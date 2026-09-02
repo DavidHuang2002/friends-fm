@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-03",
+  "postcard_number": 6,
+  "slug": "in-the-dark",
+  "title": "黑夜中",
+  "artist": "梁博",
+  "sender": "TT",
+  "note": "某人要去看梁博了嘿嘿",
+  "input_url": "",
+  "player_url": "https://www.youtube.com/embed/yAseLFhKDxQ",
+  "route": "/postcards/in-the-dark",
+  "status": "published",
+  "sources": [
+    "https://www.youtube.com/watch?v=yAseLFhKDxQ",
+    "https://www.qobuz.com/us-en/album/-/jjcz3wuiosmea",
+    "https://music.douban.com/subject/33430391/"
+  ]
+}

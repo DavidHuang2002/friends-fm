@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-02",
+  "postcard_number": 5,
+  "slug": "ginger",
+  "title": "Ginger",
+  "artist": "TOMOO",
+  "sender": "YSY",
+  "note": "最近发现的宝藏歌手",
+  "input_url": "https://youtu.be/z01gL_ahiOQ",
+  "player_url": "https://www.youtube.com/embed/z01gL_ahiOQ",
+  "route": "/postcards/ginger",
+  "status": "published",
+  "sources": [
+    "https://music.apple.com/us/song/1579694076",
+    "https://natalie.mu/music/pp/tomoo04",
+    "https://www.youtube.com/watch?v=z01gL_ahiOQ"
+  ]
+}

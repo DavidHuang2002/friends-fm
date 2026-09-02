@@ -1,0 +1,4 @@
+interface:
+  display_name: "FriendsFM Song Publisher"
+  short_description: "Turn song submissions into scheduled postcards"
+  default_prompt: "Use $friendsfm-song-publisher to publish the next FriendsFM submission."
