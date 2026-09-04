@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-05",
+  "postcard_number": 8,
+  "slug": "nicos-red-truck",
+  "title": "Nico's Red Truck",
+  "artist": "Dijon",
+  "sender": "Lucy",
+  "note": "有一天听着走在巴黎街头感觉很有感觉",
+  "input_url": "https://open.spotify.com/track/4zHC1zzSAV2xR7OlUqo2Oz?si=b3ccf377eb294f5e",
+  "player_url": "https://www.youtube.com/embed/fA5QVGlTHa0",
+  "route": "/postcards/nicos-red-truck",
+  "status": "designed",
+  "sources": [
+    "https://dijondijon.bandcamp.com/track/nicos-red-truck",
+    "https://www.youtube.com/watch?v=fA5QVGlTHa0",
+    "https://music.apple.com/us/song/1869353873",
+    "https://open.spotify.com/track/4zHC1zzSAV2xR7OlUqo2Oz"
+  ]
+}

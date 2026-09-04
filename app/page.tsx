@@ -1,4 +1,4 @@
-import { DearHome, GingerHome, LiangboHome, MovingHome, SchumannHome, StillLonelyHome } from "./nightly";
+import { DearHome, DijonHome, GingerHome, LiangboHome, MovingHome, SchumannHome, StillLonelyHome } from "./nightly";
 
 export const dynamic = "force-dynamic";
 
@@ -20,5 +20,7 @@ export default function Home() {
   if (date === "2026-09-01") return <StillLonelyHome />;
   if (date === "2026-09-02") return <GingerHome />;
   if (date === "2026-09-03") return <LiangboHome />;
-  return <SchumannHome />;
+  if (date === "2026-09-04") return <SchumannHome />;
+  if (date === "2026-09-05") return <DijonHome />;
+  return <DijonHome />;
 }

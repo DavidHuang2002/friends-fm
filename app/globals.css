@@ -692,3 +692,90 @@ footer a { text-underline-offset:4px; }
   .liangbo-pullquote { margin-top:50px; padding:24px; grid-template-columns:1fr; gap:12px; }
   .liangbo-pullquote p { font-size:32px; }
 }
+
+/* Postcard 008 — Dijon, Nico's Red Truck */
+.dijon-page { --dijon-ink:#25231e; --dijon-paper:#eadbbd; --dijon-red:#a7472f; --dijon-blue:#334f5b; --dijon-sand:#c9976e; --moving-mint:var(--dijon-paper); --moving-pink:var(--dijon-red); background:var(--dijon-ink); }
+.dijon-cover { height:100svh; min-height:780px; position:relative; overflow:hidden; isolation:isolate; color:var(--dijon-paper); background:var(--dijon-ink); }
+.dijon-art { position:absolute; inset:0 0 0 33%; width:67%; height:100%; object-fit:cover; object-position:center; z-index:-4; filter:saturate(.86) contrast(.95); animation:dijon-drive 23s ease-in-out infinite alternate; }
+.dijon-shade { position:absolute; inset:0; z-index:-3; background:linear-gradient(90deg,var(--dijon-ink) 0%,rgba(37,35,30,.98) 27%,rgba(37,35,30,.46) 48%,rgba(37,35,30,.08) 78%),linear-gradient(0deg,rgba(37,35,30,.82),transparent 48%); }
+.dijon-frame { position:absolute; inset:24px; z-index:-2; border:1px solid rgba(234,219,189,.36); pointer-events:none; }
+.dijon-frame:after { content:""; position:absolute; right:8%; top:12%; width:21vw; aspect-ratio:1; border:1px solid rgba(234,219,189,.42); border-radius:50%; box-shadow:0 0 0 2.5vw rgba(234,219,189,.08),0 0 0 5vw rgba(234,219,189,.05); }
+.dijon-brand,.dijon-how,.dijon-archive-link { color:var(--dijon-paper); }
+.dijon-how span,.dijon-archive-link span { color:var(--dijon-red); }
+.dijon-date { position:absolute; left:40px; top:104px; display:flex; flex-direction:column; gap:5px; color:var(--dijon-sand); font-size:9px; text-transform:uppercase; letter-spacing:.17em; }
+.dijon-title-block { position:absolute; left:6vw; top:47%; width:min(700px,54vw); transform:translateY(-50%); }
+.dijon-title-block > .tonight { margin:0 0 22px; color:var(--dijon-sand); }
+.dijon-title-block h1 { margin:0; font-family:var(--font-display),serif; font-size:clamp(90px,11.5vw,180px); font-weight:500; line-height:.74; letter-spacing:-.08em; text-shadow:0 14px 42px rgba(0,0,0,.35); }
+.dijon-title-block h1 em { color:var(--dijon-red); font-style:italic; font-weight:500; }
+.dijon-meta { width:min(550px,44vw); margin-top:34px; padding-top:14px; border-top:1px solid rgba(234,219,189,.6); display:flex; justify-content:space-between; gap:28px; font-size:11px; line-height:1.45; }
+.dijon-meta p { margin:0; }
+.dijon-meta p:last-child { text-align:right; }
+.dijon-meta span { color:#c5a98a; font-size:8px; text-transform:uppercase; letter-spacing:.14em; }
+.dijon-note { position:absolute; right:6vw; bottom:15%; width:min(350px,28vw); padding:22px 24px 21px; color:var(--dijon-ink); background:var(--dijon-paper); box-shadow:11px 11px 0 var(--dijon-red); transform:rotate(-1.5deg); }
+.dijon-note > span { display:inline-block; padding:5px 8px 4px; color:var(--dijon-paper); background:var(--dijon-blue); font-size:7px; font-weight:700; letter-spacing:.18em; }
+.dijon-note p { margin:14px 0 20px; font-family:var(--font-display),serif; font-size:clamp(21px,2vw,29px); line-height:1.15; }
+.dijon-note small { font-size:8px; text-transform:uppercase; letter-spacing:.17em; }
+.dijon-enter { position:absolute; left:6vw; bottom:4.5vh; display:flex; gap:14px; align-items:center; text-decoration:none; }
+.dijon-enter > span { width:47px; height:47px; display:grid; place-items:center; padding-left:2px; border:1px solid var(--dijon-paper); border-radius:50%; font-size:9px; transition:.2s; }
+.dijon-enter:hover > span { color:var(--dijon-ink); background:var(--dijon-paper); transform:scale(1.07); }
+.dijon-enter strong,.dijon-enter small { display:block; }
+.dijon-enter strong { font-size:9px; text-transform:uppercase; letter-spacing:.16em; }
+.dijon-enter small { margin-top:4px; color:#c5a98a; font-size:8px; }
+.dijon-scroll { position:absolute; right:40px; bottom:38px; font-size:8px; text-transform:uppercase; letter-spacing:.18em; }
+.dijon-scroll span { margin-left:12px; color:var(--dijon-red); }
+.dijon-story { min-height:135vh; position:relative; overflow:hidden; padding:13vw 7vw 11vw; color:var(--dijon-paper); background:var(--dijon-blue); display:grid; grid-template-columns:.8fr 1.2fr; gap:10vw; }
+.dijon-story:before { content:"NICO"; position:absolute; right:-1vw; bottom:-4vw; color:rgba(234,219,189,.05); font-family:var(--font-display),serif; font-size:28vw; font-style:italic; line-height:.7; }
+.dijon-story:after { content:""; position:absolute; left:-8vw; top:-11vw; width:32vw; aspect-ratio:1; border:1px solid rgba(234,219,189,.3); border-radius:50%; box-shadow:0 0 0 4vw rgba(234,219,189,.06),0 0 0 8vw rgba(234,219,189,.04); }
+.dijon-story-heading,.dijon-story-body { position:relative; z-index:1; }
+.dijon-story h2 { margin:28px 0 0; font-family:var(--font-display),serif; font-size:clamp(72px,8vw,126px); font-weight:500; line-height:.76; letter-spacing:-.07em; }
+.dijon-story h2 em { color:var(--dijon-sand); font-style:italic; font-weight:500; }
+.dijon-stamp { width:90%; margin-top:74px; padding:13px 0; border-top:1px solid rgba(234,219,189,.35); border-bottom:1px solid rgba(234,219,189,.18); display:flex; justify-content:space-between; color:var(--dijon-sand); font-size:8px; text-transform:uppercase; letter-spacing:.17em; }
+.dijon-story-body { padding-top:14vw; }
+.dijon-lede { max-width:770px; margin:0 0 64px; color:var(--dijon-sand); font-family:var(--font-display),serif; font-size:clamp(34px,3.7vw,57px); line-height:1.06; }
+.dijon-copy { display:grid; grid-template-columns:1fr 1fr; gap:46px; color:#d3c7aa; font-size:14px; line-height:1.9; }
+.dijon-copy p { margin:0; }
+.dijon-pullquote { margin:70px 0 10px; padding:30px 34px; display:grid; grid-template-columns:100px 1fr; gap:30px; align-items:start; color:var(--dijon-ink); background:var(--dijon-paper); transform:rotate(.6deg); }
+.dijon-pullquote span { padding-top:7px; font-size:8px; font-weight:700; letter-spacing:.17em; }
+.dijon-pullquote p { margin:0; font-family:var(--font-display),serif; font-size:clamp(28px,3vw,46px); line-height:1.08; }
+.dijon-player { border-color:var(--dijon-paper); }
+.dijon-sources { color:#a9a78e; }
+.dijon-schedule { color:var(--dijon-paper); background:var(--dijon-red); }
+.dijon-about .about-invite > p { color:var(--dijon-sand); }
+.dijon-about .about-cta { color:var(--dijon-ink); background:var(--dijon-paper); }
+.dijon-about .about-cta:hover { background:var(--dijon-sand); }
+.dijon-card { color:var(--dijon-paper); background:var(--dijon-blue); }
+.dijon-card-art { flex:1; margin:16px 0; background:url('/dijon-nicos-red-truck-cover.jpg') center/cover no-repeat; }
+@keyframes dijon-drive { from { transform:scale(1.01); } to { transform:scale(1.055) translateX(-.5%); } }
+@media (max-width:850px) {
+  .dijon-title-block { width:68vw; }
+  .dijon-title-block h1 { font-size:clamp(84px,15vw,145px); }
+  .dijon-note { width:42vw; }
+  .dijon-story { grid-template-columns:1fr; gap:4vw; }
+  .dijon-story-body { padding-top:2vw; }
+}
+@media (max-width:560px) {
+  .dijon-cover { min-height:850px; }
+  .dijon-art { inset:46% 0 0; width:100%; height:54%; object-position:center; }
+  .dijon-shade { background:linear-gradient(0deg,rgba(37,35,30,.15) 38%,rgba(37,35,30,.88) 72%,var(--dijon-ink) 100%); }
+  .dijon-frame { inset:16px; }
+  .dijon-frame:after { right:-10%; top:50%; width:62vw; }
+  .dijon-brand { left:22px; top:24px; }
+  .dijon-how { left:145px; top:36px; font-size:7px; }
+  .dijon-archive-link { right:22px; top:29px; }
+  .dijon-date { left:22px; top:86px; }
+  .dijon-title-block { left:22px; right:22px; top:31%; width:auto; }
+  .dijon-title-block h1 { font-size:82px; line-height:.76; }
+  .dijon-meta { width:100%; margin-top:23px; gap:16px; }
+  .dijon-meta p { max-width:48%; }
+  .dijon-note { left:22px; right:auto; bottom:15%; width:82%; padding:18px; box-shadow:8px 8px 0 var(--dijon-red); }
+  .dijon-note p { font-size:20px; }
+  .dijon-enter { left:22px; bottom:24px; }
+  .dijon-scroll { display:none; }
+  .dijon-story { min-height:0; padding:24vw 22px 22vw; }
+  .dijon-story h2 { font-size:66px; }
+  .dijon-story-body { margin-top:12vw; }
+  .dijon-lede { font-size:34px; }
+  .dijon-copy { grid-template-columns:1fr; gap:24px; }
+  .dijon-pullquote { grid-template-columns:1fr; gap:12px; margin-top:50px; padding:24px; }
+  .dijon-pullquote p { font-size:32px; }
+}
