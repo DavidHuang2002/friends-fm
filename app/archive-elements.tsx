@@ -1,10 +1,9 @@
-import Link from "next/link";
 import type { ArchiveKey, PostcardRecord } from "./archive-data";
 import { postcardsBefore } from "./archive-data";
 
 export function PostcardCard({ postcard, compact = false }: { postcard: PostcardRecord; compact?: boolean }) {
   return (
-    <Link
+    <a
       href={postcard.href}
       className={`archive-card ${postcard.card}${compact ? " archive-card-compact" : ""}`}
       aria-label={`Open ${postcard.title} by ${postcard.artist}, sent by ${postcard.sender}`}
@@ -18,7 +17,7 @@ export function PostcardCard({ postcard, compact = false }: { postcard: Postcard
         <h3>{postcard.title}</h3>
         <p>{postcard.artist}</p>
       </div>
-    </Link>
+    </a>
   );
 }
 
@@ -33,11 +32,11 @@ export function ArchivePreview({ current }: { current: ArchiveKey }) {
       <div className="archive-grid scheduled-archive-grid">
         {items.map((postcard) => <PostcardCard key={postcard.key} postcard={postcard} />)}
       </div>
-      <Link className="archive-all-link" href="/archive">
+      <a className="archive-all-link" href="/archive">
         <span>Open the whole year</span>
         <strong>View all postcards</strong>
         <i aria-hidden="true">↗</i>
-      </Link>
+      </a>
     </section>
   );
 }

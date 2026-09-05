@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PostcardCard } from "../archive-elements";
 import { publishedPostcards } from "../archive-data";
 
@@ -18,8 +17,8 @@ export default function ArchivePage() {
   return (
     <main className="year-archive">
       <header className="year-archive-hero">
-        <Link className="year-archive-brand" href="/">FriendsFM!</Link>
-        <Link className="year-archive-tonight" href="/">Tonight <span>↗</span></Link>
+        <a className="year-archive-brand" href="/">FriendsFM!</a>
+        <a className="year-archive-tonight" href="/">Tonight <span>↗</span></a>
         <div className="year-archive-intro">
           <p className="section-kicker">The year so far · 2026</p>
           <h1>Postcards<br /><em>we kept.</em></h1>
@@ -55,7 +54,7 @@ export default function ArchivePage() {
         <h2>Send something<br />worth keeping.</h2>
         <a href="https://forms.gle/KH685ZJcGp6xmbKaA" target="_blank" rel="noreferrer">Send me a song <span>↗</span></a>
       </section>
-      <footer className="year-archive-footer"><span className="footer-brand">FriendsFM!</span><p>One year · A lot of small worlds</p><Link href="/">Go to tonight →</Link></footer>
+      <footer className="year-archive-footer"><span className="footer-brand">FriendsFM!</span><p>One year · A lot of small worlds</p><a href="/">Go to tonight →</a></footer>
     </main>
   );
 }
