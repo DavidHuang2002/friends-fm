@@ -1047,3 +1047,91 @@ footer a { text-underline-offset:4px; }
   .guo-pullquote { margin-top:50px; padding:24px; }
   .guo-pullquote p { font-size:31px; }
 }
+
+/* Postcard 009 — Boz Scaggs, Still Falling for You */
+.boz-page { --boz-ink:#171b1e; --boz-paper:#f1eee7; --boz-ice:#bdd1d4; --boz-blue:#34434a; --boz-red:#ae4f49; background:var(--boz-ink); }
+.boz-cover { height:100svh; min-height:780px; position:relative; overflow:hidden; isolation:isolate; color:var(--boz-paper); background:var(--boz-ink); }
+.boz-art { position:absolute; inset:0 0 0 42%; width:58%; height:100%; object-fit:cover; object-position:center; z-index:-5; filter:saturate(.72) contrast(.96); animation:boz-walk 25s ease-in-out infinite alternate; }
+.boz-stripes { position:absolute; inset:0; z-index:-4; opacity:.26; background:repeating-linear-gradient(0deg,transparent 0 52px,rgba(241,238,231,.35) 53px 55px); mix-blend-mode:screen; pointer-events:none; }
+.boz-shade { position:absolute; inset:0; z-index:-3; background:linear-gradient(90deg,var(--boz-ink) 0%,rgba(23,27,30,.98) 31%,rgba(23,27,30,.62) 51%,rgba(23,27,30,.12) 83%),linear-gradient(0deg,rgba(23,27,30,.82),transparent 48%); }
+.boz-ice-ring { position:absolute; right:8vw; top:13vh; width:24vw; aspect-ratio:1; border:1px solid rgba(189,209,212,.58); border-radius:50%; box-shadow:0 0 0 3vw rgba(189,209,212,.1),0 0 0 6vw rgba(189,209,212,.06); z-index:-2; pointer-events:none; }
+.boz-brand,.boz-how,.boz-archive-link { color:var(--boz-paper); }
+.boz-how span,.boz-archive-link span { color:var(--boz-red); }
+.boz-date { position:absolute; left:40px; top:104px; display:flex; flex-direction:column; gap:5px; color:var(--boz-ice); font-size:9px; text-transform:uppercase; letter-spacing:.17em; }
+.boz-title-block { position:absolute; left:6vw; top:47%; width:min(640px,51vw); transform:translateY(-50%); }
+.boz-title-block > .tonight { margin:0 0 23px; color:var(--boz-ice); }
+.boz-title-block h1 { margin:0; font-family:var(--font-display),serif; font-size:clamp(84px,10vw,164px); font-weight:500; line-height:.75; letter-spacing:-.08em; text-shadow:0 15px 48px rgba(0,0,0,.42); }
+.boz-title-block h1 em { color:var(--boz-red); font-style:italic; font-weight:500; }
+.boz-meta { width:min(550px,44vw); margin-top:35px; padding-top:14px; border-top:1px solid rgba(241,238,231,.57); display:flex; justify-content:space-between; gap:28px; font-size:11px; line-height:1.45; }
+.boz-meta p { margin:0; }
+.boz-meta p:last-child { text-align:right; }
+.boz-meta span { color:#adc0c1; font-size:8px; text-transform:uppercase; letter-spacing:.14em; }
+.boz-note { position:absolute; right:6vw; bottom:15%; width:min(330px,27vw); padding:22px 24px 21px; color:var(--boz-ink); background:var(--boz-paper); box-shadow:11px 11px 0 var(--boz-red); transform:rotate(1.2deg); }
+.boz-note > span { display:inline-block; padding:5px 8px 4px; color:var(--boz-paper); background:var(--boz-blue); font-size:7px; font-weight:700; letter-spacing:.18em; }
+.boz-note p { margin:14px 0 20px; font-family:var(--font-display),serif; font-size:clamp(23px,2.1vw,31px); line-height:1.1; }
+.boz-note small { font-size:8px; text-transform:uppercase; letter-spacing:.17em; }
+.boz-enter { position:absolute; left:6vw; bottom:4.5vh; display:flex; gap:14px; align-items:center; text-decoration:none; }
+.boz-enter > span { width:47px; height:47px; display:grid; place-items:center; padding-left:2px; border:1px solid var(--boz-paper); border-radius:50%; font-size:9px; transition:.2s; }
+.boz-enter:hover > span { color:var(--boz-ink); background:var(--boz-paper); transform:scale(1.07); }
+.boz-enter strong,.boz-enter small { display:block; }
+.boz-enter strong { font-size:9px; text-transform:uppercase; letter-spacing:.16em; }
+.boz-enter small { margin-top:4px; color:#adc0c1; font-size:8px; }
+.boz-scroll { position:absolute; right:40px; bottom:38px; font-size:8px; text-transform:uppercase; letter-spacing:.18em; }
+.boz-scroll span { margin-left:12px; color:var(--boz-red); }
+.boz-story { min-height:140vh; position:relative; overflow:hidden; padding:13vw 7vw 11vw; color:var(--boz-paper); background:linear-gradient(120deg,#273238 0%,#3d5056 58%,#617275 100%); display:grid; grid-template-columns:.8fr 1.2fr; gap:10vw; }
+.boz-story:before { content:"STILL"; position:absolute; right:-2vw; bottom:-3vw; color:rgba(241,238,231,.055); font-family:var(--font-display),serif; font-size:26vw; font-style:italic; line-height:.7; }
+.boz-story:after { content:""; position:absolute; left:47%; top:-15vw; width:34vw; aspect-ratio:1; border:1px solid rgba(241,238,231,.26); border-radius:50%; box-shadow:0 0 0 5vw rgba(241,238,231,.07),0 0 0 10vw rgba(241,238,231,.04); }
+.boz-story-heading,.boz-story-body { position:relative; z-index:1; }
+.boz-story h2 { margin:28px 0 0; font-family:var(--font-display),serif; font-size:clamp(76px,8.3vw,132px); font-weight:500; line-height:.75; letter-spacing:-.08em; }
+.boz-story h2 em { color:var(--boz-ice); font-style:italic; font-weight:500; }
+.boz-index { width:90%; margin-top:76px; padding:13px 0; border-top:1px solid rgba(241,238,231,.32); border-bottom:1px solid rgba(241,238,231,.18); display:grid; grid-template-columns:42px 1fr auto; gap:18px; color:var(--boz-ice); font-size:8px; text-transform:uppercase; letter-spacing:.16em; }
+.boz-story-body { padding-top:14vw; }
+.boz-lede { max-width:770px; margin:0 0 64px; color:var(--boz-ice); font-family:var(--font-display),serif; font-size:clamp(34px,3.7vw,57px); line-height:1.06; }
+.boz-copy { display:grid; grid-template-columns:1fr 1fr; gap:46px; color:#d5dfe0; font-size:14px; line-height:1.9; }
+.boz-copy p { margin:0; }
+.boz-pullquote { margin:70px 0 10px; padding:30px 34px; display:grid; grid-template-columns:120px 1fr; gap:30px; align-items:start; color:var(--boz-ink); background:var(--boz-ice); transform:rotate(-.6deg); }
+.boz-pullquote span { padding-top:7px; font-size:8px; font-weight:700; letter-spacing:.17em; }
+.boz-pullquote p { margin:0; font-family:var(--font-display),serif; font-size:clamp(28px,3vw,46px); line-height:1.08; }
+.boz-player { border-color:var(--boz-paper); }
+.boz-sources { color:#c0d0d0; }
+.boz-schedule { color:var(--boz-paper); background:var(--boz-red); }
+.boz-about .about-invite > p { color:var(--boz-ice); }
+.boz-about .about-cta { color:var(--boz-ink); background:var(--boz-paper); }
+.boz-about .about-cta:hover { background:var(--boz-ice); }
+.boz-card { color:var(--boz-paper); background:var(--boz-blue); }
+.boz-card-art { flex:1; margin:16px 0; background:url('/boz-scaggs-down-two-then-left-cover.webp') center/cover no-repeat; }
+@keyframes boz-walk { from { transform:scale(1.01); } to { transform:scale(1.055) translateX(-.5%); } }
+@media (max-width:850px) {
+  .boz-title-block { width:67vw; }
+  .boz-title-block h1 { font-size:clamp(82px,14vw,142px); }
+  .boz-note { width:42vw; }
+  .boz-story { grid-template-columns:1fr; gap:4vw; }
+  .boz-story-body { padding-top:2vw; }
+}
+@media (max-width:560px) {
+  .boz-cover { min-height:860px; }
+  .boz-art { inset:46% 0 0; width:100%; height:54%; object-position:center; }
+  .boz-shade { background:linear-gradient(0deg,rgba(23,27,30,.16) 38%,rgba(23,27,30,.88) 72%,var(--boz-ink) 100%); }
+  .boz-stripes { background:repeating-linear-gradient(0deg,transparent 0 34px,rgba(241,238,231,.3) 35px 37px); }
+  .boz-ice-ring { right:-12%; top:53%; width:65vw; }
+  .boz-brand { left:22px; top:24px; }
+  .boz-how { left:145px; top:36px; font-size:7px; }
+  .boz-archive-link { right:22px; top:29px; }
+  .boz-date { left:22px; top:86px; }
+  .boz-title-block { left:22px; right:22px; top:30%; width:auto; }
+  .boz-title-block h1 { font-size:78px; line-height:.77; }
+  .boz-meta { width:100%; margin-top:23px; gap:16px; }
+  .boz-meta p { max-width:48%; }
+  .boz-note { left:22px; right:auto; bottom:15%; width:82%; padding:18px; box-shadow:8px 8px 0 var(--boz-red); }
+  .boz-note p { font-size:21px; }
+  .boz-enter { left:22px; bottom:24px; }
+  .boz-scroll { display:none; }
+  .boz-story { min-height:0; padding:24vw 22px 22vw; }
+  .boz-story h2 { font-size:66px; }
+  .boz-story-body { margin-top:12vw; }
+  .boz-lede { font-size:34px; }
+  .boz-copy { grid-template-columns:1fr; gap:24px; }
+  .boz-index { width:100%; margin-top:45px; }
+  .boz-pullquote { grid-template-columns:1fr; gap:12px; margin-top:50px; padding:24px; }
+  .boz-pullquote p { font-size:32px; }
+}

@@ -181,3 +181,29 @@ export function GuoYuanChaoHome({ archived = false }: { archived?: boolean }) {
     </main>
   );
 }
+
+export function BozHome({ archived = false }: { archived?: boolean }) {
+  return (
+    <main className="boz-page">
+      <section className="boz-cover" id="tonight" aria-labelledby="song-title">
+        <img className="boz-art" src="/boz-scaggs-down-two-then-left-cover.webp" alt="Official album artwork for Down Two Then Left by Boz Scaggs, featuring the singer walking beside ice sculptures" />
+        <div className="boz-stripes" aria-hidden="true" />
+        <div className="boz-shade" aria-hidden="true" />
+        <div className="boz-ice-ring" aria-hidden="true" />
+        <a className="brand boz-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
+        {!archived && <a className="how-link boz-how" href="#about">How it works <span>↓</span></a>}
+        <a className="archive-link boz-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
+        <div className="boz-date"><span>Sep 6, 2026</span><span>Postcard No. 009</span><span>Sent by Joey</span></div>
+        <div className="boz-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 009</p><h1 id="song-title">Still<br /><em>Falling</em><br />For You</h1><div className="boz-meta"><p>Boz Scaggs<br /><span>Written by B. Scaggs</span></p><p>Down Two Then Left<br /><span>Columbia · 1977</span></p></div></div>
+        <div className="boz-note"><span>COOL SIDE / WARM HEART</span><p>A song for the part of the night that still has somewhere to go.</p><small>— Joey, {archived ? "that night" : "tonight"}</small></div>
+        <a className="boz-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>3 min 53 sec · official audio</small></div></a>
+        <div className="boz-scroll">Walk past the ice <span>↓</span></div>
+      </section>
+      <section className="boz-story" id="story" aria-labelledby="boz-story-title">
+        <div className="boz-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="boz-story-title">Stay<br />a little<br /><em>longer.</em></h2><div className="boz-index"><span>09</span><span>Down Two Then Left</span><span>1977</span></div></div>
+        <div className="boz-story-body"><p className="boz-lede">有些歌表面上很冷，真正靠近以后，里面一直有温度。</p><div className="boz-copy"><p>《Still Falling for You》收在 Boz Scaggs 1977 年的专辑《Down Two Then Left》中。它只有三分五十三秒，却把一种很难解释的状态唱得很完整：人已经往前走了，心里还保留着一点没有关上的门。</p><p>这张唱片的封面让 Boz 走在一排冰雕旁边，画面冷静、干净，几乎没有多余动作。歌却不是一块冰。贝斯、鼓和吉他把节奏稳稳地推着往前，声音里有夜色的光泽，也有一种不急着证明什么的坚持。</p></div><div className="boz-pullquote"><span>ONE MORE TURN</span><p>The night is cool.<br />The feeling isn’t.</p></div><div className="embedded-player boz-player"><div className="player-label"><span>Listen here · No login</span><span>Boz Scaggs · Still Falling for You · 3:53</span></div><div className="video-frame"><iframe title="YouTube player for Still Falling for You by Boz Scaggs" src="https://www.youtube.com/embed/NCQjhhmw1WA?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources boz-sources"><span>Listening notes assembled from</span><a href="https://www.bozscaggs.com/discography" target="_blank" rel="noreferrer">Boz Scaggs · Discography</a><a href="https://music.apple.com/us/song/188251640" target="_blank" rel="noreferrer">Apple Music</a><a href="https://www.youtube.com/watch?v=NCQjhhmw1WA" target="_blank" rel="noreferrer">Boz Scaggs · YouTube</a><a href="https://open.spotify.com/track/3QDcy2wlMzSHqoQpMaZyJI" target="_blank" rel="noreferrer">Spotify</a></div></div>
+      </section>
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 009 · Sep 6, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="boz-schedule" /><ArchivePreview current="still-falling-for-you" /><About theme="boz-about" /><Footer /></>}
+    </main>
+  );
+}

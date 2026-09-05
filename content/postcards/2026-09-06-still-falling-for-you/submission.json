@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-06",
+  "postcard_number": 9,
+  "slug": "still-falling-for-you",
+  "title": "Still Falling for You",
+  "artist": "Boz Scaggs",
+  "sender": "Joey",
+  "note": "",
+  "input_url": "",
+  "player_url": "https://www.youtube.com/embed/NCQjhhmw1WA",
+  "route": "/postcards/still-falling-for-you",
+  "status": "designed",
+  "sources": [
+    "https://www.bozscaggs.com/discography",
+    "https://music.apple.com/us/song/188251640",
+    "https://www.youtube.com/watch?v=NCQjhhmw1WA",
+    "https://open.spotify.com/track/3QDcy2wlMzSHqoQpMaZyJI"
+  ]
+}
