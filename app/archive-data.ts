@@ -1,4 +1,5 @@
 export type ArchiveKey =
+  | "guo-yuan-chao"
   | "my-life"
   | "dijon"
   | "liangbo"
@@ -24,6 +25,7 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "guo-yuan-chao", href: "/postcards/guo-yuan-chao", dateKey: "2026-09-07", date: "SEP 07", month: "September", sender: "DAVID", title: "郭源潮", artist: "宋冬野", card: "guo-card", art: "guo-card-art", number: "010" },
   { key: "my-life", href: "/postcards/my-life", dateKey: "2026-09-06", date: "SEP 06", month: "September", sender: "YSY", title: "My Life", artist: "Billy Joel", card: "my-life-card", art: "my-life-card-art", number: "009" },
   { key: "dijon", href: "/postcards/nicos-red-truck", dateKey: "2026-09-05", date: "SEP 05", month: "September", sender: "LUCY", title: "Nico's Red Truck", artist: "Dijon", card: "dijon-card", art: "dijon-card-art", number: "008" },
   { key: "schumann", href: "/postcards/schumann-andante", dateKey: "2026-09-04", date: "SEP 04", month: "September", sender: "DAVID", title: "Andante cantabile", artist: "Robert Schumann", card: "schumann-card", art: "schumann-card-art", number: "007" },

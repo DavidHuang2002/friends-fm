@@ -955,3 +955,95 @@ footer a { text-underline-offset:4px; }
   .my-life-pullquote { margin-top:50px; padding:24px; }
   .my-life-pullquote p { font-size:31px; }
 }
+
+/* Postcard 010 — 宋冬野, 郭源潮 */
+.guo-page { --guo-black:#070707; --guo-ink:#181816; --guo-paper:#dddcd4; --guo-grey:#8d8d88; --guo-red:#b23b2b; --moving-mint:var(--guo-paper); --moving-pink:var(--guo-red); background:var(--guo-black); }
+.guo-cover { height:100svh; min-height:780px; position:relative; overflow:hidden; isolation:isolate; color:var(--guo-paper); background:var(--guo-black); }
+.guo-art { position:absolute; inset:0 0 0 29%; width:71%; height:100%; object-fit:cover; object-position:center; z-index:-5; filter:contrast(1.08); animation:guo-rise 26s ease-in-out infinite alternate; }
+.guo-shade { position:absolute; inset:0; z-index:-4; background:linear-gradient(90deg,var(--guo-black) 0 24%,rgba(7,7,7,.92) 36%,rgba(7,7,7,.18) 67%),linear-gradient(0deg,rgba(7,7,7,.68),transparent 43%); }
+.guo-cloud-lines { position:absolute; inset:0; z-index:-2; pointer-events:none; opacity:.32; }
+.guo-cloud-lines i { position:absolute; border:1px solid var(--guo-paper); border-radius:50%; }
+.guo-cloud-lines i:first-child { width:58vw; height:22vw; right:-12vw; top:15%; transform:rotate(-9deg); }
+.guo-cloud-lines i:nth-child(2) { width:71vw; height:27vw; left:22vw; top:37%; transform:rotate(7deg); }
+.guo-cloud-lines i:last-child { width:47vw; height:18vw; right:-5vw; bottom:7%; }
+.guo-brand,.guo-how,.guo-archive-link { color:var(--guo-paper); }
+.guo-how span,.guo-archive-link span { color:var(--guo-red); }
+.guo-date { position:absolute; left:40px; top:104px; display:flex; flex-direction:column; gap:5px; color:#aaa9a1; font-size:9px; text-transform:uppercase; letter-spacing:.17em; }
+.guo-title-block { position:absolute; left:6vw; top:47%; width:min(710px,56vw); transform:translateY(-50%); }
+.guo-title-block > .tonight { margin:0 0 19px; color:#aaa9a1; }
+.guo-title-block h1 { margin:0; display:flex; gap:.01em; font-family:var(--font-display),serif; font-size:clamp(115px,15.5vw,240px); font-weight:500; line-height:.72; letter-spacing:-.11em; }
+.guo-title-block h1 span:nth-child(2) { color:transparent; -webkit-text-stroke:1px var(--guo-paper); transform:translateY(9%); }
+.guo-title-block h1 span:last-child { color:var(--guo-red); transform:translateY(-6%); }
+.guo-meta { width:min(510px,41vw); margin-top:31px; padding-top:13px; border-top:1px solid rgba(221,220,212,.55); display:flex; justify-content:space-between; gap:28px; font-size:11px; line-height:1.45; }
+.guo-meta p { margin:0; }
+.guo-meta p:last-child { text-align:right; }
+.guo-meta span { color:#9a9993; font-size:8px; text-transform:uppercase; letter-spacing:.14em; }
+.guo-note { position:absolute; right:5vw; bottom:14%; width:min(355px,28vw); padding:26px 27px 23px; color:var(--guo-paper); background:rgba(7,7,7,.88); border:1px solid rgba(221,220,212,.52); box-shadow:10px 10px 0 var(--guo-red); transform:rotate(1deg); }
+.guo-note:before { content:""; position:absolute; left:19px; top:-7px; width:72px; height:13px; background:var(--guo-paper); opacity:.52; transform:rotate(-3deg); }
+.guo-note > span { color:#aaa9a1; font-size:7px; font-weight:700; letter-spacing:.19em; }
+.guo-note p { margin:18px 0 20px; font-family:var(--font-display),serif; font-size:clamp(23px,2.2vw,32px); line-height:1.13; }
+.guo-note small { font-size:8px; text-transform:uppercase; letter-spacing:.17em; }
+.guo-enter { position:absolute; left:6vw; bottom:4.5vh; display:flex; align-items:center; gap:14px; text-decoration:none; }
+.guo-enter > span { width:47px; height:47px; display:grid; place-items:center; padding-left:2px; border:1px solid var(--guo-paper); border-radius:50%; font-size:9px; transition:.2s; }
+.guo-enter:hover > span { color:var(--guo-black); background:var(--guo-paper); transform:scale(1.07); }
+.guo-enter strong,.guo-enter small { display:block; }
+.guo-enter strong { font-size:9px; text-transform:uppercase; letter-spacing:.16em; }
+.guo-enter small { margin-top:4px; color:#aaa9a1; font-size:8px; }
+.guo-scroll { position:absolute; right:40px; bottom:38px; font-size:8px; text-transform:uppercase; letter-spacing:.18em; }
+.guo-scroll span { margin-left:12px; color:var(--guo-red); }
+.guo-story { min-height:138vh; position:relative; overflow:hidden; padding:13vw 7vw 11vw; color:var(--guo-ink); background:var(--guo-paper); display:grid; grid-template-columns:.82fr 1.18fr; gap:9vw; }
+.guo-story:before { content:""; position:absolute; inset:0; opacity:.17; background:radial-gradient(ellipse at 10% 68%,var(--guo-grey) 0 12%,transparent 12.%),radial-gradient(ellipse at 32% 79%,var(--guo-grey) 0 19%,transparent 19.2%),radial-gradient(ellipse at 80% 15%,var(--guo-grey) 0 18%,transparent 18.2%); filter:blur(18px); }
+.guo-story:after { content:"郭源潮"; position:absolute; right:-3vw; bottom:-7vw; color:rgba(24,24,22,.055); font-family:var(--font-display),serif; font-size:24vw; line-height:.7; white-space:nowrap; }
+.guo-story-heading,.guo-story-body { position:relative; z-index:1; }
+.guo-story h2 { margin:28px 0 0; font-family:var(--font-display),serif; font-size:clamp(66px,7.5vw,116px); font-weight:500; line-height:.79; letter-spacing:-.075em; }
+.guo-story h2 em { color:var(--guo-red); font-style:normal; }
+.guo-years { width:88%; margin-top:73px; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:18px; font-size:12px; letter-spacing:.2em; }
+.guo-years i { height:1px; background:var(--guo-ink); position:relative; }
+.guo-years i:after { content:"9 YEARS"; position:absolute; left:50%; top:9px; transform:translateX(-50%); font-size:7px; white-space:nowrap; letter-spacing:.16em; }
+.guo-story-body { padding-top:13vw; }
+.guo-lede { max-width:760px; margin:0 0 64px; font-family:var(--font-display),serif; font-size:clamp(35px,3.8vw,58px); line-height:1.04; }
+.guo-copy { display:grid; grid-template-columns:1fr 1fr; gap:46px; color:#494944; font-size:14px; line-height:1.92; }
+.guo-copy p { margin:0; }
+.guo-pullquote { margin:68px 0 10px; padding:30px 34px; color:var(--guo-paper); background:var(--guo-ink); border-top:8px solid var(--guo-red); }
+.guo-pullquote span { color:#aaa9a1; font-size:7px; font-weight:700; letter-spacing:.19em; }
+.guo-pullquote p { margin:16px 0 0; font-family:var(--font-display),serif; font-size:clamp(30px,3.2vw,48px); line-height:1.08; }
+.guo-player { border-color:var(--guo-ink); }
+.guo-sources { color:#696963; }
+.guo-schedule { color:var(--guo-paper); background:var(--guo-red); }
+.guo-about .about-invite > p { color:#aaa9a1; }
+.guo-about .about-cta { color:var(--guo-black); background:var(--guo-paper); }
+.guo-about .about-cta:hover { color:var(--guo-paper); background:var(--guo-red); }
+.guo-card { color:var(--guo-paper); background:var(--guo-black); }
+.guo-card-art { flex:1; margin:16px 0; background:url('/song-dongye-guo-yuan-chao-cover.jpg') center/cover no-repeat; border-left:7px solid var(--guo-red); }
+@keyframes guo-rise { from { transform:scale(1.01) translateY(0); } to { transform:scale(1.055) translateY(-.7%); } }
+@media (max-width:850px) {
+  .guo-title-block { width:67vw; }
+  .guo-note { width:40vw; }
+  .guo-story { grid-template-columns:1fr; gap:4vw; }
+  .guo-story-body { padding-top:1vw; }
+}
+@media (max-width:560px) {
+  .guo-cover { min-height:850px; }
+  .guo-art { inset:38% 0 0; width:100%; height:62%; object-position:center; }
+  .guo-shade { background:linear-gradient(0deg,rgba(7,7,7,.05) 35%,rgba(7,7,7,.91) 68%,var(--guo-black) 100%); }
+  .guo-brand { left:22px; top:24px; }
+  .guo-how { left:145px; top:36px; font-size:7px; }
+  .guo-archive-link { right:22px; top:29px; }
+  .guo-date { left:22px; top:86px; }
+  .guo-title-block { left:22px; right:22px; top:31%; width:auto; }
+  .guo-title-block h1 { font-size:104px; line-height:.7; }
+  .guo-meta { width:100%; margin-top:21px; gap:16px; }
+  .guo-meta p { max-width:49%; }
+  .guo-note { left:22px; right:auto; bottom:13%; width:80%; padding:19px; box-shadow:8px 8px 0 var(--guo-red); }
+  .guo-note p { font-size:23px; }
+  .guo-enter { left:22px; bottom:24px; }
+  .guo-scroll { display:none; }
+  .guo-story { min-height:0; padding:24vw 22px 22vw; }
+  .guo-story h2 { font-size:62px; }
+  .guo-story-body { margin-top:12vw; }
+  .guo-lede { font-size:34px; }
+  .guo-copy { grid-template-columns:1fr; gap:24px; }
+  .guo-years { margin-top:50px; }
+  .guo-pullquote { margin-top:50px; padding:24px; }
+  .guo-pullquote p { font-size:31px; }
+}

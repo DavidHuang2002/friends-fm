@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-07",
+  "postcard_number": 10,
+  "slug": "guo-yuan-chao",
+  "title": "郭源潮",
+  "artist": "宋冬野",
+  "sender": "David",
+  "note": "宋冬野最近出新专了",
+  "input_url": "https://www.youtube.com/watch?v=0IWVfD535yw",
+  "player_url": "https://www.youtube.com/embed/0IWVfD535yw?playsinline=1&rel=0",
+  "route": "/postcards/guo-yuan-chao",
+  "status": "queued",
+  "sources": [
+    "https://www.youtube.com/watch?v=0IWVfD535yw",
+    "https://www.modernsky.com/home/artists/42",
+    "https://open.spotify.com/embed/album/10ybjitbVIXwzgwfW7HLRc"
+  ]
+}
