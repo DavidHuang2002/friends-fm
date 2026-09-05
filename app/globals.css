@@ -861,3 +861,97 @@ footer a { text-underline-offset:4px; }
   .archive-invite { min-height:620px; padding:22vw 22px; }
   .archive-invite h2 { font-size:66px; margin-bottom:48px; }
 }
+
+/* Postcard 009 — Billy Joel, My Life */
+.my-life-page { --life-black:#111210; --life-cream:#eee9d9; --life-blue:#8fb7be; --life-rust:#be4d2e; --life-yellow:#e4b94d; --moving-mint:var(--life-blue); --moving-pink:var(--life-rust); background:var(--life-black); }
+.my-life-cover { height:100svh; min-height:780px; position:relative; overflow:hidden; isolation:isolate; color:var(--life-cream); background:var(--life-black); }
+.my-life-art { position:absolute; inset:0 0 0 39%; z-index:-5; width:61%; height:100%; object-fit:cover; object-position:44% center; filter:saturate(.82) contrast(1.04); animation:life-drift 22s ease-in-out infinite alternate; }
+.my-life-shade { position:absolute; inset:0; z-index:-4; background:linear-gradient(90deg,var(--life-black) 0 34%,rgba(17,18,16,.91) 43%,rgba(17,18,16,.13) 70%),linear-gradient(0deg,rgba(17,18,16,.83),transparent 47%); }
+.my-life-keys { position:absolute; left:-1px; bottom:0; width:43%; height:18vh; z-index:-2; display:grid; grid-template-columns:repeat(11,1fr); opacity:.16; }
+.my-life-keys i { border:1px solid var(--life-cream); border-bottom:0; }
+.my-life-keys i:nth-child(2),.my-life-keys i:nth-child(4),.my-life-keys i:nth-child(7),.my-life-keys i:nth-child(9),.my-life-keys i:nth-child(11) { height:58%; background:var(--life-cream); }
+.my-life-frame { position:absolute; inset:22px; z-index:-1; border:1px solid rgba(238,233,217,.32); color:var(--life-yellow); font-size:7px; letter-spacing:.18em; }
+.my-life-frame span { position:absolute; writing-mode:vertical-rl; }
+.my-life-frame span:first-child { right:9px; top:31%; }
+.my-life-frame span:last-child { right:9px; bottom:9%; }
+.my-life-brand,.my-life-how,.my-life-archive-link { color:var(--life-cream); }
+.my-life-how span,.my-life-archive-link span { color:var(--life-yellow); }
+.my-life-date { position:absolute; left:40px; top:104px; display:flex; flex-direction:column; gap:5px; color:var(--life-blue); font-size:9px; text-transform:uppercase; letter-spacing:.17em; }
+.my-life-title-block { position:absolute; left:6vw; top:46%; width:min(650px,52vw); transform:translateY(-50%); }
+.my-life-title-block > .tonight { margin:0 0 18px; color:var(--life-yellow); }
+.my-life-title-block h1 { margin:0; font-family:var(--font-display),serif; font-size:clamp(120px,15vw,238px); font-weight:500; line-height:.58; letter-spacing:-.095em; text-transform:uppercase; }
+.my-life-title-block h1 em { color:var(--life-blue); font-style:normal; }
+.my-life-meta { width:min(500px,40vw); margin-top:34px; padding-top:13px; border-top:1px solid rgba(238,233,217,.58); display:flex; justify-content:space-between; gap:28px; font-size:10px; line-height:1.45; }
+.my-life-meta p { margin:0; }
+.my-life-meta p:last-child { text-align:right; }
+.my-life-meta span { color:#a5aaa0; font-size:8px; text-transform:uppercase; letter-spacing:.14em; }
+.my-life-note { position:absolute; right:5vw; bottom:14%; width:min(390px,30vw); padding:24px 26px; color:var(--life-black); background:var(--life-cream); border-top:11px solid var(--life-rust); box-shadow:12px 12px 0 var(--life-yellow); transform:rotate(-1deg); }
+.my-life-note > span { font-size:7px; font-weight:800; letter-spacing:.19em; }
+.my-life-note p { margin:15px 0 20px; font-family:var(--font-display),serif; font-size:clamp(20px,2vw,29px); line-height:1.12; }
+.my-life-note small { font-size:8px; text-transform:uppercase; letter-spacing:.16em; }
+.my-life-enter { position:absolute; left:6vw; bottom:4.5vh; display:flex; gap:14px; align-items:center; text-decoration:none; }
+.my-life-enter > span { width:47px; height:47px; display:grid; place-items:center; border:1px solid var(--life-cream); border-radius:50%; padding-left:2px; font-size:9px; transition:.2s; }
+.my-life-enter:hover > span { color:var(--life-black); background:var(--life-cream); transform:scale(1.06); }
+.my-life-enter strong,.my-life-enter small { display:block; }
+.my-life-enter strong { font-size:9px; text-transform:uppercase; letter-spacing:.16em; }
+.my-life-enter small { margin-top:4px; color:#a5aaa0; font-size:8px; }
+.my-life-scroll { position:absolute; right:42px; bottom:38px; font-size:8px; text-transform:uppercase; letter-spacing:.18em; }
+.my-life-scroll span { margin-left:12px; color:var(--life-yellow); }
+.my-life-story { min-height:135vh; position:relative; overflow:hidden; padding:13vw 7vw 11vw; color:var(--life-black); background:var(--life-cream); display:grid; grid-template-columns:.82fr 1.18fr; gap:9vw; }
+.my-life-story:before { content:"MY LIFE · MY LIFE · MY LIFE"; position:absolute; left:-2vw; bottom:1vw; color:rgba(190,77,46,.075); font-family:var(--font-display),serif; font-size:10vw; white-space:nowrap; letter-spacing:-.07em; }
+.my-life-story:after { content:""; position:absolute; top:0; right:5vw; width:27vw; height:100%; opacity:.16; background:repeating-linear-gradient(90deg,var(--life-black) 0 1px,transparent 1px 3.2vw); }
+.my-life-story-heading,.my-life-story-body { position:relative; z-index:1; }
+.my-life-story h2 { margin:28px 0 0; font-family:var(--font-display),serif; font-size:clamp(78px,8.8vw,140px); font-weight:500; line-height:.72; letter-spacing:-.075em; }
+.my-life-story h2 em { color:var(--life-rust); font-style:normal; }
+.my-life-punch { width:190px; aspect-ratio:1; margin-top:70px; border:2px solid var(--life-black); border-radius:50%; display:flex; align-items:center; justify-content:center; gap:8px; transform:rotate(-9deg); }
+.my-life-punch > span { font-family:var(--font-display),serif; font-size:73px; line-height:.8; }
+.my-life-punch small { font-size:7px; line-height:1.5; letter-spacing:.12em; }
+.my-life-story-body { padding-top:13vw; }
+.my-life-lede { max-width:760px; margin:0 0 64px; color:var(--life-rust); font-family:var(--font-display),serif; font-size:clamp(35px,3.8vw,58px); line-height:1.04; }
+.my-life-copy { display:grid; grid-template-columns:1fr 1fr; gap:46px; color:#4b4b44; font-size:14px; line-height:1.9; }
+.my-life-copy p { margin:0; }
+.my-life-pullquote { margin:68px 0 10px; padding:28px 32px; color:var(--life-cream); background:var(--life-black); border-left:12px solid var(--life-yellow); }
+.my-life-pullquote span { color:var(--life-blue); font-size:7px; font-weight:700; letter-spacing:.18em; }
+.my-life-pullquote p { margin:16px 0 0; font-family:var(--font-display),serif; font-size:clamp(28px,3vw,45px); line-height:1.06; }
+.my-life-player { border-color:var(--life-black); }
+.my-life-sources { color:#73746c; }
+.my-life-schedule { color:var(--life-black); background:var(--life-yellow); }
+.my-life-about .about-invite > p { color:var(--life-blue); }
+.my-life-about .about-cta { color:var(--life-black); background:var(--life-yellow); }
+.my-life-about .about-cta:hover { background:var(--life-blue); }
+.my-life-card { color:var(--life-cream); background:var(--life-black); }
+.my-life-card-art { flex:1; margin:16px 0; background:url('/billy-joel-52nd-street-cover.jpg') center/cover no-repeat; border-bottom:9px solid var(--life-rust); }
+@keyframes life-drift { from { transform:scale(1.01); } to { transform:scale(1.05) translateX(-.6%); } }
+@media (max-width:850px) {
+  .my-life-title-block { width:64vw; }
+  .my-life-note { width:41vw; }
+  .my-life-story { grid-template-columns:1fr; gap:4vw; }
+  .my-life-story-body { padding-top:1vw; }
+}
+@media (max-width:560px) {
+  .my-life-cover { min-height:850px; }
+  .my-life-art { inset:43% 0 0; width:100%; height:57%; object-position:center; }
+  .my-life-shade { background:linear-gradient(0deg,rgba(17,18,16,.08) 29%,rgba(17,18,16,.9) 70%,var(--life-black) 100%); }
+  .my-life-frame { inset:15px; }
+  .my-life-brand { left:22px; top:24px; }
+  .my-life-how { left:145px; top:36px; font-size:7px; }
+  .my-life-archive-link { right:22px; top:29px; }
+  .my-life-date { left:22px; top:86px; }
+  .my-life-title-block { left:22px; right:22px; top:33%; width:auto; }
+  .my-life-title-block h1 { font-size:108px; line-height:.57; }
+  .my-life-meta { width:100%; margin-top:27px; gap:16px; }
+  .my-life-meta p { max-width:49%; }
+  .my-life-note { left:22px; right:auto; bottom:14%; width:83%; padding:18px; box-shadow:8px 8px 0 var(--life-yellow); }
+  .my-life-note p { font-size:20px; }
+  .my-life-enter { left:22px; bottom:24px; }
+  .my-life-scroll,.my-life-keys { display:none; }
+  .my-life-story { min-height:0; padding:24vw 22px 22vw; }
+  .my-life-story h2 { font-size:72px; }
+  .my-life-story-body { margin-top:12vw; }
+  .my-life-lede { font-size:34px; }
+  .my-life-copy { grid-template-columns:1fr; gap:24px; }
+  .my-life-punch { width:150px; margin-top:48px; }
+  .my-life-punch > span { font-size:58px; }
+  .my-life-pullquote { margin-top:50px; padding:24px; }
+  .my-life-pullquote p { font-size:31px; }
+}

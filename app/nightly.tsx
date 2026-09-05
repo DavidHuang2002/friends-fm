@@ -127,7 +127,33 @@ export function DijonHome({ archived = false }: { archived?: boolean }) {
         <div className="dijon-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="dijon-story-title">A memory<br />with the<br /><em>engine on.</em></h2><div className="dijon-stamp"><span>09 · 20 · 18</span><span>DARK GREEN</span></div></div>
         <div className="dijon-story-body"><p className="dijon-lede">有些歌像旧照片：颜色已经褪了，手一摸，还是会有一点温度。</p><div className="dijon-copy"><p>《Nico’s Red Truck》是 Dijon 在 2018 年发布的单曲，词、曲与制作都由他完成。歌一开始就把人放进一场移动的回忆：雨、道路、朋友、照片，还有那些当时普通得不值得记录的细节。</p><p>它的声音也保留着这种“不太整理过”的质感——像从车里望出去的画面，边缘有一点晃，远处却很亮。Lucy 说，某天走在巴黎街头听到它，突然觉得很有感觉；这正是它迷人的地方：它记住的不是宏大的过去，而是一个人边走边被某个瞬间击中的时候。</p></div><div className="dijon-pullquote"><span>ONE FRAME</span><p>Keep the picture moving.<br />Let the feeling catch up.</p></div><div className="embedded-player dijon-player"><div className="player-label"><span>Listen here · No login</span><span>Dijon · Nico’s Red Truck · 4:08</span></div><div className="video-frame"><iframe title="YouTube player for Nico's Red Truck by Dijon" src="https://www.youtube.com/embed/fA5QVGlTHa0?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources dijon-sources"><span>Listening notes assembled from</span><a href="https://dijondijon.bandcamp.com/track/nicos-red-truck" target="_blank" rel="noreferrer">Dijon · Bandcamp</a><a href="https://www.youtube.com/watch?v=fA5QVGlTHa0" target="_blank" rel="noreferrer">Dijon · YouTube</a><a href="https://music.apple.com/us/song/1869353873" target="_blank" rel="noreferrer">Apple Music</a><a href="https://open.spotify.com/track/4zHC1zzSAV2xR7OlUqo2Oz" target="_blank" rel="noreferrer">Spotify</a></div></div>
       </section>
-      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 008 · Sep 5, 2026</p><a href={archived ? "/" : "#tonight"}>Go to tonight →</a></footer> : <><Schedule entries={[]} theme="dijon-schedule" /><ArchivePreview current="dijon" /><About theme="dijon-about" /><Footer /></>}
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 008 · Sep 5, 2026</p><a href={archived ? "/" : "#tonight"}>Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Tomorrow", sender: "YSY", date: "Sep 06" }]} theme="dijon-schedule" /><ArchivePreview current="dijon" /><About theme="dijon-about" /><Footer /></>}
+    </main>
+  );
+}
+
+export function MyLifeHome({ archived = false }: { archived?: boolean }) {
+  return (
+    <main className="my-life-page">
+      <section className="my-life-cover" id="tonight" aria-labelledby="song-title">
+        <div className="my-life-keys" aria-hidden="true">{Array.from({ length: 11 }).map((_, index) => <i key={index} />)}</div>
+        <img className="my-life-art" src="/billy-joel-52nd-street-cover.jpg" alt="Official 52nd Street album artwork featuring Billy Joel on a New York street" />
+        <div className="my-life-shade" aria-hidden="true" />
+        <div className="my-life-frame" aria-hidden="true"><span>SHIFT 09 · 06</span><span>PLAY IT BACK</span></div>
+        <a className="brand my-life-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
+        {!archived && <a className="how-link my-life-how" href="#about">How it works <span>↓</span></a>}
+        <a className="archive-link my-life-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
+        <div className="my-life-date"><span>Sep 6, 2026</span><span>Postcard No. 009</span><span>Sent by YSY</span></div>
+        <div className="my-life-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 009</p><h1 id="song-title">My<br /><em>Life</em></h1><div className="my-life-meta"><p>Billy Joel<br /><span>Written · performed by Billy Joel</span></p><p>52nd Street<br /><span>Columbia · 1978</span></p></div></div>
+        <div className="my-life-note"><span>CAUGHT ON SHIFT</span><p>“在 AutoZone 店里培训时，一下被钢琴的节奏抓住。”</p><small>— YSY, {archived ? "that night" : "tonight"}</small></div>
+        <a className="my-life-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>4 min 45 sec · official audio</small></div></a>
+        <div className="my-life-scroll">Clock out, turn it up <span>↓</span></div>
+      </section>
+      <section className="my-life-story" id="story" aria-labelledby="my-life-story-title">
+        <div className="my-life-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="my-life-story-title">The keys<br />cut<br /><em>through.</em></h2><div className="my-life-punch"><span>52</span><small>ND STREET<br />NEW YORK · 1978</small></div></div>
+        <div className="my-life-story-body"><p className="my-life-lede">有时候一首歌不是被找来的。它只是在最不浪漫的地方，忽然把你拦住。</p><div className="my-life-copy"><p>《My Life》收在 Billy Joel 1978 年的专辑《52nd Street》，排在第三首。专辑由 Phil Ramone 制作，也让 Billy Joel 第一次拿到格莱美年度专辑奖；这首歌随后成为一支 Top 5 单曲。</p><p>近五十年以后，它却不是在唱片店或深夜酒吧里重新出现，而是在一次 AutoZone 店内培训中，被钢琴节奏硬生生从背景里拉到眼前。环境越普通，那一下越准确：你还在上班，歌已经替你把门推开了。</p></div><div className="my-life-pullquote"><span>TRAINING NOTE · 05:22 PM</span><p>Some songs wait for the right room.<br />This one made its own.</p></div><div className="embedded-player my-life-player"><div className="player-label"><span>Listen here · No login</span><span>Billy Joel · My Life · 4:45</span></div><div className="video-frame"><iframe title="YouTube player for My Life by Billy Joel" src="https://www.youtube.com/embed/HVX80UpMPDI?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources my-life-sources"><span>Listening notes assembled from</span><a href="https://www.billyjoel.com/music/52nd-street/" target="_blank" rel="noreferrer">Billy Joel</a><a href="https://music.apple.com/us/album/52nd-street/259573387" target="_blank" rel="noreferrer">Apple Music</a><a href="https://www.youtube.com/watch?v=HVX80UpMPDI" target="_blank" rel="noreferrer">Official audio</a></div></div>
+      </section>
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 009 · Sep 6, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="my-life-schedule" /><ArchivePreview current="my-life" /><About theme="my-life-about" /><Footer /></>}
     </main>
   );
 }

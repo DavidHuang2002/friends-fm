@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-06",
+  "postcard_number": 9,
+  "slug": "my-life",
+  "title": "My Life",
+  "artist": "Billy Joel",
+  "sender": "YSY",
+  "note": "在 AutoZone 店里培训时，一下被钢琴的节奏抓住。",
+  "input_url": "https://youtu.be/HVX80UpMPDI",
+  "player_url": "https://www.youtube.com/embed/HVX80UpMPDI?playsinline=1&rel=0",
+  "route": "/postcards/my-life",
+  "status": "queued",
+  "sources": [
+    "https://www.billyjoel.com/music/52nd-street/",
+    "https://music.apple.com/us/album/52nd-street/259573387",
+    "https://www.youtube.com/watch?v=HVX80UpMPDI"
+  ]
+}
