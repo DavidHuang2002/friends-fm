@@ -862,7 +862,7 @@ footer a { text-underline-offset:4px; }
   .archive-invite h2 { font-size:66px; margin-bottom:48px; }
 }
 
-/* Postcard 009 — Billy Joel, My Life */
+/* Postcard 010 — Billy Joel, My Life */
 .my-life-page { --life-black:#111210; --life-cream:#eee9d9; --life-blue:#8fb7be; --life-rust:#be4d2e; --life-yellow:#e4b94d; --moving-mint:var(--life-blue); --moving-pink:var(--life-rust); background:var(--life-black); }
 .my-life-cover { height:100svh; min-height:780px; position:relative; overflow:hidden; isolation:isolate; color:var(--life-cream); background:var(--life-black); }
 .my-life-art { position:absolute; inset:0 0 0 39%; z-index:-5; width:61%; height:100%; object-fit:cover; object-position:44% center; filter:saturate(.82) contrast(1.04); animation:life-drift 22s ease-in-out infinite alternate; }
@@ -956,7 +956,7 @@ footer a { text-underline-offset:4px; }
   .my-life-pullquote p { font-size:31px; }
 }
 
-/* Postcard 010 — 宋冬野, 郭源潮 */
+/* Postcard 011 — 宋冬野, 郭源潮 */
 .guo-page { --guo-black:#070707; --guo-ink:#181816; --guo-paper:#dddcd4; --guo-grey:#8d8d88; --guo-red:#b23b2b; --moving-mint:var(--guo-paper); --moving-pink:var(--guo-red); background:var(--guo-black); }
 .guo-cover { height:100svh; min-height:780px; position:relative; overflow:hidden; isolation:isolate; color:var(--guo-paper); background:var(--guo-black); }
 .guo-art { position:absolute; inset:0 0 0 29%; width:71%; height:100%; object-fit:cover; object-position:center; z-index:-5; filter:contrast(1.08); animation:guo-rise 26s ease-in-out infinite alternate; }
