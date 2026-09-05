@@ -3,7 +3,10 @@
 ## Source of truth
 
 - `app/page.tsx`: Los Angeles date-to-postcard selection.
-- `app/nightly.tsx`: postcard components, queue, archive data, shared sections.
+- `app/nightly.tsx`: postcard components, queue, and shared sections.
+- `app/archive-data.ts`: canonical postcard metadata for the homepage preview and full yearly archive.
+- `app/archive-elements.tsx`: shared archive card and preview components.
+- `app/archive/page.tsx`: date-aware complete yearly archive.
 - `app/globals.css`: shared and nightly visual systems.
 - `app/postcards/<slug>/page.tsx`: stable archive routes.
 - `public/`: artwork and web-served share assets.
@@ -63,6 +66,7 @@ Omit the quote block when no note was supplied. Native punctuation can follow th
 - Interpret dates in `America/Los_Angeles`.
 - Keep postcard numbers chronological, consecutive, and unique.
 - Keep the current page, queue, archive, routes, packets, and public date selector synchronized.
+- Register every completed postcard once in `app/archive-data.ts`; do not rebuild archive lists inside individual nightly pages.
 - Reordering a date requires updating all affected postcards, not only `app/page.tsx`.
 - Preserve complete historical pages; never replace an archive route with a thumbnail-only mockup.
 

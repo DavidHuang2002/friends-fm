@@ -26,7 +26,7 @@ For a Google Sheet row, read the exact song/link, sender, and note cells. Sheet 
 
 ## 2. Inspect and schedule
 
-Read `app/page.tsx`, `app/nightly.tsx`, `app/globals.css`, `app/postcards/`, `.openai/hosting.json`, and the latest `content/postcards/` packets.
+Read `app/page.tsx`, `app/nightly.tsx`, `app/archive-data.ts`, `app/globals.css`, `app/postcards/`, `.openai/hosting.json`, and the latest `content/postcards/` packets.
 
 Use `America/Los_Angeles` for the nightly date. Assign consecutive, unique postcard numbers. Update all affected dates and numbers when recommendations are reordered.
 
@@ -35,7 +35,7 @@ Keep these views consistent:
 1. date selection in `app/page.tsx`;
 2. current page date, number, and sender;
 3. `Waiting to send` entries in chronological order;
-4. archive cards and routes;
+4. the canonical record in `app/archive-data.ts` and its stable route;
 5. stored release packets.
 
 Never add fake queue names. If a future postcard is scheduled but not fully designed, make that explicit in the packet and finish it before its date; do not let the date selector point to an unrelated page.
