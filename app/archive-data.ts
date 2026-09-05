@@ -30,7 +30,7 @@ export const postcards: PostcardRecord[] = [
   { key: "lonely", href: "/postcards/still-lonely", dateKey: "2026-09-01", date: "SEP 01", month: "September", sender: "TT", title: "還是會寂寞", artist: "陳綺貞", card: "lonely-card", art: "lonely-card-art", number: "004" },
   { key: "dear", href: "/postcards/dear", dateKey: "2026-08-31", date: "AUG 31", month: "August", sender: "TT", title: "親愛的", artist: "張懸", card: "dear-card", art: "dear-card-art", number: "003" },
   { key: "moving", href: "/postcards/moving", dateKey: "2026-08-30", date: "AUG 30", month: "August", sender: "DAVID", title: "搬家", artist: "張震岳", card: "moving-card", art: "moving-card-art", number: "002" },
-  { key: "peace", href: "/postcards/peace-piece", dateKey: "2026-08-29", date: "AUG 29", month: "August", sender: "DAVID", title: "Peace Piece", artist: "Bill Evans", card: "archive-blue", art: "card-art", number: "001" },
+  { key: "peace", href: "/postcards/peace-piece", dateKey: "2026-08-29", date: "AUG 29", month: "August", sender: "DAVID", title: "Peace Piece", artist: "Bill Evans", card: "peace-card", art: "peace-card-art", number: "001" },
 ];
 
 export function postcardByKey(key: ArchiveKey) {
