@@ -195,7 +195,7 @@ export function BozHome({ archived = false }: { archived?: boolean }) {
         <a className="archive-link boz-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
         <div className="boz-date"><span>Sep 6, 2026</span><span>Postcard No. 009</span><span>Sent by Joey</span></div>
         <div className="boz-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 009</p><h1 id="song-title">Still<br /><em>Falling</em><br />For You</h1><div className="boz-meta"><p>Boz Scaggs<br /><span>Written by B. Scaggs</span></p><p>Down Two Then Left<br /><span>Columbia · 1977</span></p></div></div>
-        <div className="boz-note"><span>COOL SIDE / WARM HEART</span><p>A song for the part of the night that still has somewhere to go.</p><small>— Joey, {archived ? "that night" : "tonight"}</small></div>
+        <div className="boz-note"><span>FRIENDSFM LISTENING NOTE</span><p>A song for the part of the night that still has somewhere to go.</p><small>— FriendsFM editorial · Song sent by Joey</small></div>
         <a className="boz-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>3 min 53 sec · official audio</small></div></a>
         <div className="boz-scroll">Walk past the ice <span>↓</span></div>
       </section>
