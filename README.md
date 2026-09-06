@@ -15,6 +15,13 @@ the [live site](https://friendsfm.davidhuang1203.chatgpt.site/).
 4. The homepage chooses the correct postcard for the current date in
    `America/Los_Angeles`.
 5. Past postcards remain available in the yearly archive.
+
+### Player behavior
+
+Every postcard follows the same listening convention: its cover entry link points to
+`#story`, and the story contains one YouTube embed. The shared playback controller
+uses YouTube's IFrame Player API to start that embed when the entry link is clicked.
+Do not add `autoplay=1` to postcard embeds or duplicate player scripts in new routes.
 6. A square sharing image and ready-to-send message are stored with the release.
 
 ## FriendsFM Song Publisher skill
