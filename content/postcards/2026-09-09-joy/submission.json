@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-09",
+  "postcard_number": 12,
+  "slug": "joy",
+  "title": "Joy.",
+  "artist": "RAYE, Amma & Absolutely",
+  "sender": "TT",
+  "note": "I may cry through the night but my joy comes in the morning~~",
+  "input_url": "https://www.youtube.com/watch?v=taHYtEGxLnw&list=RDtaHYtEGxLnw&start_radio=1",
+  "player_url": "https://www.youtube.com/embed/taHYtEGxLnw?playsinline=1&rel=0",
+  "route": "/postcards/joy",
+  "status": "designed",
+  "sources": [
+    "https://music.apple.com/us/album/this-music-may-contain-hope/1871085677",
+    "https://www.youtube.com/watch?v=taHYtEGxLnw",
+    "https://open.spotify.com/track/5CKbUv7zkOdf8X2602qgei"
+  ]
+}
