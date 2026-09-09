@@ -1,4 +1,5 @@
 export type ArchiveKey =
+  | "meet-me-in-amsterdam"
   | "joy"
   | "guo-yuan-chao"
   | "my-life"
@@ -27,6 +28,7 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "meet-me-in-amsterdam", href: "/postcards/meet-me-in-amsterdam", dateKey: "2026-09-10", date: "SEP 10", month: "September", sender: "DAVID", title: "Meet Me in Amsterdam", artist: "RINI", card: "amsterdam-card", art: "amsterdam-card-art", number: "013" },
   { key: "joy", href: "/postcards/joy", dateKey: "2026-09-09", date: "SEP 09", month: "September", sender: "TT", title: "Joy.", artist: "RAYE, Amma & Absolutely", card: "joy-card", art: "joy-card-art", number: "012" },
   { key: "guo-yuan-chao", href: "/postcards/guo-yuan-chao", dateKey: "2026-09-08", date: "SEP 08", month: "September", sender: "DAVID", title: "郭源潮", artist: "宋冬野", card: "guo-card", art: "guo-card-art", number: "011" },
   { key: "my-life", href: "/postcards/my-life", dateKey: "2026-09-07", date: "SEP 07", month: "September", sender: "YSY", title: "My Life", artist: "Billy Joel", card: "my-life-card", art: "my-life-card-art", number: "010" },
