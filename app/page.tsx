@@ -1,4 +1,4 @@
-import { BlowersDaughterHome, BozHome, DearHome, DijonHome, GingerHome, GuoYuanChaoHome, JoyHome, LiangboHome, MovingHome, MyLifeHome, SchumannHome, StillLonelyHome } from "./nightly";
+import { AmsterdamHome, BlowersDaughterHome, BozHome, DearHome, DijonHome, GingerHome, GuoYuanChaoHome, JoyHome, LiangboHome, MovingHome, MyLifeHome, SchumannHome, StillLonelyHome } from "./nightly";
 
 export const dynamic = "force-dynamic";
 
@@ -27,5 +27,6 @@ export default function Home() {
   if (date === "2026-09-08") return <GuoYuanChaoHome />;
   if (date === "2026-09-09") return <JoyHome />;
   if (date === "2026-09-10") return <BlowersDaughterHome />;
-  return <BlowersDaughterHome />;
+  if (date === "2026-09-11") return <AmsterdamHome />;
+  return <AmsterdamHome />;
 }
