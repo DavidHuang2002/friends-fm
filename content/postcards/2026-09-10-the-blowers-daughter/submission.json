@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-10",
+  "postcard_number": 13,
+  "slug": "the-blowers-daughter",
+  "title": "The Blower's Daughter",
+  "artist": "Damien Rice",
+  "sender": "David",
+  "note": "It's the most heart-wrenchingly beautiful song I have heard in a while.",
+  "input_url": "https://www.youtube.com/watch?v=5YXVMCHG-Nk",
+  "player_url": "https://www.youtube.com/embed/5YXVMCHG-Nk?playsinline=1&rel=0",
+  "route": "/postcards/the-blowers-daughter",
+  "status": "designed",
+  "sources": [
+    "https://www.youtube.com/watch?v=5YXVMCHG-Nk",
+    "https://www.youtube.com/watch?v=DpNa6b61daw",
+    "https://music.apple.com/us/album/o/2249511",
+    "https://open.spotify.com/track/4B2lJinAkeNLSJjcq3dg8Q"
+  ]
+}

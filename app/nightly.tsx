@@ -235,26 +235,26 @@ export function JoyHome({ archived = false }: { archived?: boolean }) {
   );
 }
 
-export function AmsterdamHome({ archived = false }: { archived?: boolean }) {
+export function BlowersDaughterHome({ archived = false }: { archived?: boolean }) {
   return (
-    <main className="amsterdam-page">
-      <section className="amsterdam-cover" id="tonight" aria-labelledby="song-title">
-        <img className="amsterdam-art" src="/rini-meet-me-in-amsterdam-share.png" alt="AI-generated night view of an Amsterdam canal, bridge, and bicycle reflected in amber light" />
-        <div className="amsterdam-shade" aria-hidden="true" /><div className="amsterdam-ripple" aria-hidden="true"><i /><i /><i /></div>
-        <a className="brand amsterdam-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
-        {!archived && <a className="how-link amsterdam-how" href="#about">How it works <span>↓</span></a>}
-        <a className="archive-link amsterdam-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
-        <div className="amsterdam-date"><span>Sep 10, 2026</span><span>Postcard No. 013</span><span>Sent by David</span></div>
-        <div className="amsterdam-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 013</p><h1 id="song-title">Meet Me<br /><em>in Amsterdam</em></h1><div className="amsterdam-meta"><p>RINI<br /><span>Written & produced by RINI</span></p><p>After the Sun · Track 01<br /><span>RINI · 2018</span></p></div></div>
-        <div className="amsterdam-note"><span>FRIENDSFM LISTENING NOTE</span><p>Meet me where the city light reaches the water.</p><small>— FriendsFM editorial · Song sent by David</small></div>
-        <a className="amsterdam-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>5 min 01 sec · official video</small></div></a>
-        <div className="amsterdam-scroll">Cross the bridge <span>↓</span></div>
+    <main className="blower-page">
+      <section className="blower-cover" id="tonight" aria-labelledby="song-title">
+        <img className="blower-art" src="/damien-rice-the-blowers-daughter-share.png" alt="AI-generated charcoal drawing of two people separated by torn paper and a broken red thread" />
+        <div className="blower-shade" aria-hidden="true" /><div className="blower-thread" aria-hidden="true" />
+        <a className="brand blower-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
+        {!archived && <a className="how-link blower-how" href="#about">How it works <span>↓</span></a>}
+        <a className="archive-link blower-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
+        <div className="blower-date"><span>Sep 10, 2026</span><span>Postcard No. 013</span><span>Sent by David</span></div>
+        <div className="blower-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 013</p><h1 id="song-title">The Blower’s<br /><em>Daughter</em></h1><div className="blower-meta"><p>Damien Rice<br /><span>with Lisa Hannigan</span></p><p>O · Track 03<br /><span>DRM / 14th Floor · 2002</span></p></div></div>
+        <div className="blower-note"><span>FROM DAVID</span><p>“It&apos;s the most heart-wrenchingly beautiful song I have heard in a while.”</p><small>— David, {archived ? "that night" : "tonight"}</small></div>
+        <a className="blower-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>4 min 46 sec · official video</small></div></a>
+        <div className="blower-scroll">Follow the thread <span>↓</span></div>
       </section>
-      <section className="amsterdam-story" id="story" aria-labelledby="amsterdam-story-title">
-        <div className="amsterdam-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="amsterdam-story-title">A place<br />to arrive<br /><em>together.</em></h2><div className="amsterdam-index"><span>01</span><span>AFTER THE SUN</span><span>5:01</span></div></div>
-        <div className="amsterdam-story-body"><p className="amsterdam-lede">有些约定不需要地址。只要一座城、一盏灯，和一句“来见我”。</p><div className="amsterdam-copy"><p>《Meet Me in Amsterdam》是 RINI 2018 年 EP《After the Sun》的开场曲，也是五首歌里最长的一首。RINI 自己写词、制作，并和 Aldwin Cajili 一起完成混音与母带；吉他、贝斯、鼓和键盘把五分钟铺成一段缓慢靠近的路。</p><p>歌名像目的地，真正让人停下来的却不是城市风景，而是“抵达”这件事。旋律一直保持克制，像夜里的运河反光：距离还在，但每一道光都指向同一个地方。David 今晚寄来的，是一张没有写返程时间的约会卡。</p></div><div className="amsterdam-pullquote"><span>AFTER THE SUN</span><p>Across the water.<br />Toward the same light.</p></div><div className="embedded-player amsterdam-player"><div className="player-label"><span>Listen here · No login</span><span>RINI · Meet Me in Amsterdam · 5:01</span></div><div className="video-frame"><iframe title="YouTube player for Meet Me in Amsterdam by RINI" src="https://www.youtube.com/embed/FhCuoJuHwQA?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources amsterdam-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=y2hlRe6IcVY" target="_blank" rel="noreferrer">RINI · Official audio</a><a href="https://music.apple.com/us/song/1440301326" target="_blank" rel="noreferrer">Apple Music</a><a href="https://open.spotify.com/track/3LRbalLzZcuvSR6jVnqclh" target="_blank" rel="noreferrer">Spotify</a></div></div>
+      <section className="blower-story" id="story" aria-labelledby="blower-story-title">
+        <div className="blower-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="blower-story-title">Beautiful<br />because it<br /><em>hurts.</em></h2><div className="blower-index"><span>03</span><span>O</span><span>4:46</span></div></div>
+        <div className="blower-story-body"><p className="blower-lede">有些歌不是把心碎唱出来，而是让它在一句话之间，慢慢变得无法躲开。</p><div className="blower-copy"><p>《The Blower’s Daughter》收在 Damien Rice 2002 年的首张专辑《O》，排在第三首。录音的骨架很少：Rice 的木吉他和低声演唱，Lisa Hannigan 的人声，再加上 Vyvienne Long 的大提琴。留白没有让它变轻，反而让每一次呼吸都更近。</p><p>它最难受的地方，是情绪从来没有真正爆开。吉他保持同样的距离，人声却一点点失去防线；等弦乐进入，歌已经从私语变成无法收回的凝视。David 说这是最近听过最令人心碎地美的一首歌——今晚不需要替这种感觉补充解释。</p></div><div className="blower-pullquote"><span>THE DISTANCE BETWEEN</span><p>Almost touching.<br />Still apart.</p></div><div className="embedded-player blower-player"><div className="player-label"><span>Listen here · No login</span><span>Damien Rice · The Blower’s Daughter · 4:46</span></div><div className="video-frame"><iframe title="YouTube player for The Blower's Daughter by Damien Rice" src="https://www.youtube.com/embed/5YXVMCHG-Nk?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources blower-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=DpNa6b61daw" target="_blank" rel="noreferrer">14th Floor Records · Official audio</a><a href="https://music.apple.com/us/album/o/2249511" target="_blank" rel="noreferrer">Apple Music</a><a href="https://open.spotify.com/track/4B2lJinAkeNLSJjcq3dg8Q" target="_blank" rel="noreferrer">Spotify</a></div></div>
       </section>
-      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 013 · Sep 10, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="amsterdam-schedule" /><ArchivePreview current="meet-me-in-amsterdam" /><About theme="amsterdam-about" /><Footer /></>}
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 013 · Sep 10, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="blower-schedule" /><ArchivePreview current="the-blowers-daughter" /><About theme="blower-about" /><Footer /></>}
     </main>
   );
 }
