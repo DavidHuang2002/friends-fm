@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-12",
+  "postcard_number": 15,
+  "slug": "le-temps-des-cathedrales",
+  "title": "Le temps des cathédrales",
+  "artist": "Bruno Pelletier",
+  "sender": "TT",
+  "note": "11年前在无锡看了巴黎圣母院音乐剧现场被狠狠震撼。手动@这几天还能路过notre dame的胡女士",
+  "input_url": "https://www.youtube.com/watch?v=EBGZQui6jZ4&list=RDEBGZQui6jZ4&start_radio=1",
+  "player_url": "https://www.youtube.com/embed/EBGZQui6jZ4?playsinline=1&rel=0",
+  "route": "/postcards/le-temps-des-cathedrales",
+  "status": "designed",
+  "sources": [
+    "https://music.apple.com/us/song/205580615",
+    "https://classical.music.apple.com/ca/album/79745251",
+    "https://www.youtube.com/watch?v=EBGZQui6jZ4"
+  ]
+}

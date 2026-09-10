@@ -254,7 +254,47 @@ export function BlowersDaughterHome({ archived = false }: { archived?: boolean }
         <div className="blower-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="blower-story-title">Beautiful<br />because it<br /><em>hurts.</em></h2><div className="blower-index"><span>03</span><span>O</span><span>4:46</span></div></div>
         <div className="blower-story-body"><p className="blower-lede">有些歌不是把心碎唱出来，而是让它在一句话之间，慢慢变得无法躲开。</p><div className="blower-copy"><p>《The Blower’s Daughter》收在 Damien Rice 2002 年的首张专辑《O》，排在第三首。录音的骨架很少：Rice 的木吉他和低声演唱，Lisa Hannigan 的人声，再加上 Vyvienne Long 的大提琴。留白没有让它变轻，反而让每一次呼吸都更近。</p><p>它最难受的地方，是情绪从来没有真正爆开。吉他保持同样的距离，人声却一点点失去防线；等弦乐进入，歌已经从私语变成无法收回的凝视。David 说这是最近听过最令人心碎地美的一首歌——今晚不需要替这种感觉补充解释。</p></div><div className="blower-pullquote"><span>THE DISTANCE BETWEEN</span><p>Almost touching.<br />Still apart.</p></div><div className="embedded-player blower-player"><div className="player-label"><span>Listen here · No login</span><span>Damien Rice · The Blower’s Daughter · 4:46</span></div><div className="video-frame"><iframe title="YouTube player for The Blower's Daughter by Damien Rice" src="https://www.youtube.com/embed/5YXVMCHG-Nk?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources blower-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=DpNa6b61daw" target="_blank" rel="noreferrer">14th Floor Records · Official audio</a><a href="https://music.apple.com/us/album/o/2249511" target="_blank" rel="noreferrer">Apple Music</a><a href="https://open.spotify.com/track/4B2lJinAkeNLSJjcq3dg8Q" target="_blank" rel="noreferrer">Spotify</a></div></div>
       </section>
-      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 013 · Sep 10, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Tomorrow", sender: "David", date: "Sep 11" }]} theme="blower-schedule" /><ArchivePreview current="the-blowers-daughter" /><About theme="blower-about" /><Footer /></>}
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 013 · Sep 10, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Tomorrow", sender: "Lucy", date: "Sep 11" }, { day: "After", sender: "TT", date: "Sep 12" }, { day: "Then", sender: "David", date: "Sep 13" }]} theme="blower-schedule" /><ArchivePreview current="the-blowers-daughter" /><About theme="blower-about" /><Footer /></>}
+    </main>
+  );
+}
+
+export function JiufenCafeHome({ archived = false }: { archived?: boolean }) {
+  return (
+    <main className="jiufen-page">
+      <section className="postcard-cover jiufen-cover" id="tonight" aria-labelledby="song-title">
+        <img className="postcard-art" src="/cheer-chen-jiufen-cafe-share.png" alt="AI-generated rainy hillside cafe in Jiufen at blue hour" />
+        <div className="postcard-shade" aria-hidden="true" />
+        <a className="brand postcard-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
+        {!archived && <a className="how-link postcard-how" href="#about">How it works <span>↓</span></a>}
+        <a className="archive-link postcard-archive" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
+        <div className="postcard-date"><span>Sep 11, 2026</span><span>Postcard No. 014</span><span>Sent by Lucy</span></div>
+        <div className="postcard-title"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 014</p><h1 id="song-title">九份的<br />咖啡店</h1><p>陈绮贞 · Demo 3</p></div>
+        <div className="postcard-note"><span>FROM LUCY</span><p>又是一首在巴黎街头会常听的歌，陈绮贞的歌真的giving欧洲vibe</p></div>
+        <a className="postcard-enter" href="#story">▶ <strong>Enter {archived ? "this" : "tonight’s"} song</strong></a>
+      </section>
+      <section className="postcard-story jiufen-story" id="story"><div><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2>Rain on<br />two streets.</h2></div><div className="postcard-copy"><p className="postcard-lede">九份的山路和巴黎的街角，被同一阵潮湿、轻轻的吉他声连在一起。</p><p>《九份的咖啡店》先出现在陈绮贞 2002 年的《Demo 3》。它像旅行途中没有寄出的明信片：咖啡店、陌生城市和一点还没散去的想念，都被唱得很近。</p><p>Lucy 说这首歌在巴黎街头很常听见。也许所谓“欧洲 vibe”不是某个地名，而是她的声音让任何一条雨后的路，都像可以慢下来坐一会儿。</p><div className="embedded-player postcard-player"><div className="player-label"><span>Listen here · No login</span><span>陈绮贞 · 九份的咖啡店</span></div><div className="video-frame"><iframe title="YouTube player for 九份的咖啡店 by 陈绮贞" src="https://www.youtube.com/embed/nDi82SWcIeM?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen loading="lazy" /></div></div><div className="sources"><span>Listening notes assembled from</span><a href="https://www.yesasia.com/global/demo-3-%E9%99%90%E9%87%8F%E7%89%88/1002443646-0-0-0-zh_CN/info.html" target="_blank" rel="noreferrer">Demo 3</a><a href="https://open.spotify.com/intl-it/album/7KImFSQ8P2Xy2AqqKQLkWl" target="_blank" rel="noreferrer">Spotify</a><a href="https://www.youtube.com/watch?v=nDi82SWcIeM" target="_blank" rel="noreferrer">YouTube</a></div></div></section>
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 014 · Sep 11, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Tomorrow", sender: "TT", date: "Sep 12" }, { day: "After", sender: "David", date: "Sep 13" }]} theme="jiufen-schedule" /><ArchivePreview current="jiufen-cafe" /><About theme="jiufen-about" /><Footer /></>}
+    </main>
+  );
+}
+
+export function CathedralesHome({ archived = false }: { archived?: boolean }) {
+  return (
+    <main className="cathedral-page">
+      <section className="postcard-cover cathedral-cover" id="tonight" aria-labelledby="song-title">
+        <img className="postcard-art" src="/bruno-pelletier-le-temps-des-cathedrales-share.png" alt="AI-generated Gothic cathedral stage in ultramarine and gold" />
+        <div className="postcard-shade" aria-hidden="true" />
+        <a className="brand postcard-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
+        {!archived && <a className="how-link postcard-how" href="#about">How it works <span>↓</span></a>}
+        <a className="archive-link postcard-archive" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
+        <div className="postcard-date"><span>Sep 12, 2026</span><span>Postcard No. 015</span><span>Sent by TT</span></div>
+        <div className="postcard-title"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 015</p><h1 id="song-title">Le temps des<br />cathédrales</h1><p>Bruno Pelletier · Notre-Dame de Paris</p></div>
+        <div className="postcard-note"><span>FROM TT</span><p>11年前在无锡看了巴黎圣母院音乐剧现场被狠狠震撼。手动@这几天还能路过notre dame的胡女士</p></div>
+        <a className="postcard-enter" href="#story">▶ <strong>Enter {archived ? "this" : "tonight’s"} song</strong></a>
+      </section>
+      <section className="postcard-story cathedral-story" id="story"><div><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2>When stone<br />learns to sing.</h2></div><div className="postcard-copy"><p className="postcard-lede">一座教堂可以站几百年，一次现场也可以在十一年后，仍然发出回声。</p><p>《Le temps des cathédrales》是法语音乐剧《Notre-Dame de Paris》的开场曲。Bruno Pelletier 饰演诗人格兰古瓦，用这首歌把舞台带回大教堂兴起的时代。</p><p>Luc Plamondon 作词、Riccardo Cocciante 作曲；宏大的旋律并不是背景，而是整部戏的第一道拱门。TT 记住的是无锡那晚的震撼，也把它送给此刻仍能经过 Notre-Dame 的朋友。</p><div className="embedded-player postcard-player"><div className="player-label"><span>Listen here · No login</span><span>Bruno Pelletier · 3:49</span></div><div className="video-frame"><iframe title="YouTube player for Le temps des cathédrales by Bruno Pelletier" src="https://www.youtube.com/embed/EBGZQui6jZ4?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen loading="lazy" /></div></div><div className="sources"><span>Listening notes assembled from</span><a href="https://music.apple.com/us/song/205580615" target="_blank" rel="noreferrer">Apple Music</a><a href="https://classical.music.apple.com/ca/album/79745251" target="_blank" rel="noreferrer">Original cast</a><a href="https://www.youtube.com/watch?v=EBGZQui6jZ4" target="_blank" rel="noreferrer">Submitted video</a></div></div></section>
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 015 · Sep 12, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Tomorrow", sender: "David", date: "Sep 13" }]} theme="cathedral-schedule" /><ArchivePreview current="le-temps-des-cathedrales" /><About theme="cathedral-about" /><Footer /></>}
     </main>
   );
 }
@@ -268,8 +308,8 @@ export function AmsterdamHome({ archived = false }: { archived?: boolean }) {
         <a className="brand amsterdam-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
         {!archived && <a className="how-link amsterdam-how" href="#about">How it works <span>↓</span></a>}
         <a className="archive-link amsterdam-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
-        <div className="amsterdam-date"><span>Sep 11, 2026</span><span>Postcard No. 014</span><span>Sent by David</span></div>
-        <div className="amsterdam-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 014</p><h1 id="song-title">Meet Me<br /><em>in Amsterdam</em></h1><div className="amsterdam-meta"><p>RINI<br /><span>Written & produced by RINI</span></p><p>After the Sun · Track 01<br /><span>RINI · 2018</span></p></div></div>
+        <div className="amsterdam-date"><span>Sep 13, 2026</span><span>Postcard No. 016</span><span>Sent by David</span></div>
+        <div className="amsterdam-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 016</p><h1 id="song-title">Meet Me<br /><em>in Amsterdam</em></h1><div className="amsterdam-meta"><p>RINI<br /><span>Written & produced by RINI</span></p><p>After the Sun · Track 01<br /><span>RINI · 2018</span></p></div></div>
         <div className="amsterdam-note"><span>FRIENDSFM LISTENING NOTE</span><p>Meet me where the city light reaches the water.</p><small>— FriendsFM editorial · Song sent by David</small></div>
         <a className="amsterdam-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>5 min 01 sec · official video</small></div></a>
         <div className="amsterdam-scroll">Cross the bridge <span>↓</span></div>
@@ -278,7 +318,7 @@ export function AmsterdamHome({ archived = false }: { archived?: boolean }) {
         <div className="amsterdam-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="amsterdam-story-title">A place<br />to arrive<br /><em>together.</em></h2><div className="amsterdam-index"><span>01</span><span>AFTER THE SUN</span><span>5:01</span></div></div>
         <div className="amsterdam-story-body"><p className="amsterdam-lede">有些约定不需要地址。只要一座城、一盏灯，和一句“来见我”。</p><div className="amsterdam-copy"><p>《Meet Me in Amsterdam》是 RINI 2018 年 EP《After the Sun》的开场曲，也是五首歌里最长的一首。RINI 自己写词、制作，并和 Aldwin Cajili 一起完成混音与母带；吉他、贝斯、鼓和键盘把五分钟铺成一段缓慢靠近的路。</p><p>歌名像目的地，真正让人停下来的却不是城市风景，而是“抵达”这件事。旋律一直保持克制，像夜里的运河反光：距离还在，但每一道光都指向同一个地方。David 今晚寄来的，是一张没有写返程时间的约会卡。</p></div><div className="amsterdam-pullquote"><span>AFTER THE SUN</span><p>Across the water.<br />Toward the same light.</p></div><div className="embedded-player amsterdam-player"><div className="player-label"><span>Listen here · No login</span><span>RINI · Meet Me in Amsterdam · 5:01</span></div><div className="video-frame"><iframe title="YouTube player for Meet Me in Amsterdam by RINI" src="https://www.youtube.com/embed/FhCuoJuHwQA?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources amsterdam-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=y2hlRe6IcVY" target="_blank" rel="noreferrer">RINI · Official audio</a><a href="https://music.apple.com/us/song/1440301326" target="_blank" rel="noreferrer">Apple Music</a><a href="https://open.spotify.com/track/3LRbalLzZcuvSR6jVnqclh" target="_blank" rel="noreferrer">Spotify</a></div></div>
       </section>
-      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 014 · Sep 11, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="amsterdam-schedule" /><ArchivePreview current="meet-me-in-amsterdam" /><About theme="amsterdam-about" /><Footer /></>}
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 016 · Sep 13, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="amsterdam-schedule" /><ArchivePreview current="meet-me-in-amsterdam" /><About theme="amsterdam-about" /><Footer /></>}
     </main>
   );
 }

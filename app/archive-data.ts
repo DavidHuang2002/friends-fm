@@ -1,4 +1,6 @@
 export type ArchiveKey =
+  | "jiufen-cafe"
+  | "le-temps-des-cathedrales"
   | "meet-me-in-amsterdam"
   | "the-blowers-daughter"
   | "joy"
@@ -29,7 +31,9 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
-  { key: "meet-me-in-amsterdam", href: "/postcards/meet-me-in-amsterdam", dateKey: "2026-09-11", date: "SEP 11", month: "September", sender: "DAVID", title: "Meet Me in Amsterdam", artist: "RINI", card: "amsterdam-card", art: "amsterdam-card-art", number: "014" },
+  { key: "meet-me-in-amsterdam", href: "/postcards/meet-me-in-amsterdam", dateKey: "2026-09-13", date: "SEP 13", month: "September", sender: "DAVID", title: "Meet Me in Amsterdam", artist: "RINI", card: "amsterdam-card", art: "amsterdam-card-art", number: "016" },
+  { key: "le-temps-des-cathedrales", href: "/postcards/le-temps-des-cathedrales", dateKey: "2026-09-12", date: "SEP 12", month: "September", sender: "TT", title: "Le temps des cathédrales", artist: "Bruno Pelletier", card: "cathedral-card", art: "cathedral-card-art", number: "015" },
+  { key: "jiufen-cafe", href: "/postcards/jiufen-cafe", dateKey: "2026-09-11", date: "SEP 11", month: "September", sender: "LUCY", title: "九份的咖啡店", artist: "陈绮贞", card: "jiufen-card", art: "jiufen-card-art", number: "014" },
   { key: "the-blowers-daughter", href: "/postcards/the-blowers-daughter", dateKey: "2026-09-10", date: "SEP 10", month: "September", sender: "DAVID", title: "The Blower's Daughter", artist: "Damien Rice", card: "blower-card", art: "blower-card-art", number: "013" },
   { key: "joy", href: "/postcards/joy", dateKey: "2026-09-09", date: "SEP 09", month: "September", sender: "TT", title: "Joy.", artist: "RAYE, Amma & Absolutely", card: "joy-card", art: "joy-card-art", number: "012" },
   { key: "guo-yuan-chao", href: "/postcards/guo-yuan-chao", dateKey: "2026-09-08", date: "SEP 08", month: "September", sender: "DAVID", title: "郭源潮", artist: "宋冬野", card: "guo-card", art: "guo-card-art", number: "011" },
