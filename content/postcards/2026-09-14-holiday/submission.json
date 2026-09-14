@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-14",
+  "postcard_number": 17,
+  "slug": "holiday",
+  "title": "Holiday",
+  "artist": "滨田金吾",
+  "sender": "Joey",
+  "note": "",
+  "input_url": "https://www.youtube.com/watch?v=_kJtQl4CjJM",
+  "player_url": "https://www.youtube.com/embed/_kJtQl4CjJM?playsinline=1&rel=0",
+  "route": "/postcards/holiday",
+  "status": "designed",
+  "sources": [
+    "https://www.youtube.com/watch?v=_kJtQl4CjJM",
+    "https://kingohamada.com/discography/discography.html",
+    "https://tower.jp/item/475488/Manhattan-in-the-Rain"
+  ]
+}

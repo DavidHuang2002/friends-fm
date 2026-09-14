@@ -1,4 +1,5 @@
 export type ArchiveKey =
+  | "holiday"
   | "jiufen-cafe"
   | "le-temps-des-cathedrales"
   | "meet-me-in-amsterdam"
@@ -31,6 +32,7 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "holiday", href: "/postcards/holiday", dateKey: "2026-09-14", date: "SEP 14", month: "September", sender: "JOEY", title: "Holiday", artist: "滨田金吾", card: "holiday-card", art: "holiday-card-art", number: "017" },
   { key: "meet-me-in-amsterdam", href: "/postcards/meet-me-in-amsterdam", dateKey: "2026-09-13", date: "SEP 13", month: "September", sender: "DAVID", title: "Meet Me in Amsterdam", artist: "RINI", card: "amsterdam-card", art: "amsterdam-card-art", number: "016" },
   { key: "le-temps-des-cathedrales", href: "/postcards/le-temps-des-cathedrales", dateKey: "2026-09-12", date: "SEP 12", month: "September", sender: "TT", title: "Le temps des cathédrales", artist: "Bruno Pelletier", card: "cathedral-card", art: "cathedral-card-art", number: "015" },
   { key: "jiufen-cafe", href: "/postcards/jiufen-cafe", dateKey: "2026-09-11", date: "SEP 11", month: "September", sender: "LUCY", title: "九份的咖啡店", artist: "陈绮贞", card: "jiufen-card", art: "jiufen-card-art", number: "014" },

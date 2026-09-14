@@ -318,7 +318,31 @@ export function AmsterdamHome({ archived = false }: { archived?: boolean }) {
         <div className="amsterdam-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="amsterdam-story-title">A place<br />to arrive<br /><em>together.</em></h2><div className="amsterdam-index"><span>01</span><span>AFTER THE SUN</span><span>5:01</span></div></div>
         <div className="amsterdam-story-body"><p className="amsterdam-lede">有些约定不需要地址。只要一座城、一盏灯，和一句“来见我”。</p><div className="amsterdam-copy"><p>《Meet Me in Amsterdam》是 RINI 2018 年 EP《After the Sun》的开场曲，也是五首歌里最长的一首。RINI 自己写词、制作，并和 Aldwin Cajili 一起完成混音与母带；吉他、贝斯、鼓和键盘把五分钟铺成一段缓慢靠近的路。</p><p>歌名像目的地，真正让人停下来的却不是城市风景，而是“抵达”这件事。旋律一直保持克制，像夜里的运河反光：距离还在，但每一道光都指向同一个地方。David 今晚寄来的，是一张没有写返程时间的约会卡。</p></div><div className="amsterdam-pullquote"><span>AFTER THE SUN</span><p>Across the water.<br />Toward the same light.</p></div><div className="embedded-player amsterdam-player"><div className="player-label"><span>Listen here · No login</span><span>RINI · Meet Me in Amsterdam · 5:01</span></div><div className="video-frame"><iframe title="YouTube player for Meet Me in Amsterdam by RINI" src="https://www.youtube.com/embed/FhCuoJuHwQA?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources amsterdam-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=y2hlRe6IcVY" target="_blank" rel="noreferrer">RINI · Official audio</a><a href="https://music.apple.com/us/song/1440301326" target="_blank" rel="noreferrer">Apple Music</a><a href="https://open.spotify.com/track/3LRbalLzZcuvSR6jVnqclh" target="_blank" rel="noreferrer">Spotify</a></div></div>
       </section>
-      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 016 · Sep 13, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="amsterdam-schedule" /><ArchivePreview current="meet-me-in-amsterdam" /><About theme="amsterdam-about" /><Footer /></>}
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 016 · Sep 13, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Tomorrow", sender: "Joey", date: "Sep 14" }]} theme="amsterdam-schedule" /><ArchivePreview current="meet-me-in-amsterdam" /><About theme="amsterdam-about" /><Footer /></>}
+    </main>
+  );
+}
+
+export function HolidayHome({ archived = false }: { archived?: boolean }) {
+  return (
+    <main className="holiday-page">
+      <section className="holiday-cover" id="tonight" aria-labelledby="song-title">
+        <img className="holiday-art" src="/kingo-hamada-holiday-share.png" alt="AI-generated 1980s travel poster of a rain-polished Manhattan rooftop terrace" />
+        <div className="holiday-shade" aria-hidden="true" /><div className="holiday-grid" aria-hidden="true" />
+        <a className="brand holiday-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
+        {!archived && <a className="how-link holiday-how" href="#about">How it works <span>↓</span></a>}
+        <a className="archive-link holiday-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
+        <div className="holiday-date"><span>Sep 14, 2026</span><span>Postcard No. 017</span><span>Sent by Joey</span></div>
+        <div className="holiday-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 017</p><h1 id="song-title">Holi<br /><em>day</em></h1><div className="holiday-meta"><p>滨田金吾<br /><span>Kingo Hamada</span></p><p>Manhattan in the Rain · Track 08<br /><span>air RECORDS · 1980</span></p></div></div>
+        <div className="holiday-stamp"><span>FROM JOEY</span><strong>CHECKED IN</strong><small>CITY AFTER RAIN</small></div>
+        <a className="holiday-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>4 min 28 sec · official audio</small></div></a>
+        <div className="holiday-scroll">After the rain <span>↓</span></div>
+      </section>
+      <section className="holiday-story" id="story" aria-labelledby="holiday-story-title">
+        <div className="holiday-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="holiday-story-title">A day off<br />with the city<br /><em>still glowing.</em></h2><div className="holiday-ticket"><span>AIR-8002</span><span>SIDE B · 04</span><span>4:28</span></div></div>
+        <div className="holiday-story-body"><p className="holiday-lede">雨停了，城市没有安静下来。它只是把霓虹留在水面上，给今晚多放一天假。</p><div className="holiday-copy"><p>《Holiday》收在滨田金吾 1980 年的首张个人专辑《Manhattan in the Rain》，位于唱片 B 面第四首。小林和子作词，滨田金吾作曲，并由他与山田秀俊共同编曲。</p><p>这张唱片把日式流行旋律放进当时精致的都市 AOR 声响里。《Holiday》的 4 分 28 秒像一扇刚推开的露台门：节奏仍在走，时间却忽然不必赶路。Joey 送来的正是这种轻松——城市很亮，今晚可以慢一点。</p></div><div className="holiday-pullquote"><span>CHECK-OUT: LATER</span><p>Let the rain finish.<br />Keep the city lights.</p></div><div className="embedded-player holiday-player"><div className="player-label"><span>Listen here · No login</span><span>滨田金吾 · Holiday · 4:28</span></div><div className="video-frame"><iframe title="YouTube player for Holiday by Kingo Hamada" src="https://www.youtube.com/embed/_kJtQl4CjJM?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources holiday-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=_kJtQl4CjJM" target="_blank" rel="noreferrer">Sony Music Direct · Official audio</a><a href="https://kingohamada.com/discography/discography.html" target="_blank" rel="noreferrer">Kingo Hamada</a><a href="https://tower.jp/item/475488/Manhattan-in-the-Rain" target="_blank" rel="noreferrer">Tower Records</a></div></div>
+      </section>
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 017 · Sep 14, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="holiday-schedule" /><ArchivePreview current="holiday" /><About theme="holiday-about" /><Footer /></>}
     </main>
   );
 }
