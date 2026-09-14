@@ -342,7 +342,31 @@ export function HolidayHome({ archived = false }: { archived?: boolean }) {
         <div className="holiday-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="holiday-story-title">A day off<br />with the city<br /><em>still glowing.</em></h2><div className="holiday-ticket"><span>AIR-8002</span><span>SIDE B · 04</span><span>4:28</span></div></div>
         <div className="holiday-story-body"><p className="holiday-lede">雨停了，城市没有安静下来。它只是把霓虹留在水面上，给今晚多放一天假。</p><div className="holiday-copy"><p>《Holiday》收在滨田金吾 1980 年的首张个人专辑《Manhattan in the Rain》，位于唱片 B 面第四首。小林和子作词，滨田金吾作曲，并由他与山田秀俊共同编曲。</p><p>这张唱片把日式流行旋律放进当时精致的都市 AOR 声响里。《Holiday》的 4 分 28 秒像一扇刚推开的露台门：节奏仍在走，时间却忽然不必赶路。Joey 送来的正是这种轻松——城市很亮，今晚可以慢一点。</p></div><div className="holiday-pullquote"><span>CHECK-OUT: LATER</span><p>Let the rain finish.<br />Keep the city lights.</p></div><div className="embedded-player holiday-player"><div className="player-label"><span>Listen here · No login</span><span>滨田金吾 · Holiday · 4:28</span></div><div className="video-frame"><iframe title="YouTube player for Holiday by Kingo Hamada" src="https://www.youtube.com/embed/_kJtQl4CjJM?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources holiday-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=_kJtQl4CjJM" target="_blank" rel="noreferrer">Sony Music Direct · Official audio</a><a href="https://kingohamada.com/discography/discography.html" target="_blank" rel="noreferrer">Kingo Hamada</a><a href="https://tower.jp/item/475488/Manhattan-in-the-Rain" target="_blank" rel="noreferrer">Tower Records</a></div></div>
       </section>
-      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 017 · Sep 14, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="holiday-schedule" /><ArchivePreview current="holiday" /><About theme="holiday-about" /><Footer /></>}
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 017 · Sep 14, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Tomorrow", sender: "TT", date: "Sep 15" }]} theme="holiday-schedule" /><ArchivePreview current="holiday" /><About theme="holiday-about" /><Footer /></>}
+    </main>
+  );
+}
+
+export function RuHeHome({ archived = false }: { archived?: boolean }) {
+  return (
+    <main className="ruhe-page">
+      <section className="ruhe-cover" id="tonight" aria-labelledby="song-title">
+        <img className="ruhe-art" src="/deserts-xuan-ru-he-share.png" alt="AI-generated paper collage of two figures connected by red threads" />
+        <div className="ruhe-shade" aria-hidden="true" /><div className="ruhe-thread thread-a" aria-hidden="true" /><div className="ruhe-thread thread-b" aria-hidden="true" />
+        <a className="brand ruhe-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
+        {!archived && <a className="how-link ruhe-how" href="#about">How it works <span>↓</span></a>}
+        <a className="archive-link ruhe-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
+        <div className="ruhe-date"><span>Sep 15, 2026</span><span>Postcard No. 018</span><span>Sent by TT</span></div>
+        <div className="ruhe-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 018</p><h1 id="song-title">如<br /><em>何</em></h1><div className="ruhe-meta"><p>张悬<br /><span>Deserts Xuan</span></p><p>神的游戏 · Track 05<br /><span>Sony Music · 2012</span></p></div></div>
+        <div className="ruhe-note"><span>TT LEFT A LINE</span><p>“缘分是神；游戏，是我们。”</p><small>— TT, {archived ? "that night" : "tonight"}</small></div>
+        <a className="ruhe-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>3 min 57 sec · official video</small></div></a>
+        <div className="ruhe-scroll">Follow the thread <span>↓</span></div>
+      </section>
+      <section className="ruhe-story" id="story" aria-labelledby="ruhe-story-title">
+        <div className="ruhe-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="ruhe-story-title">缘分给出<br />相遇，<br /><em>我们落子。</em></h2><div className="ruhe-index"><span>05</span><span>神的游戏</span><span>2012</span></div></div>
+        <div className="ruhe-story-body"><p className="ruhe-lede">有些关系像一根线：起点也许不由我们，握住以后怎么走，却成了自己的选择。</p><div className="ruhe-copy"><p>《如何》收在张悬 2012 年的专辑《神的游戏》，排在第五首。专辑于 8 月 10 日发行，由她贯穿创作、编曲与制作，把关于命运、关系与选择的思考放进一张完整的作品里。</p><p>张悬在歌曲介绍里说，这首歌不是向生命发问，更像是写给所爱家人与朋友的一段对话。TT 留下的“缘分是神；游戏，是我们。”也把那层关系说得很准：相遇像偶然，之后的每一步，仍要由人亲自走完。</p></div><div className="ruhe-pullquote"><span>PLAYER / PIECE</span><p>The thread arrives.<br />The move is ours.</p></div><div className="embedded-player ruhe-player"><div className="player-label"><span>Listen here · No login</span><span>张悬 · 如何 · 3:57</span></div><div className="video-frame"><iframe title="YouTube player for 如何 by 张悬" src="https://www.youtube.com/embed/LfQvaHm53oQ?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources ruhe-sources"><span>Listening notes assembled from</span><a href="https://sonymusic.com.tw/album/%E7%A5%9E%E7%9A%84%E9%81%8A%E6%88%B2-%E5%BC%B5%E6%87%B8-deserts-xuan-%E5%BC%B5%E6%87%B8-deserts-xuan-88725453952-0/" target="_blank" rel="noreferrer">Sony Music Taiwan</a><a href="https://www.youtube.com/watch?v=UMj6HwW_OpI" target="_blank" rel="noreferrer">张悬 · Song introduction</a><a href="https://www.youtube.com/watch?v=LfQvaHm53oQ" target="_blank" rel="noreferrer">DesertsXuanVEVO</a></div></div>
+      </section>
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 018 · Sep 15, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="ruhe-schedule" /><ArchivePreview current="ru-he" /><About theme="ruhe-about" /><Footer /></>}
     </main>
   );
 }
