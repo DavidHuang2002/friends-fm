@@ -1,4 +1,5 @@
 export type ArchiveKey =
+  | "eternal-theme"
   | "ru-he"
   | "holiday"
   | "jiufen-cafe"
@@ -33,6 +34,7 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "eternal-theme", href: "/postcards/eternal-theme", dateKey: "2026-09-16", date: "SEP 16", month: "September", sender: "YSY", title: "永恆的主題", artist: "丁世光", card: "eternal-card", art: "eternal-card-art", number: "019" },
   { key: "ru-he", href: "/postcards/ru-he", dateKey: "2026-09-15", date: "SEP 15", month: "September", sender: "TT", title: "如何", artist: "张悬", card: "ruhe-card", art: "ruhe-card-art", number: "018" },
   { key: "holiday", href: "/postcards/holiday", dateKey: "2026-09-14", date: "SEP 14", month: "September", sender: "JOEY", title: "Holiday", artist: "滨田金吾", card: "holiday-card", art: "holiday-card-art", number: "017" },
   { key: "meet-me-in-amsterdam", href: "/postcards/meet-me-in-amsterdam", dateKey: "2026-09-13", date: "SEP 13", month: "September", sender: "DAVID", title: "Meet Me in Amsterdam", artist: "RINI", card: "amsterdam-card", art: "amsterdam-card-art", number: "016" },

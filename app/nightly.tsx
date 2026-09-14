@@ -366,7 +366,31 @@ export function RuHeHome({ archived = false }: { archived?: boolean }) {
         <div className="ruhe-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="ruhe-story-title">缘分给出<br />相遇，<br /><em>我们落子。</em></h2><div className="ruhe-index"><span>05</span><span>神的游戏</span><span>2012</span></div></div>
         <div className="ruhe-story-body"><p className="ruhe-lede">有些关系像一根线：起点也许不由我们，握住以后怎么走，却成了自己的选择。</p><div className="ruhe-copy"><p>《如何》收在张悬 2012 年的专辑《神的游戏》，排在第五首。专辑于 8 月 10 日发行，由她贯穿创作、编曲与制作，把关于命运、关系与选择的思考放进一张完整的作品里。</p><p>张悬在歌曲介绍里说，这首歌不是向生命发问，更像是写给所爱家人与朋友的一段对话。TT 留下的“缘分是神；游戏，是我们。”也把那层关系说得很准：相遇像偶然，之后的每一步，仍要由人亲自走完。</p></div><div className="ruhe-pullquote"><span>PLAYER / PIECE</span><p>The thread arrives.<br />The move is ours.</p></div><div className="embedded-player ruhe-player"><div className="player-label"><span>Listen here · No login</span><span>张悬 · 如何 · 3:57</span></div><div className="video-frame"><iframe title="YouTube player for 如何 by 张悬" src="https://www.youtube.com/embed/LfQvaHm53oQ?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources ruhe-sources"><span>Listening notes assembled from</span><a href="https://sonymusic.com.tw/album/%E7%A5%9E%E7%9A%84%E9%81%8A%E6%88%B2-%E5%BC%B5%E6%87%B8-deserts-xuan-%E5%BC%B5%E6%87%B8-deserts-xuan-88725453952-0/" target="_blank" rel="noreferrer">Sony Music Taiwan</a><a href="https://www.youtube.com/watch?v=UMj6HwW_OpI" target="_blank" rel="noreferrer">张悬 · Song introduction</a><a href="https://www.youtube.com/watch?v=LfQvaHm53oQ" target="_blank" rel="noreferrer">DesertsXuanVEVO</a></div></div>
       </section>
-      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 018 · Sep 15, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="ruhe-schedule" /><ArchivePreview current="ru-he" /><About theme="ruhe-about" /><Footer /></>}
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 018 · Sep 15, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Tomorrow", sender: "YSY", date: "Sep 16" }]} theme="ruhe-schedule" /><ArchivePreview current="ru-he" /><About theme="ruhe-about" /><Footer /></>}
+    </main>
+  );
+}
+
+export function EternalThemeHome({ archived = false }: { archived?: boolean }) {
+  return (
+    <main className="eternal-page">
+      <section className="eternal-cover" id="tonight" aria-labelledby="song-title">
+        <img className="eternal-art" src="/dean-ting-eternal-theme-share.png" alt="AI-generated candlelit paper cards joined by an infinity-shaped gold ribbon" />
+        <div className="eternal-shade" aria-hidden="true" /><div className="eternal-ribbon" aria-hidden="true">∞</div>
+        <a className="brand eternal-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
+        {!archived && <a className="how-link eternal-how" href="#about">How it works <span>↓</span></a>}
+        <a className="archive-link eternal-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
+        <div className="eternal-date"><span>Sep 16, 2026</span><span>Postcard No. 019</span><span>Sent by YSY</span></div>
+        <div className="eternal-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 019</p><h1 id="song-title">永恆的<br /><em>主題</em></h1><p className="eternal-english">A Song for Nathan’s Wedding</p><div className="eternal-meta"><p>丁世光<br /><span>Dean Ting</span></p><p>神經志 · Track 12<br /><span>Retro Records · 2017</span></p></div></div>
+        <div className="eternal-seal"><span>FROM YSY</span><strong>TRACK 12</strong><small>VOWS IN 4:11</small></div>
+        <a className="eternal-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>4 min 11 sec · official audio</small></div></a>
+        <div className="eternal-scroll">Follow the ribbon <span>↓</span></div>
+      </section>
+      <section className="eternal-story" id="story" aria-labelledby="eternal-story-title">
+        <div className="eternal-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="eternal-story-title">一首写给<br />婚礼的歌，<br /><em>放在最后。</em></h2><div className="eternal-vow"><span>12</span><span>THE JOURNAL</span><span>4:11</span></div></div>
+        <div className="eternal-story-body"><p className="eternal-lede">专辑走过十二首追问，最后没有再问。它把答案留给一句愿意长久说下去的话。</p><div className="eternal-copy"><p>《永恆的主題》是丁世光 2017 年首张个人专辑《神經志》的第十二首，也是终曲。副标题直接写明它的来处：<em>A Song for Nathan’s Wedding</em>。官方音源资料列丁世光为词曲作者，葉喜兒担任制作人。</p><p>前面的曲序像一本不断追问感情与生活的日记，这首歌却把镜头落在婚礼上，让整张专辑停在承诺而不是疑问。YSY 没有附一句解释，也刚好给音乐留出了位置：今晚只需要听那条旋律，怎样从一个人的声音慢慢变成两个人的誓言。</p></div><div className="eternal-pullquote"><span>THE FINAL ENTRY</span><p>Twelve songs.<br />One promise left open.</p></div><div className="embedded-player eternal-player"><div className="player-label"><span>Listen here · No login</span><span>丁世光 · 永恆的主題 · 4:11</span></div><div className="video-frame"><iframe title="YouTube player for 永恆的主題 by 丁世光" src="https://www.youtube.com/embed/FJ3H8OlCi3Q?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources eternal-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=FJ3H8OlCi3Q" target="_blank" rel="noreferrer">Taihe Music · Official audio</a><a href="https://music.sonyselect.net/page/album.html?id=1744" target="_blank" rel="noreferrer">Sony Select</a><a href="https://open.spotify.com/album/2We4bcJBP2Syc9mqLliiUQ" target="_blank" rel="noreferrer">Spotify</a></div></div>
+      </section>
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 019 · Sep 16, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="eternal-schedule" /><ArchivePreview current="eternal-theme" /><About theme="eternal-about" /><Footer /></>}
     </main>
   );
 }
