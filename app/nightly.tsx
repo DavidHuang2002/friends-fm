@@ -390,7 +390,55 @@ export function EternalThemeHome({ archived = false }: { archived?: boolean }) {
         <div className="eternal-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="eternal-story-title">一首写给<br />婚礼的歌，<br /><em>放在最后。</em></h2><div className="eternal-vow"><span>12</span><span>THE JOURNAL</span><span>4:11</span></div></div>
         <div className="eternal-story-body"><p className="eternal-lede">专辑走过十二首追问，最后没有再问。它把答案留给一句愿意长久说下去的话。</p><div className="eternal-copy"><p>《永恆的主題》是丁世光 2017 年首张个人专辑《神經志》的第十二首，也是终曲。副标题直接写明它的来处：<em>A Song for Nathan’s Wedding</em>。官方音源资料列丁世光为词曲作者，葉喜兒担任制作人。</p><p>前面的曲序像一本不断追问感情与生活的日记，这首歌却把镜头落在婚礼上，让整张专辑停在承诺而不是疑问。YSY 没有附一句解释，也刚好给音乐留出了位置：今晚只需要听那条旋律，怎样从一个人的声音慢慢变成两个人的誓言。</p></div><div className="eternal-pullquote"><span>THE FINAL ENTRY</span><p>Twelve songs.<br />One promise left open.</p></div><div className="embedded-player eternal-player"><div className="player-label"><span>Listen here · No login</span><span>丁世光 · 永恆的主題 · 4:11</span></div><div className="video-frame"><iframe title="YouTube player for 永恆的主題 by 丁世光" src="https://www.youtube.com/embed/FJ3H8OlCi3Q?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources eternal-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=FJ3H8OlCi3Q" target="_blank" rel="noreferrer">Taihe Music · Official audio</a><a href="https://music.sonyselect.net/page/album.html?id=1744" target="_blank" rel="noreferrer">Sony Select</a><a href="https://open.spotify.com/album/2We4bcJBP2Syc9mqLliiUQ" target="_blank" rel="noreferrer">Spotify</a></div></div>
       </section>
-      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 019 · Sep 16, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="eternal-schedule" /><ArchivePreview current="eternal-theme" /><About theme="eternal-about" /><Footer /></>}
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 019 · Sep 16, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Tomorrow", sender: "Lucy", date: "Sep 17" }, { day: "After", sender: "TT", date: "Sep 18" }]} theme="eternal-schedule" /><ArchivePreview current="eternal-theme" /><About theme="eternal-about" /><Footer /></>}
+    </main>
+  );
+}
+
+export function IShallBelieveHome({ archived = false }: { archived?: boolean }) {
+  return (
+    <main className="believe-page">
+      <section className="believe-cover" id="tonight" aria-labelledby="song-title">
+        <img className="believe-art" src="/anpu-i-shall-believe-share.png" alt="AI-generated view of an empty festival stage glowing at dusk" />
+        <div className="believe-shade" aria-hidden="true" /><div className="believe-afterglow" aria-hidden="true" />
+        <a className="brand believe-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
+        {!archived && <a className="how-link believe-how" href="#about">How it works <span>↓</span></a>}
+        <a className="archive-link believe-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
+        <div className="believe-date"><span>Sep 17, 2026</span><span>Postcard No. 020</span><span>Sent by Lucy</span></div>
+        <div className="believe-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 020</p><h1 id="song-title">I Shall<br /><em>Believe</em></h1><div className="believe-meta"><p>安溥<br /><span>Anpu · live cover</span></p><p>Written by Sheryl Crow & Bill Bottrell<br /><span>Live in Tokyo · 2016</span></p></div></div>
+        <div className="believe-note"><span>LUCY LEFT A LINE</span><p>“去看梁博音乐节那一场也听了安溥唱这首，特好听”</p><small>— Lucy, {archived ? "that night" : "tonight"}</small></div>
+        <a className="believe-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>6 min 01 sec · live recording</small></div></a>
+        <div className="believe-scroll">Stay for the afterglow <span>↓</span></div>
+      </section>
+      <section className="believe-story" id="story" aria-labelledby="believe-story-title">
+        <div className="believe-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="believe-story-title">灯暗以后，<br />相信还<br /><em>留在现场。</em></h2><div className="believe-index"><span>LIVE</span><span>TOKYO · 2016</span><span>6:01</span></div></div>
+        <div className="believe-story-body"><p className="believe-lede">音乐节已经散场，一首很多年前唱过的歌，却在另一个夜晚重新击中人。</p><div className="believe-copy"><p>《I Shall Believe》原本是 Sheryl Crow 1993 年首张专辑《Tuesday Night Music Club》的终曲，由她与 Bill Bottrell 共同创作。安溥长期在现场翻唱它；这里选用的是 2016 年 7 月 28 日东京青山“月见ル君想フ”的现场记录。</p><p>原作写的是在动摇里仍愿意相信，安溥的版本把那份力量收进一把吉他和近距离的人声里。Lucy 是在另一场音乐节听见它的：同一首歌穿过不同城市与年份，再被朋友带到今晚，正好说明现场为什么不会真的结束。</p></div><div className="believe-pullquote"><span>AFTER THE SET</span><p>The lights go down.<br />The song keeps its promise.</p></div><div className="embedded-player believe-player"><div className="player-label"><span>Listen here · No login</span><span>安溥 · I Shall Believe · 6:01</span></div><div className="video-frame"><iframe title="YouTube player for I Shall Believe performed live by 安溥" src="https://www.youtube.com/embed/K_XXxl0t0IY?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources believe-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=K_XXxl0t0IY" target="_blank" rel="noreferrer">Live in Tokyo archive</a><a href="https://music.apple.com/us/song/1440919039" target="_blank" rel="noreferrer">Sheryl Crow · Apple Music</a><a href="https://sherylcrow.com/playlist/tuesday-night-music-club/" target="_blank" rel="noreferrer">Sheryl Crow · Official</a></div></div>
+      </section>
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 020 · Sep 17, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Tomorrow", sender: "TT", date: "Sep 18" }]} theme="believe-schedule" /><ArchivePreview current="i-shall-believe" /><About theme="believe-about" /><Footer /></>}
+    </main>
+  );
+}
+
+export function UfofHome({ archived = false }: { archived?: boolean }) {
+  return (
+    <main className="ufof-page">
+      <section className="ufof-cover" id="tonight" aria-labelledby="song-title">
+        <img className="ufof-art" src="/big-thief-ufof-share.png" alt="AI-generated recording cabin opening onto a rain-dark forest with analog tape machines" />
+        <div className="ufof-shade" aria-hidden="true" /><div className="ufof-signal" aria-hidden="true"><i /><i /><i /></div>
+        <a className="brand ufof-brand" href={archived ? "/" : "#tonight"}>FriendsFM!</a>
+        {!archived && <a className="how-link ufof-how" href="#about">How it works <span>↓</span></a>}
+        <a className="archive-link ufof-archive-link" href={archived ? "/#archive" : "#archive"}>Archive <span>{archived ? "↖" : "↘"}</span></a>
+        <div className="ufof-date"><span>Sep 18, 2026</span><span>Postcard No. 021</span><span>Sent by TT</span></div>
+        <div className="ufof-title-block"><p className="tonight">{archived ? "From the archive" : "Tonight’s song"} · No. 021</p><h1 id="song-title">U.F.O.F.</h1><div className="ufof-meta"><p>Big Thief<br /><span>Adrianne Lenker · vocals & guitar</span></p><p>U.F.O.F. · Track 02<br /><span>4AD · 2019</span></p></div></div>
+        <div className="ufof-note"><span>TT LEFT A LINE</span><p>“Kesem的哥们说Adrienne Lenker（主唱）是best songwriter of the generation”</p><small>— TT, {archived ? "that night" : "tonight"}</small></div>
+        <a className="ufof-enter" href="#story"><span>▶</span><div><strong>Enter {archived ? "this" : "tonight’s"} song</strong><small>3 min 08 sec · official audio</small></div></a>
+        <div className="ufof-scroll">Follow the signal <span>↓</span></div>
+      </section>
+      <section className="ufof-story" id="story" aria-labelledby="ufof-story-title">
+        <div className="ufof-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="ufof-story-title">Make a friend<br />of the<br /><em>unknown.</em></h2><div className="ufof-index"><span>02</span><span>BEAR CREEK</span><span>3:08</span></div></div>
+        <div className="ufof-story-body"><p className="ufof-lede">一束声音从木屋里出去，穿过潮湿的森林，像在试着和未知交换名字。</p><div className="ufof-copy"><p>《U.F.O.F.》是 Big Thief 2019 年同名第三张专辑的第二首，也是乐队加入 4AD 后的第一张唱片。专辑在华盛顿州西部的 Bear Creek Studios 录制：乐队在木屋般的大房间里一起演奏，很多素材很快完成，保留了现场呼吸。</p><p>Adrianne Lenker 说，第二个 F 指的是 “Friend”；面对变化与无常，她宁愿清醒地待在真相里。TT 带来的那句评价因此很合适：真正厉害的 songwriter，不只是把未知写清楚，而是让你愿意靠近它，听它成为朋友。</p></div><div className="ufof-pullquote"><span>UNKNOWN / FRIEND</span><p>One signal leaves the room.<br />Something answers in the trees.</p></div><div className="embedded-player ufof-player"><div className="player-label"><span>Listen here · No login</span><span>Big Thief · U.F.O.F. · 3:08</span></div><div className="video-frame"><iframe title="YouTube player for U.F.O.F. by Big Thief" src="https://www.youtube.com/embed/2RaZjVDwagI?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources ufof-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=2RaZjVDwagI" target="_blank" rel="noreferrer">Big Thief · Official audio</a><a href="https://shop.4ad.com/format/1135217-ufof?lang=en_US" target="_blank" rel="noreferrer">4AD</a><a href="https://www.bigthief.net/music" target="_blank" rel="noreferrer">Big Thief · Official</a></div></div>
+      </section>
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 021 · Sep 18, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="ufof-schedule" /><ArchivePreview current="ufof" /><About theme="ufof-about" /><Footer /></>}
     </main>
   );
 }

@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-18",
+  "postcard_number": 21,
+  "slug": "ufof",
+  "title": "U.F.O.F.",
+  "artist": "Big Thief",
+  "sender": "TT",
+  "note": "Kesem的哥们说Adrienne Lenker（主唱）是best songwriter of the generation",
+  "input_url": "https://www.youtube.com/watch?v=2RaZjVDwagI",
+  "player_url": "https://www.youtube.com/embed/2RaZjVDwagI?playsinline=1&rel=0",
+  "route": "/postcards/ufof",
+  "status": "designed",
+  "sources": [
+    "https://www.youtube.com/watch?v=2RaZjVDwagI",
+    "https://shop.4ad.com/format/1135217-ufof?lang=en_US",
+    "https://www.bigthief.net/music"
+  ]
+}

@@ -1,4 +1,6 @@
 export type ArchiveKey =
+  | "ufof"
+  | "i-shall-believe"
   | "eternal-theme"
   | "ru-he"
   | "holiday"
@@ -34,6 +36,8 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "ufof", href: "/postcards/ufof", dateKey: "2026-09-18", date: "SEP 18", month: "September", sender: "TT", title: "U.F.O.F.", artist: "Big Thief", card: "ufof-card", art: "ufof-card-art", number: "021" },
+  { key: "i-shall-believe", href: "/postcards/i-shall-believe", dateKey: "2026-09-17", date: "SEP 17", month: "September", sender: "LUCY", title: "I Shall Believe", artist: "安溥", card: "believe-card", art: "believe-card-art", number: "020" },
   { key: "eternal-theme", href: "/postcards/eternal-theme", dateKey: "2026-09-16", date: "SEP 16", month: "September", sender: "YSY", title: "永恆的主題", artist: "丁世光", card: "eternal-card", art: "eternal-card-art", number: "019" },
   { key: "ru-he", href: "/postcards/ru-he", dateKey: "2026-09-15", date: "SEP 15", month: "September", sender: "TT", title: "如何", artist: "张悬", card: "ruhe-card", art: "ruhe-card-art", number: "018" },
   { key: "holiday", href: "/postcards/holiday", dateKey: "2026-09-14", date: "SEP 14", month: "September", sender: "JOEY", title: "Holiday", artist: "滨田金吾", card: "holiday-card", art: "holiday-card-art", number: "017" },

@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-17",
+  "postcard_number": 20,
+  "slug": "i-shall-believe",
+  "title": "I Shall Believe",
+  "artist": "安溥",
+  "sender": "Lucy",
+  "note": "去看梁博音乐节那一场也听了安溥唱这首，特好听",
+  "input_url": "https://www.youtube.com/watch?v=K_XXxl0t0IY",
+  "player_url": "https://www.youtube.com/embed/K_XXxl0t0IY?playsinline=1&rel=0",
+  "route": "/postcards/i-shall-believe",
+  "status": "designed",
+  "sources": [
+    "https://www.youtube.com/watch?v=K_XXxl0t0IY",
+    "https://music.apple.com/us/song/1440919039",
+    "https://sherylcrow.com/playlist/tuesday-night-music-club/"
+  ]
+}
