@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs><radialGradient id="sun"><stop stop-color="#fff0c0"/><stop offset=".36" stop-color="#f5b82e"/><stop offset="1" stop-color="#e85c2d"/></radialGradient></defs>
+  <rect width="1200" height="1200" fill="#361338"/>
+  <g transform="translate(860 355)" fill="none" stroke="#fff0c0" opacity=".55"><ellipse rx="285" ry="205" stroke-width="2" transform="rotate(-15)"/><ellipse rx="220" ry="145" stroke-width="2" transform="rotate(-15)"/></g>
+  <g transform="translate(860 355)"><circle r="174" fill="#e85c2d"/><circle r="148" fill="url(#sun)"/><circle r="42" fill="#361338"/></g>
+  <path d="M0 690 1200 410V585L0 840Z" fill="#e85c2d" opacity=".9"/><path d="M0 815 1200 525V650L0 920Z" fill="#f5b82e" opacity=".95"/>
+  <text x="74" y="92" fill="#f5b82e" font-family="Helvetica Neue, Arial, sans-serif" font-size="21" letter-spacing="7">TONIGHT'S SONG</text>
+  <text x="70" y="465" fill="#fff0c0" font-family="Georgia, serif" font-size="158" font-style="italic">SEP</text>
+  <text x="70" y="630" fill="#f5b82e" font-family="Georgia, serif" font-size="154" font-style="italic">TEMBER</text>
+  <rect x="70" y="685" width="648" height="72" fill="#361338"/>
+  <text x="91" y="733" fill="#fff0c0" font-family="Helvetica Neue, Arial, sans-serif" font-size="31" letter-spacing="2">EARTH, WIND &amp; FIRE</text>
+  <text x="74" y="1080" fill="#fff0c0" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" letter-spacing="6">SENT BY DAVID</text>
+  <text x="1125" y="1080" fill="#fff0c0" font-family="Georgia, serif" font-size="29" text-anchor="end" font-weight="700">FriendsFM!</text>
+</svg>

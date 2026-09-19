@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#28356a"/><stop offset="1" stop-color="#11162d"/></linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efaa52"/><stop offset="1" stop-color="#c96474"/></linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#sky)"/>
+  <g opacity=".16" stroke="#eee4c8"><path d="M-80 270 1220 670"/><path d="M-80 390 1220 790"/><path d="M-80 510 1220 910"/></g>
+  <circle cx="920" cy="255" r="170" fill="none" stroke="#eee4c8" opacity=".48" stroke-width="2"/><circle cx="920" cy="255" r="205" fill="none" stroke="#eee4c8" opacity=".10" stroke-width="34"/>
+  <path d="M-120 900 1320 660 1320 1200-120 1200Z" fill="#090d1c"/>
+  <path d="M690 815 780 675" stroke="#efaa52" stroke-width="4" opacity=".72"/>
+  <g transform="translate(885 395) rotate(-13)"><path d="M0 30C-125-60-170 95-44 152-13 166 0 138 0 30Z" fill="url(#wing)"/><path d="M12 30C137-60 182 95 56 152 25 166 12 138 12 30Z" fill="url(#wing)"/><path d="M5 63v100" stroke="#eee4c8" stroke-width="7" stroke-linecap="round"/></g>
+  <text x="78" y="92" fill="#efaa52" font-family="Helvetica Neue, Arial, sans-serif" font-size="21" letter-spacing="7">TONIGHT'S SONG</text>
+  <text x="78" y="585" fill="#eee4c8" font-family="Songti SC, STSong, serif" font-size="152" font-weight="600">赶路的</text>
+  <text x="78" y="730" fill="#c96474" font-family="Songti SC, STSong, serif" font-size="152" font-weight="600">蝴蝶</text>
+  <line x1="78" y1="790" x2="720" y2="790" stroke="#eee4c8" opacity=".48"/>
+  <text x="78" y="845" fill="#eee4c8" font-family="Helvetica Neue, Arial, sans-serif" font-size="31" letter-spacing="2">step.jad依加 × 李佳隆</text>
+  <text x="78" y="1080" fill="#8492bd" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" letter-spacing="6">SENT BY DAVID</text>
+  <text x="1010" y="1080" fill="#eee4c8" font-family="Georgia, serif" font-size="29" text-anchor="end" font-weight="700">FriendsFM!</text>
+</svg>
