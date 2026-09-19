@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-21",
+  "postcard_number": 23,
+  "slug": "september",
+  "title": "September",
+  "artist": "Earth, Wind & Fire",
+  "sender": "David",
+  "note": "There is only one right song for today",
+  "input_url": "https://www.youtube.com/watch?v=3cKtSlsYVEU",
+  "player_url": "https://www.youtube.com/embed/3cKtSlsYVEU?playsinline=1&rel=0",
+  "route": "/postcards/september",
+  "status": "designed",
+  "sources": [
+    "https://www.youtube.com/watch?v=3cKtSlsYVEU",
+    "https://www.earthwindandfire.com/history/biography/",
+    "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/September.pdf"
+  ]
+}

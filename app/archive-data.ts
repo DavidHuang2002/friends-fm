@@ -1,4 +1,6 @@
 export type ArchiveKey =
+  | "september"
+  | "butterfly"
   | "ufof"
   | "i-shall-believe"
   | "eternal-theme"
@@ -36,6 +38,8 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "september", href: "/postcards/september", dateKey: "2026-09-21", date: "SEP 21", month: "September", sender: "DAVID", title: "September", artist: "Earth, Wind & Fire", card: "september-card", art: "september-card-art", number: "023" },
+  { key: "butterfly", href: "/postcards/gan-lu-de-hu-die", dateKey: "2026-09-20", date: "SEP 20", month: "September", sender: "DAVID", title: "赶路的蝴蝶", artist: "step.jad依加 & 李佳隆", card: "butterfly-card", art: "butterfly-card-art", number: "022" },
   { key: "ufof", href: "/postcards/ufof", dateKey: "2026-09-18", date: "SEP 18", month: "September", sender: "TT", title: "U.F.O.F.", artist: "Big Thief", card: "ufof-card", art: "ufof-card-art", number: "021" },
   { key: "i-shall-believe", href: "/postcards/i-shall-believe", dateKey: "2026-09-17", date: "SEP 17", month: "September", sender: "LUCY", title: "I Shall Believe", artist: "安溥", card: "believe-card", art: "believe-card-art", number: "020" },
   { key: "eternal-theme", href: "/postcards/eternal-theme", dateKey: "2026-09-16", date: "SEP 16", month: "September", sender: "YSY", title: "永恆的主題", artist: "丁世光", card: "eternal-card", art: "eternal-card-art", number: "019" },
