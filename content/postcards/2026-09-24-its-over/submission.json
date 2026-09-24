@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-24",
+  "postcard_number": 24,
+  "slug": "its-over",
+  "title": "It's Over",
+  "artist": "Boz Scaggs",
+  "sender": "Joey",
+  "note": "",
+  "input_url": "",
+  "player_url": "https://www.youtube.com/embed/Ls1dqc-FLTQ",
+  "route": "/postcards/its-over",
+  "status": "designed",
+  "sources": ["https://bozscaggs.com/release/silk-degrees/","https://www.youtube.com/watch?v=Ls1dqc-FLTQ","https://music.apple.com/us/album/silk-degrees-2023-remaster/1696326925"]
+}

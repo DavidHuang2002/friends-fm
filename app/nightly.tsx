@@ -2,7 +2,7 @@ import { ArchivePreview } from "./archive-elements";
 
 type ScheduleEntry = { date: string; day: string; sender: string };
 
-function Schedule({ entries, theme }: { entries: ScheduleEntry[]; theme: string }) {
+export function Schedule({ entries, theme }: { entries: ScheduleEntry[]; theme: string }) {
   return (
     <section className={`schedule-board ${theme}`} aria-labelledby="queue-title">
       <div className="schedule-copy"><p className="section-kicker">Waiting to send</p><h2 id="queue-title">On the<br />way.</h2><p>The next postcards are already spoken for.</p></div>
@@ -15,7 +15,7 @@ function Schedule({ entries, theme }: { entries: ScheduleEntry[]; theme: string 
   );
 }
 
-function About({ theme }: { theme: string }) {
+export function About({ theme }: { theme: string }) {
   return (
     <section className={`about ${theme}`} id="about" aria-labelledby="about-title">
       <div className="about-intro"><p className="section-kicker">FriendsFM · The idea</p><h2 id="about-title">What is this?</h2><p className="about-statement">Hi, this is David. I never know what to listen to, so I made this small website to ask my friends.</p><p className="about-motivation">I want to know what you’ve been listening to lately. FriendsFM is a way for us to pass songs around, find something new to hear, and keep in touch without needing a big reason to talk.</p></div>
@@ -25,7 +25,7 @@ function About({ theme }: { theme: string }) {
   );
 }
 
-function Footer() { return <footer><span className="footer-brand">FriendsFM!</span><p>One night · One friend · One song</p><a href="#tonight">Back to tonight ↑</a></footer>; }
+export function Footer() { return <footer><span className="footer-brand">FriendsFM!</span><p>One night · One friend · One song</p><a href="#tonight">Back to tonight ↑</a></footer>; }
 
 export function MovingHome() {
   return (
@@ -484,7 +484,7 @@ export function SeptemberHome({ archived = false }: { archived?: boolean }) {
         <div className="september-story-heading"><p className="section-kicker">Why this one, {archived ? "that night" : "tonight"}</p><h2 id="september-story-title">The date<br />already chose<br /><em>the song.</em></h2><div className="september-index"><span>21</span><span>NOVEMBER 1978</span><span>3:35</span></div></div>
         <div className="september-story-body"><p className="september-lede">On the twenty-first night, taste is beside the point. The calendar has taken over the aux.</p><div className="september-copy"><p>Earth, Wind & Fire released “September” in November 1978 as one of the new songs on <em>The Best of Earth, Wind & Fire, Vol. 1</em>. Maurice White produced it and wrote it with guitarist Al McKay and lyricist Allee Willis; it went on to top the R&B chart and reach No. 8 on the pop chart.</p><p>The hook works because it refuses to explain itself. Willis originally questioned the nonsense refrain; White kept it because the sound already carried the feeling. Nearly five decades later, the date in the opening line has become its own annual cue. David is right: today, choosing anything else would only be showing off.</p></div><div className="september-pullquote"><span>CALENDAR RULE</span><p>One date.<br />One correct record.</p></div><div className="embedded-player september-player"><div className="player-label"><span>Listen here · No login</span><span>Earth, Wind & Fire · September · 3:35</span></div><div className="video-frame"><iframe title="YouTube player for September by Earth, Wind & Fire" src="https://www.youtube.com/embed/3cKtSlsYVEU?playsinline=1&rel=0" width="100%" height="100%" frameBorder="0" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" /></div></div><div className="sources september-sources"><span>Listening notes assembled from</span><a href="https://www.youtube.com/watch?v=3cKtSlsYVEU" target="_blank" rel="noreferrer">Earth, Wind & Fire · Official audio</a><a href="https://www.earthwindandfire.com/history/biography/" target="_blank" rel="noreferrer">Earth, Wind & Fire · Biography</a><a href="https://www.loc.gov/static/programs/national-recording-preservation-board/documents/September.pdf" target="_blank" rel="noreferrer">Library of Congress</a></div></div>
       </section>
-      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 023 · Sep 21, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="september-schedule" /><ArchivePreview current="september" /><About theme="september-about" /><Footer /></>}
+      {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 023 · Sep 21, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Thursday", sender: "Joey", date: "Sep 24" }, { day: "Friday", sender: "TT", date: "Sep 25" }, { day: "Saturday", sender: "TT", date: "Sep 26" }]} theme="september-schedule" /><ArchivePreview current="september" /><About theme="september-about" /><Footer /></>}
     </main>
   );
 }

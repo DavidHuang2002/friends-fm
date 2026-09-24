@@ -1,4 +1,7 @@
 export type ArchiveKey =
+  | "its-over"
+  | "for-once-in-my-life"
+  | "m21-forgiveness"
   | "september"
   | "butterfly"
   | "ufof"
@@ -38,6 +41,9 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "m21-forgiveness", href: "/postcards/m21-forgiveness", dateKey: "2026-09-26", date: "SEP 26", month: "September", sender: "TT", title: "M21 - Forgiveness", artist: "坂本龙一", card: "m21-forgiveness-card", art: "m21-forgiveness-card-art", number: "026" },
+  { key: "for-once-in-my-life", href: "/postcards/for-once-in-my-life", dateKey: "2026-09-25", date: "SEP 25", month: "September", sender: "TT", title: "For Once in My Life", artist: "Stevie Wonder", card: "for-once-in-my-life-card", art: "for-once-in-my-life-card-art", number: "025" },
+  { key: "its-over", href: "/postcards/its-over", dateKey: "2026-09-24", date: "SEP 24", month: "September", sender: "JOEY", title: "It's Over", artist: "Boz Scaggs", card: "its-over-card", art: "its-over-card-art", number: "024" },
   { key: "september", href: "/postcards/september", dateKey: "2026-09-21", date: "SEP 21", month: "September", sender: "DAVID", title: "September", artist: "Earth, Wind & Fire", card: "september-card", art: "september-card-art", number: "023" },
   { key: "butterfly", href: "/postcards/gan-lu-de-hu-die", dateKey: "2026-09-20", date: "SEP 20", month: "September", sender: "DAVID", title: "赶路的蝴蝶", artist: "step.jad依加 & 李佳隆", card: "butterfly-card", art: "butterfly-card-art", number: "022" },
   { key: "ufof", href: "/postcards/ufof", dateKey: "2026-09-18", date: "SEP 18", month: "September", sender: "TT", title: "U.F.O.F.", artist: "Big Thief", card: "ufof-card", art: "ufof-card-art", number: "021" },

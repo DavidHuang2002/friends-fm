@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import "./postcard-redesign.css";
+import "./late-september.css";
 import { SongPlaybackController } from "./song-playback-controller";
 
 const display = Cormorant_Garamond({
