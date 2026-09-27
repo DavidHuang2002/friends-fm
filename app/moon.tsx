@@ -21,6 +21,6 @@ export function MoonHome({ archived = false }: { archived?: boolean }) {
         <div className="moon-sources"><span>Sources & recording</span><a href="https://www.youtube.com/watch?v=yzBhPeoh5t4" target="_blank" rel="noreferrer">Columbia / Legacy · Official audio & credits ↗</a><a href="https://music.apple.com/us/album/fly-me-to-the-moon/157427624?i=157427655" target="_blank" rel="noreferrer">Apple Music · Album & track listing ↗</a><small>Original sleeve © Columbia Records. Night landscape and share artwork are AI-generated; listening notes by FriendsFM. David’s note is quoted verbatim.</small></div>
       </div>
     </section>
-    {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 027 · Sep 27, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="moon-schedule" /><ArchivePreview current="fly-me-to-the-moon" /><About theme="moon-about" /><Footer /></>}
+    {archived ? <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. 027 · Sep 27, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{day:"Monday",date:"Sep 28",sender:"YSY"},{day:"Tuesday",date:"Sep 29",sender:"TT"}]} theme="moon-schedule" /><ArchivePreview current="fly-me-to-the-moon" /><About theme="moon-about" /><Footer /></>}
   </main>;
 }

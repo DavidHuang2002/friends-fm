@@ -83,6 +83,8 @@ test("switches nightly in Los Angeles and advances the people-only queue", async
     ["2026-09-26T07:00:00Z", "OtSyeBtver8", ["Sep 27"]],
     ["2026-09-27T06:59:00Z", "OtSyeBtver8", ["Sep 27"]],
     ["2026-09-27T07:00:00Z", "yzBhPeoh5t4", []],
+    ["2026-09-28T07:00:00Z", "Q0W--O7aWBg", []],
+    ["2026-09-29T07:00:00Z", "zm2Ytj5bL_I", []],
   ];
   for (const [date, video, queued] of dates) {
     t.mock.timers.setTime(new Date(date).getTime());
@@ -92,6 +94,23 @@ test("switches nightly in Los Angeles and advances the people-only queue", async
     assert.ok(queue);
     for (const day of ["Sep 24", "Sep 25", "Sep 26", "Sep 27"]) assert.equal(queue.includes(day), queued.includes(day));
     assert.doesNotMatch(queue, /Forgiveness|Boz|Stevie|It's Over|Tony Bennett|Fly Me/);
+  }
+});
+
+test("queues submissions by release order, not submission timestamp", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-09-27T07:00:00Z") });
+  for (const [date, expected] of [["2026-09-27T07:00:00Z",["Sep 28","Sep 29"]],["2026-09-28T07:00:00Z",["Sep 29"]],["2026-09-29T07:00:00Z",[]]]) {
+    t.mock.timers.setTime(new Date(date).getTime());
+    const html = await (await render()).text();
+    const queue = html.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+    assert.ok(queue);
+    for (const day of ["Sep 28","Sep 29"]) assert.equal(queue.includes(day),expected.includes(day));
+    assert.doesNotMatch(queue,/大人中|九月|盧廣仲|周云蓬/);
+  }
+  for (const [slug,note,sender] of [["adult","原来爱人不在身边就叫远方 😭😢😭","YSY"],["jiu-yue","是在to do list上摘抄过的诗句","TT"]]) {
+    const html = await (await render(`/postcards/${slug}`)).text();
+    assert.ok(html.includes(note)); assert.ok(html.replace(/<!--.*?-->/g, "").includes(`Sent by ${sender}`));
+    assert.ok(html.includes("Sources &amp; recording"));
   }
 });
 

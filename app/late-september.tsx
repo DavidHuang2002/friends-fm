@@ -7,6 +7,8 @@ export const upcomingNights = [
   { day: "Friday", date: "Sep 25", sender: "TT" },
   { day: "Saturday", date: "Sep 26", sender: "TT" },
   { day: "Sunday", date: "Sep 27", sender: "David" },
+  { day: "Monday", date: "Sep 28", sender: "YSY" },
+  { day: "Tuesday", date: "Sep 29", sender: "TT" },
 ];
 
 const records = {
