@@ -78,9 +78,11 @@ test("switches nightly in Los Angeles and advances the people-only queue", async
   t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-09-24T06:59:00Z") });
   const dates = [
     ["2026-09-24T06:59:00Z", "3cKtSlsYVEU", ["Sep 24", "Sep 25", "Sep 26"]],
-    ["2026-09-24T07:00:00Z", "Ls1dqc-FLTQ", ["Sep 25", "Sep 26"]],
-    ["2026-09-25T07:00:00Z", "A7rBdYhmbXI", ["Sep 26"]],
-    ["2026-09-26T07:00:00Z", "OtSyeBtver8", []],
+    ["2026-09-24T07:00:00Z", "Ls1dqc-FLTQ", ["Sep 25", "Sep 26", "Sep 27"]],
+    ["2026-09-25T07:00:00Z", "A7rBdYhmbXI", ["Sep 26", "Sep 27"]],
+    ["2026-09-26T07:00:00Z", "OtSyeBtver8", ["Sep 27"]],
+    ["2026-09-27T06:59:00Z", "OtSyeBtver8", ["Sep 27"]],
+    ["2026-09-27T07:00:00Z", "yzBhPeoh5t4", []],
   ];
   for (const [date, video, queued] of dates) {
     t.mock.timers.setTime(new Date(date).getTime());
@@ -88,7 +90,16 @@ test("switches nightly in Los Angeles and advances the people-only queue", async
     assert.ok(html.includes(`youtube.com/embed/${video}`), date);
     const queue = html.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
     assert.ok(queue);
-    for (const day of ["Sep 24", "Sep 25", "Sep 26"]) assert.equal(queue.includes(day), queued.includes(day));
-    assert.doesNotMatch(queue, /Forgiveness|Boz|Stevie|It's Over/);
+    for (const day of ["Sep 24", "Sep 25", "Sep 26", "Sep 27"]) assert.equal(queue.includes(day), queued.includes(day));
+    assert.doesNotMatch(queue, /Forgiveness|Boz|Stevie|It's Over|Tony Bennett|Fly Me/);
   }
+});
+
+test("preserves David's exact moon note and recording on the stable route", async () => {
+  const html = await (await render("/postcards/fly-me-to-the-moon")).text();
+  assert.match(html, /2 days late but here is a song about the moon/);
+  assert.match(html, /No\. 027/);
+  assert.match(html, /Sent by David/);
+  assert.match(html, /youtube.com\/embed\/yzBhPeoh5t4/);
+  assert.match(html, /fly-me-to-the-moon-night.png/);
 });

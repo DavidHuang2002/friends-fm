@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-27",
+  "postcard_number": 27,
+  "slug": "fly-me-to-the-moon",
+  "title": "Fly Me to the Moon",
+  "artist": "Tony Bennett",
+  "sender": "David",
+  "note": "2 days late but here is a song about the moon",
+  "input_url": "",
+  "player_url": "https://www.youtube.com/embed/yzBhPeoh5t4",
+  "route": "/postcards/fly-me-to-the-moon",
+  "status": "designed",
+  "sources": ["https://www.youtube.com/watch?v=yzBhPeoh5t4", "https://music.apple.com/us/album/fly-me-to-the-moon/157427624?i=157427655"]
+}

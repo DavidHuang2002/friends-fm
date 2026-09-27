@@ -1,6 +1,7 @@
 import { AmsterdamHome, BlowersDaughterHome, BozHome, ButterflyHome, CathedralesHome, DearHome, DijonHome, EternalThemeHome, GingerHome, GuoYuanChaoHome, HolidayHome, IShallBelieveHome, JiufenCafeHome, JoyHome, LiangboHome, MovingHome, MyLifeHome, RuHeHome, SchumannHome, SeptemberHome, StillLonelyHome, UfofHome } from "./nightly";
 
 import { LateSeptemberHome } from "./late-september";
+import { MoonHome } from "./moon";
 
 export const dynamic = "force-dynamic";
 
@@ -42,5 +43,6 @@ export default function Home() {
   if (date < "2026-09-24") return <SeptemberHome />;
   if (date === "2026-09-24") return <LateSeptemberHome song="its-over" />;
   if (date === "2026-09-25") return <LateSeptemberHome song="for-once-in-my-life" />;
-  return <LateSeptemberHome song="m21-forgiveness" />;
+  if (date === "2026-09-26") return <LateSeptemberHome song="m21-forgiveness" />;
+  return <MoonHome />;
 }

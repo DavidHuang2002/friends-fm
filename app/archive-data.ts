@@ -1,4 +1,5 @@
 export type ArchiveKey =
+  | "fly-me-to-the-moon"
   | "its-over"
   | "for-once-in-my-life"
   | "m21-forgiveness"
@@ -41,6 +42,7 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "fly-me-to-the-moon", href: "/postcards/fly-me-to-the-moon", dateKey: "2026-09-27", date: "SEP 27", month: "September", sender: "DAVID", title: "Fly Me to the Moon", artist: "Tony Bennett", card: "moon-card", art: "moon-card-art", number: "027" },
   { key: "m21-forgiveness", href: "/postcards/m21-forgiveness", dateKey: "2026-09-26", date: "SEP 26", month: "September", sender: "TT", title: "M21 - Forgiveness", artist: "坂本龙一", card: "m21-forgiveness-card", art: "m21-forgiveness-card-art", number: "026" },
   { key: "for-once-in-my-life", href: "/postcards/for-once-in-my-life", dateKey: "2026-09-25", date: "SEP 25", month: "September", sender: "TT", title: "For Once in My Life", artist: "Stevie Wonder", card: "for-once-in-my-life-card", art: "for-once-in-my-life-card-art", number: "025" },
   { key: "its-over", href: "/postcards/its-over", dateKey: "2026-09-24", date: "SEP 24", month: "September", sender: "JOEY", title: "It's Over", artist: "Boz Scaggs", card: "its-over-card", art: "its-over-card-art", number: "024" },
