@@ -4,7 +4,7 @@ Local preparation, not deployed. Queue order follows the existing September 29 r
 
 ## Album-first direction
 
-Use the actual Pocket Park sleeve, not another generated landscape. Off-white, lilac triangles, restrained peach, partial portrait and generous negative space drive both page sections. Official artwork remains unchanged on the website. The album dates to 1980; the song debuted as a 1979 single. Player is the official Pony Canyon 2009 reissue album upload (BBj3SCImk_A), not the compilation upload or a later remix. Approximate player duration 5:12.
+Use the actual Pocket Park sleeve, not another generated landscape. Off-white, lilac triangles, restrained peach, partial portrait and generous negative space drive both page sections. Official artwork remains unchanged on the website. The album dates to 1980; the song debuted as a 1979 single. Player is Pony Canyon's official lyric video (nuU2YHtxMik), replacing the unavailable album upload. This is Miki Matsubara's performance; no claim is made that its mastering matches the album upload. Approximate player duration 5:10.
 
 Cover: public/stay-with-me-pocket-park.jpg, official Apple catalog artwork, fetched from https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/06/eb/b1/06ebb16a-7e31-5818-4be9-684cb57622dc/PA00204086_0_234544_jacket.jpg/1200x1200bb.jpg . The lower-resolution label reference is public/stay-with-me-album.jpg. Rights remain with Pony Canyon.
 

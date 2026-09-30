@@ -128,7 +128,7 @@ test("renders cover-led postcards with Lucy's note and no invented TT note", asy
   assert.match(stay, /你怎么知道我到霓虹了/);
   assert.match(stay, /No\. 030/);
   assert.match(stay, /stay-with-me-pocket-park.jpg/);
-  assert.match(stay, /youtube.com\/embed\/BBj3SCImk_A/);
+  assert.match(stay, /youtube.com\/embed\/nuU2YHtxMik/);
   const light = await (await render("/postcards/light-song")).text();
   assert.match(light, /No\. 031/);
   assert.match(light, /light-song-album.jpg/);
@@ -142,8 +142,8 @@ test("advances the queue and homepage across the September–October boundary", 
   t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-09-30T06:59:00Z") });
   for (const [date,video,queued] of [
     ["2026-09-30T06:59:00Z","zm2Ytj5bL_I",["Sep 30","Oct 01"]],
-    ["2026-09-30T07:00:00Z","BBj3SCImk_A",["Oct 01"]],
-    ["2026-10-01T06:59:00Z","BBj3SCImk_A",["Oct 01"]],
+    ["2026-09-30T07:00:00Z","nuU2YHtxMik",["Oct 01"]],
+    ["2026-10-01T06:59:00Z","nuU2YHtxMik",["Oct 01"]],
     ["2026-10-01T07:00:00Z","dnHpo1CVbLg",[]],
   ]) {
     t.mock.timers.setTime(new Date(date).getTime());
