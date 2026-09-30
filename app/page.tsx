@@ -3,6 +3,7 @@ import { AmsterdamHome, BlowersDaughterHome, BozHome, ButterflyHome, Cathedrales
 import { LateSeptemberHome } from "./late-september";
 import { MoonHome } from "./moon";
 import { AutumnHome } from "./autumn";
+import { StayWithMeHome, LightSongHome } from "./record-sleeves";
 
 export const dynamic = "force-dynamic";
 
@@ -47,5 +48,7 @@ export default function Home() {
   if (date === "2026-09-26") return <LateSeptemberHome song="m21-forgiveness" />;
   if (date === "2026-09-27") return <MoonHome />;
   if (date === "2026-09-28") return <AutumnHome song="adult" />;
-  return <AutumnHome song="jiu-yue" />;
+  if (date === "2026-09-29") return <AutumnHome song="jiu-yue" />;
+  if (date === "2026-09-30") return <StayWithMeHome />;
+  return <LightSongHome />;
 }

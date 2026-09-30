@@ -5,6 +5,7 @@ import "./postcard-redesign.css";
 import "./late-september.css";
 import "./moon.css";
 import "./autumn.css";
+import "./record-sleeves.css";
 import { SongPlaybackController } from "./song-playback-controller";
 
 const display = Cormorant_Garamond({

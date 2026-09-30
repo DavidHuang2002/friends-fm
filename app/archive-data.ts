@@ -1,4 +1,6 @@
 export type ArchiveKey =
+  | "stay-with-me"
+  | "light-song"
   | "adult"
   | "jiu-yue"
   | "fly-me-to-the-moon"
@@ -44,6 +46,8 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "light-song", href: "/postcards/light-song", dateKey: "2026-10-01", date: "OCT 01", month: "October", sender: "TT", title: "Light song", artist: "haruka nakamura & urara", card: "light-record-card", art: "light-record-card-art", number: "031" },
+  { key: "stay-with-me", href: "/postcards/stay-with-me", dateKey: "2026-09-30", date: "SEP 30", month: "September", sender: "LUCY", title: "Stay With Me", artist: "松原みき · Miki Matsubara", card: "stay-record-card", art: "stay-record-card-art", number: "030" },
   { key: "jiu-yue", href: "/postcards/jiu-yue", dateKey: "2026-09-29", date: "SEP 29", month: "September", sender: "TT", title: "九月", artist: "周云蓬", card: "jiuyue-card", art: "jiuyue-card-art", number: "029" },
   { key: "adult", href: "/postcards/adult", dateKey: "2026-09-28", date: "SEP 28", month: "September", sender: "YSY", title: "大人中", artist: "盧廣仲", card: "adult-card", art: "adult-card-art", number: "028" },
   { key: "fly-me-to-the-moon", href: "/postcards/fly-me-to-the-moon", dateKey: "2026-09-27", date: "SEP 27", month: "September", sender: "DAVID", title: "Fly Me to the Moon", artist: "Tony Bennett", card: "moon-card", art: "moon-card-art", number: "027" },
