@@ -157,3 +157,36 @@ test("advances the queue and homepage across the September–October boundary", 
     assert.equal(archive.includes('href="/postcards/light-song"'),date >= "2026-10-01T07:00:00Z");
   }
 });
+
+test("prepares October 2 and 3 with exact notes, cover assets and honest player credits", async () => {
+  for (const [slug, video, note, number, cover] of [
+    ["nautilus", "j83OVgv6woA", "高中时期的回忆，都给我去听尾奏", "032", "nautilus-elma-cover.jpg"],
+    ["music-book", "TDkyTvZJ9uk", "喔～～music book", "033", "music-book-for-you-cover.jpg"],
+  ]) {
+    const response = await render(`/postcards/${slug}`);
+    assert.equal(response.status, 200);
+    const html = await response.text();
+    for (const value of [video, note, number, cover, "Sources &amp; recording"]) assert.ok(html.includes(value), value);
+    assert.equal(html.includes("Third-party upload"), slug === "music-book");
+  }
+});
+
+test("releases October postcards at Los Angeles midnight and keeps queue names-only", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-02T06:59:00Z") });
+  for (const [date, video, dates, visible] of [
+    ["2026-10-02T06:59:00Z", "dnHpo1CVbLg", ["Oct 02", "Oct 03"], []],
+    ["2026-10-02T07:00:00Z", "j83OVgv6woA", ["Oct 03"], ["nautilus"]],
+    ["2026-10-03T06:59:00Z", "j83OVgv6woA", ["Oct 03"], ["nautilus"]],
+    ["2026-10-03T07:00:00Z", "TDkyTvZJ9uk", [], ["nautilus", "music-book"]],
+  ]) {
+    t.mock.timers.setTime(new Date(date).getTime());
+    const html = await (await render()).text();
+    assert.ok(html.includes(`youtube.com/embed/${video}`));
+    const queue = html.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+    assert.ok(queue);
+    for (const day of ["Oct 02", "Oct 03"]) assert.equal(queue.includes(day), dates.includes(day));
+    assert.doesNotMatch(queue, /Nautilus|Music Book|ヨルシカ|山下/);
+    const archive = await (await render("/archive")).text();
+    for (const slug of ["nautilus", "music-book"]) assert.equal(archive.includes(`href="/postcards/${slug}"`), visible.includes(slug));
+  }
+});

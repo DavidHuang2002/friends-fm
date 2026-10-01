@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-02",
+  "postcard_number": 32,
+  "slug": "nautilus",
+  "title": "ノーチラス / Nautilus",
+  "artist": "ヨルシカ / Yorushika",
+  "sender": "YSY",
+  "note": "高中时期的回忆，都给我去听尾奏",
+  "input_url": "https://youtu.be/j83OVgv6woA?is=wtz09r95bFUHIbOZ",
+  "player_url": "https://www.youtube.com/embed/j83OVgv6woA",
+  "route": "/postcards/nautilus",
+  "status": "designed",
+  "submitted_at": "9/29/2026 13:10:31",
+  "recording": "Yorushika official music video; music, lyrics and arrangement by n-buna, vocals by suis; Elma (2019), track 14",
+  "sources": ["https://sp.universal-music.co.jp/yorushika/elma/", "https://www.youtube.com/watch?v=j83OVgv6woA"],
+  "artwork_source": "https://sp.universal-music.co.jp/yorushika/elma/images/YRSK_amy_tujou_JKT_RGB_600.jpg",
+  "playback_verified": "2026-10-01: local postcard embed advanced to 0:38 / 4:22"
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-03",
+  "postcard_number": 33,
+  "slug": "music-book",
+  "title": "Music Book",
+  "artist": "山下達郎",
+  "sender": "TT",
+  "note": "喔～～music book",
+  "input_url": "",
+  "player_url": "https://www.youtube.com/embed/TDkyTvZJ9uk",
+  "route": "/postcards/music-book",
+  "status": "designed",
+  "submitted_at": "10/1/2026 10:16:22",
+  "recording": "Music Book from For You (1982), track 2. YouTube upload by vtx; third-party, not an official artist upload. Exact mastering unverified.",
+  "sources": ["https://www.tatsuro.co.jp/discography/#album-rca07", "https://www.tatsuro.co.jp/discography/single.php", "https://www.youtube.com/watch?v=TDkyTvZJ9uk"],
+  "artwork_source": "https://www.tatsuro.co.jp/discography/img/al_007.jpg",
+  "playback_verified": "2026-10-01: local postcard embed advanced to 0:12 / 5:10; availability may change"
+}

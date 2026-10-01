@@ -4,6 +4,7 @@ import { LateSeptemberHome } from "./late-september";
 import { MoonHome } from "./moon";
 import { AutumnHome } from "./autumn";
 import { StayWithMeHome, LightSongHome } from "./record-sleeves";
+import { NautilusHome, MusicBookHome } from "./october-records";
 
 export const dynamic = "force-dynamic";
 
@@ -50,5 +51,7 @@ export default function Home() {
   if (date === "2026-09-28") return <AutumnHome song="adult" />;
   if (date === "2026-09-29") return <AutumnHome song="jiu-yue" />;
   if (date === "2026-09-30") return <StayWithMeHome />;
-  return <LightSongHome />;
+  if (date === "2026-10-01") return <LightSongHome />;
+  if (date === "2026-10-02") return <NautilusHome />;
+  return <MusicBookHome />;
 }

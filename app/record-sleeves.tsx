@@ -1,5 +1,6 @@
 import { ArchivePreview } from "./archive-elements";
 import { About, Footer, Schedule } from "./nightly";
+import { octoberQueue } from "./october-records";
 
 const lightQueue = [{ day: "Thursday", date: "Oct 01", sender: "TT" }];
 
@@ -50,6 +51,6 @@ export function LightSongHome({ archived = false }: { archived?: boolean }) {
       <div className="light-cover-bottom"><span>A song sent by TT</span><span>One night · One friend · One song</span></div>
     </section>
     <section className="light-story sleeve-story" id="story" aria-labelledby="story-title"><header><p className="section-kicker">Listening notes · FriendsFM</p><h2 id="story-title">The light<br />on the <em>page.</em></h2><div className="light-sheet" aria-hidden="true"><span /><span /><span /><span /></div><p className="light-caption">A DESK / A DRAWING / A VOICE</p></header><div className="sleeve-story-body"><p className="sleeve-lede" lang="zh">画完这一页，<br />让歌再留一会儿。</p><div className="sleeve-prose" lang="zh"><p>《Light song》是 2024 年动画电影《Look Back》（《蓦然回首》）的主题曲，由 haruka nakamura 创作，urara 演唱，收录在同年 6 月 28 日发行的原声带中。电影改编自藤本树的漫画，讲述藤野与京本因画画而相遇的故事。</p><p>原声带封面没有把镜头对准远方，而是留在一个人的画桌后面：灯、纸、书架，还有正在画下去的背影。今晚就从这里听起。把 urara 的声音当作另一道光，不急着往下翻，也不必先替这首歌写好感想。</p></div><SleevePlayer video="dnHpo1CVbLg" title="Light song by haruka nakamura and urara — official Look Back soundtrack audio" edition="avex pictures · Look Back soundtrack" duration="4:10" /><div className="sleeve-sources"><span>Sources & recording</span><a href="https://lookback-anime.com/news/detail/?id=1115209" target="_blank" rel="noreferrer">Look Back · Official theme-song announcement ↗</a><a href="https://music.apple.com/us/album/light-song/1751243365?i=1751243381" target="_blank" rel="noreferrer">Apple Music · Album & recording ↗</a><a href="https://www.youtube.com/watch?v=dnHpo1CVbLg" target="_blank" rel="noreferrer">avex pictures · Official audio & credits ↗</a><small>Original soundtrack artwork belongs to its respective rights holders. Layout and listening notes by FriendsFM; no personal note was supplied by TT.</small></div></div></section>
-    {archived ? <SleeveFooter number="031" date="Oct 01, 2026" /> : <><Schedule entries={[]} theme="light-shared" /><ArchivePreview current="light-song" /><About theme="light-shared" /><Footer /></>}
+    {archived ? <SleeveFooter number="031" date="Oct 01, 2026" /> : <><Schedule entries={octoberQueue} theme="light-shared" /><ArchivePreview current="light-song" /><About theme="light-shared" /><Footer /></>}
   </main>;
 }

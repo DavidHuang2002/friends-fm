@@ -1,4 +1,6 @@
 export type ArchiveKey =
+  | "nautilus"
+  | "music-book"
   | "stay-with-me"
   | "light-song"
   | "adult"
@@ -46,6 +48,8 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "music-book", href: "/postcards/music-book", dateKey: "2026-10-03", date: "OCT 03", month: "October", sender: "TT", title: "Music Book", artist: "山下達郎", card: "music-book-card", art: "music-book-card-art", number: "033" },
+  { key: "nautilus", href: "/postcards/nautilus", dateKey: "2026-10-02", date: "OCT 02", month: "October", sender: "YSY", title: "Nautilus", artist: "ヨルシカ / Yorushika", card: "nautilus-card", art: "nautilus-card-art", number: "032" },
   { key: "light-song", href: "/postcards/light-song", dateKey: "2026-10-01", date: "OCT 01", month: "October", sender: "TT", title: "Light song", artist: "haruka nakamura & urara", card: "light-record-card", art: "light-record-card-art", number: "031" },
   { key: "stay-with-me", href: "/postcards/stay-with-me", dateKey: "2026-09-30", date: "SEP 30", month: "September", sender: "LUCY", title: "Stay With Me", artist: "松原みき · Miki Matsubara", card: "stay-record-card", art: "stay-record-card-art", number: "030" },
   { key: "jiu-yue", href: "/postcards/jiu-yue", dateKey: "2026-09-29", date: "SEP 29", month: "September", sender: "TT", title: "九月", artist: "周云蓬", card: "jiuyue-card", art: "jiuyue-card-art", number: "029" },
