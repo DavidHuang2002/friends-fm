@@ -7,6 +7,8 @@ import "./moon.css";
 import "./autumn.css";
 import "./record-sleeves.css";
 import "./october-records.css";
+import "./volume.css";
+import "./record-shelf.css";
 import { SongPlaybackController } from "./song-playback-controller";
 
 const display = Cormorant_Garamond({

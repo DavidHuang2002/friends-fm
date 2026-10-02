@@ -32,6 +32,7 @@ export function ArchivePreview({ current }: { current: ArchiveKey }) {
       <div className="archive-grid scheduled-archive-grid">
         {items.map((postcard) => <PostcardCard key={postcard.key} postcard={postcard} />)}
       </div>
+      <a className="volume-entry" href="/volumes/september-2026"><strong>September · Volume 01</strong><span>Our first 30 songs, kept together ↗</span></a>
       <a className="archive-all-link" href="/archive">
         <span>Open the whole year</span>
         <strong>View all postcards</strong>

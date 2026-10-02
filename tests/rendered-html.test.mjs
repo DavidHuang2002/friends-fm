@@ -4,6 +4,20 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("September volume keeps thirty original postcards including August's opening three", async () => {
+  const response = await render("/volumes/september-2026");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  const links = [...html.matchAll(/href="(\/postcards\/[^\"]+)"/g)].map(match => match[1]);
+  assert.equal(new Set(links).size, 30);
+  for (const slug of ["peace-piece", "moving", "dear", "stay-with-me"]) assert.ok(links.includes(`/postcards/${slug}`));
+  assert.ok(!links.includes("/postcards/light-song"));
+  assert.match(html, /It was nice building a sound scape with you all/);
+  assert.match(html, /Enjoy our September song track~/);
+  assert.match(html, /AUG 29/);
+  assert.match(html, /september-volume-01.jpg/);
+});
+
 async function render(path = "/") {
   const workerUrl = new URL("dist/server/index.js", root);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);

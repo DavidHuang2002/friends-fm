@@ -33,6 +33,7 @@ export default function ArchivePage() {
       </header>
 
       <div className="year-archive-body">
+        <a className="volume-entry" href="/volumes/september-2026"><strong>September · Volume 01</strong><span>Our first 30 songs, kept together ↗</span></a>
         {months.map((month) => {
           const monthItems = items.filter((postcard) => postcard.month === month);
           return (
