@@ -13,6 +13,7 @@ export default function SeptemberVolume() {
     <nav className="volume-nav"><a href="/">FriendsFM!</a><span>A collection between friends</span><a href="/archive">The archive ↗</a></nav>
     <h1 className="volume-edition-title">September <span>Our first month, kept together. / Vol. 01</span></h1>
     <RecordShelf />
+    <section className="volume-spotify" aria-labelledby="spotify-title"><div><p className="volume-label">Take September with you</p><h2 id="spotify-title">Same friends.<br />A longer listen.</h2><p>Our month, collected on Spotify.<br /><small>20 of 30 songs added so far — the playlist is still being assembled.</small></p></div><a href="https://open.spotify.com/playlist/2twVD4Mt0lSdFLX19NE3DB" target="_blank" rel="noreferrer"><span aria-hidden="true">▶</span> Listen on Spotify <span aria-hidden="true">↗</span></a></section>
     <section className="volume-letter" aria-labelledby="letter-title">
       <div><p className="volume-label">A note from David</p><h2 id="letter-title">Look what<br />we made.</h2><span className="volume-stamp">FRIENDS FM<br />FIRST EDITION<br />01</span></div>
       <div className="volume-letter-copy"><p>{septemberLetter}</p><p>{septemberSignoff}</p><p className="volume-signature">With love, David</p></div>

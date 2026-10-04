@@ -20,6 +20,10 @@ function losAngelesDate() {
 }
 
 export default function Home() {
+  return <><TonightPage />{losAngelesDate() >= "2026-10-01" && <a className="september-discovery" href="/volumes/september-2026" aria-label="Discover our September recap — 30 songs from friends"><span className="discovery-record" aria-hidden="true"><span className="discovery-vinyl" /><span className="discovery-sleeve"><small>FRIENDS FM</small><strong>Sep.</strong><span>VOL. 01</span></span></span><span className="discovery-copy"><small>30 NIGHTS LATER</small><strong>Look what we made <span aria-hidden="true">↗</span></strong></span></a>}</>;
+}
+
+function TonightPage() {
   const date = losAngelesDate();
   if (date <= "2026-08-30") return <MovingHome />;
   if (date === "2026-08-31") return <DearHome />;

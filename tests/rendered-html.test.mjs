@@ -4,6 +4,16 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("exposes the September discovery widget only on home and links the partial Spotify playlist", async () => {
+  const home = await (await render("/")).text();
+  assert.match(home, /class="september-discovery"/);
+  const postcard = await (await render("/postcards/nautilus")).text();
+  assert.doesNotMatch(postcard, /class="september-discovery"/);
+  const volume = await (await render("/volumes/september-2026")).text();
+  assert.match(volume, /https:\/\/open.spotify.com\/playlist\/2twVD4Mt0lSdFLX19NE3DB/);
+  assert.match(volume, /20 of 30 songs added so far/);
+});
+
 test("September volume keeps thirty original postcards including August's opening three", async () => {
   const response = await render("/volumes/september-2026");
   assert.equal(response.status, 200);
