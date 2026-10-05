@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-05",
+  "postcard_number": 34,
+  "slug": "for-lovers",
+  "title": "For Lovers",
+  "artist": "Lamp",
+  "sender": "David",
+  "note": "很短但很有感觉的一首歌，整个专辑都很好听",
+  "input_url": "https://www.youtube.com/watch?v=v1Ng43JoGtE",
+  "player_url": "https://www.youtube.com/embed/v1Ng43JoGtE",
+  "route": "/postcards/for-lovers",
+  "status": "designed",
+  "timezone": "America/Los_Angeles",
+  "recording": "For Lovers / 恋人へ — opening track, For Lovers (2004), 01:15",
+  "player_credit": "Arctic Lines — third-party lyric video supplied by David; not an official Lamp channel",
+  "sources": ["https://botanicalhouse.bandcamp.com/album/for-lovers-2004", "https://botanicalhouse.bandcamp.com/track/for-lovers", "https://www.youtube.com/watch?v=v1Ng43JoGtE"]
+}

@@ -4,6 +4,35 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("publishes Lamp at LA midnight October 5, preserving the note, queue and archive", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-05T06:59:59Z") });
+  const before = await (await render()).text();
+  assert.match(before, /youtube.com\/embed\/TDkyTvZJ9uk/);
+  const queue = before.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+  assert.match(queue, /David/);
+  assert.match(queue, /Oct 05/);
+  assert.doesNotMatch(queue, /For Lovers|Lamp/);
+  assert.doesNotMatch(await (await render("/archive")).text(), /href="\/postcards\/for-lovers"/);
+  const preview = await (await render("/postcards/for-lovers")).text();
+  assert.match(preview, /很短但很有感觉的一首歌，整个专辑都很好听/);
+  assert.match(preview, /lamp-for-lovers-cover.png/);
+  assert.match(preview, /Arctic Lines/);
+  assert.match(preview, /botanicalhouse.bandcamp.com\/album\/for-lovers-2004/);
+  assert.match(preview, /Postcard No. 034/);
+  t.mock.timers.setTime(new Date("2026-10-05T07:00:00Z").getTime());
+  const after = await (await render()).text();
+  assert.match(after, /youtube.com\/embed\/v1Ng43JoGtE/);
+  assert.match(after, /October 05, 2026/);
+  assert.match(after, /很短但很有感觉的一首歌，整个专辑都很好听/);
+  assert.doesNotMatch(after.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1], /Oct 05|David/);
+  assert.match(await (await render("/archive")).text(), /href="\/postcards\/for-lovers"/);
+  assert.match(await (await render("/postcards/music-book")).text(), /youtube.com\/embed\/TDkyTvZJ9uk/);
+  const packet = JSON.parse(await readFile(new URL("content/postcards/2026-10-05-for-lovers/submission.json", root)));
+  assert.equal(packet.date, "2026-10-05");
+  assert.equal(packet.postcard_number, 34);
+  assert.equal(packet.note, "很短但很有感觉的一首歌，整个专辑都很好听");
+});
+
 test("exposes the September discovery widget only on home and links the partial Spotify playlist", async () => {
   const home = await (await render("/")).text();
   assert.match(home, /class="september-discovery"/);

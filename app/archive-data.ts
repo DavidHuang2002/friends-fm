@@ -1,4 +1,5 @@
 export type ArchiveKey =
+  | "for-lovers"
   | "nautilus"
   | "music-book"
   | "stay-with-me"
@@ -48,6 +49,7 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "for-lovers", href: "/postcards/for-lovers", dateKey: "2026-10-05", date: "OCT 05", month: "October", sender: "DAVID", title: "For Lovers", artist: "Lamp", card: "lovers-card", art: "lovers-card-art", number: "034" },
   { key: "music-book", href: "/postcards/music-book", dateKey: "2026-10-03", date: "OCT 03", month: "October", sender: "TT", title: "Music Book", artist: "山下達郎", card: "music-book-card", art: "music-book-card-art", number: "033" },
   { key: "nautilus", href: "/postcards/nautilus", dateKey: "2026-10-02", date: "OCT 02", month: "October", sender: "YSY", title: "Nautilus", artist: "ヨルシカ / Yorushika", card: "nautilus-card", art: "nautilus-card-art", number: "032" },
   { key: "light-song", href: "/postcards/light-song", dateKey: "2026-10-01", date: "OCT 01", month: "October", sender: "TT", title: "Light song", artist: "haruka nakamura & urara", card: "light-record-card", art: "light-record-card-art", number: "031" },

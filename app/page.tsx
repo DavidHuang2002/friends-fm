@@ -5,6 +5,7 @@ import { MoonHome } from "./moon";
 import { AutumnHome } from "./autumn";
 import { StayWithMeHome, LightSongHome } from "./record-sleeves";
 import { NautilusHome, MusicBookHome } from "./october-records";
+import { ForLoversHome } from "./for-lovers";
 
 export const dynamic = "force-dynamic";
 
@@ -57,5 +58,6 @@ function TonightPage() {
   if (date === "2026-09-30") return <StayWithMeHome />;
   if (date === "2026-10-01") return <LightSongHome />;
   if (date === "2026-10-02") return <NautilusHome />;
-  return <MusicBookHome />;
+  if (date < "2026-10-05") return <MusicBookHome />;
+  return <ForLoversHome />;
 }
