@@ -1,5 +1,6 @@
 import { ArchivePreview } from "./archive-elements";
 import { About, Footer, Schedule } from "./nightly";
+import { octoberSixSevenQueue } from "./october-six-seven";
 
 export function ForLoversHome({ archived = false }: { archived?: boolean }) {
   return <main className="lovers-page">
@@ -20,6 +21,6 @@ export function ForLoversHome({ archived = false }: { archived?: boolean }) {
         <div className="lovers-sources"><span>Sources & credits</span><a href="https://botanicalhouse.bandcamp.com/track/for-lovers" target="_blank" rel="noreferrer">Botanical House · Official track ↗</a><a href="https://botanicalhouse.bandcamp.com/album/for-lovers-2004" target="_blank" rel="noreferrer">Botanical House · Release date & tracklist ↗</a><small>Original album artwork supplied by David; rights remain with its owners. Listening notes by FriendsFM. David’s note is preserved verbatim.</small></div>
       </div>
     </section>
-    {archived ? <footer className="lovers-footer"><span className="footer-brand">FriendsFM!</span><p>Postcard No. 034 · October 05, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="lovers-shared" /><ArchivePreview current="for-lovers" /><About theme="lovers-shared" /><Footer /></>}
+    {archived ? <footer className="lovers-footer"><span className="footer-brand">FriendsFM!</span><p>Postcard No. 034 · October 05, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={octoberSixSevenQueue} theme="lovers-shared" /><ArchivePreview current="for-lovers" /><About theme="lovers-shared" /><Footer /></>}
   </main>;
 }

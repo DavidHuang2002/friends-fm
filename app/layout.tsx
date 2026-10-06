@@ -11,6 +11,7 @@ import "./volume.css";
 import "./record-shelf.css";
 import "./september-discovery.css";
 import "./for-lovers.css";
+import "./october-six-seven.css";
 import { SongPlaybackController } from "./song-playback-controller";
 
 const display = Cormorant_Garamond({

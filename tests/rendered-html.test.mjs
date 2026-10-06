@@ -4,6 +4,50 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("releases October 6–7 at LA midnight with exact submissions and people-only queues", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-06T06:59:59Z") });
+  const before = await (await render()).text();
+  assert.match(before, /youtube.com\/embed\/v1Ng43JoGtE/);
+  const queue = before.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+  assert.match(queue, /YSY[\s\S]*TT/);
+  assert.match(queue, /Oct 06/);
+  assert.match(queue, /Oct 07/);
+  assert.doesNotMatch(queue, /ENDLESS|MON AMOUR|X JAPAN|中森/);
+  assert.doesNotMatch(await (await render("/archive")).text(), /href="\/postcards\/(endless-rain|abunai-mon-amour)"/);
+  for (const [slug, number, note, player, source] of [
+    ["endless-rain", 35, "双吉他solo太经典了", "QhOFg_3RV5Q", "sonymusic.co.jp"],
+    ["abunai-mon-amour", 36, "前奏和萨克斯爽麻了", "PxMtHQuE-5Q", "sp.wmg.jp"],
+  ]) {
+    const html = await (await render(`/postcards/${slug}`)).text();
+    assert.ok(html.includes(note));
+    assert.ok(html.includes(`/embed/${player}`));
+    assert.ok(html.includes(source));
+    assert.ok(html.replace(/<!--.*?-->/g, "").includes(`Postcard No. 0${number}`));
+    const date = slug === "endless-rain" ? "2026-10-06" : "2026-10-07";
+    const packet = JSON.parse(await readFile(new URL(`content/postcards/${date}-${slug}/submission.json`, root)));
+    assert.equal(packet.note, note);
+    assert.equal(packet.postcard_number, number);
+    assert.equal(packet.date, date);
+    assert.ok((await readFile(new URL(`content/postcards/${date}-${slug}/share.png`, root))).length > 1000);
+  }
+  t.mock.timers.setTime(new Date("2026-10-06T07:00:00Z").getTime());
+  const sixth = await (await render()).text();
+  assert.match(sixth, /youtube.com\/embed\/QhOFg_3RV5Q/);
+  const sixthQueue = sixth.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+  assert.match(sixthQueue, /TT/);
+  assert.doesNotMatch(sixthQueue, /YSY|Oct 06/);
+  assert.match(await (await render("/archive")).text(), /href="\/postcards\/endless-rain"/);
+  assert.doesNotMatch(await (await render("/archive")).text(), /href="\/postcards\/abunai-mon-amour"/);
+  t.mock.timers.setTime(new Date("2026-10-07T06:59:59Z").getTime());
+  assert.match(await (await render()).text(), /youtube.com\/embed\/QhOFg_3RV5Q/);
+  t.mock.timers.setTime(new Date("2026-10-07T07:00:00Z").getTime());
+  const seventh = await (await render()).text();
+  assert.match(seventh, /youtube.com\/embed\/PxMtHQuE-5Q/);
+  assert.match(seventh, /akina-fin-cover.jpg/);
+  assert.doesNotMatch(seventh.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1], /Oct 06|Oct 07/);
+  assert.match(await (await render("/archive")).text(), /href="\/postcards\/abunai-mon-amour"/);
+});
+
 test("publishes Lamp at LA midnight October 5, preserving the note, queue and archive", async (t) => {
   t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-05T06:59:59Z") });
   const before = await (await render()).text();

@@ -1,5 +1,6 @@
 import { ArchivePreview } from "./archive-elements";
 import { About, Footer, Schedule } from "./nightly";
+import { octoberSixSevenQueue } from "./october-six-seven";
 
 export const octoberQueue = [{ day: "Friday", date: "Oct 02", sender: "YSY" }, { day: "Saturday", date: "Oct 03", sender: "TT" }];
 
@@ -13,7 +14,7 @@ function Player({ video, title, label, duration }: { video: string; title: strin
 
 function End({ archived, music = false }: { archived: boolean; music?: boolean }) {
   if (archived) return <footer><span className="footer-brand">FriendsFM!</span><p>Postcard No. {music ? "033" : "032"} · Oct {music ? "03" : "02"}, 2026</p><a href="/">Go to tonight →</a></footer>;
-  return <><Schedule entries={music ? [{ day: "Monday", date: "Oct 05", sender: "David" }] : octoberQueue.slice(1)} theme={music ? "book-shared" : "nautilus-shared"} /><ArchivePreview current={music ? "music-book" : "nautilus"} /><About theme={music ? "book-shared" : "nautilus-shared"} /><Footer /></>;
+  return <><Schedule entries={music ? [{ day: "Monday", date: "Oct 05", sender: "David" }, ...octoberSixSevenQueue] : octoberQueue.slice(1)} theme={music ? "book-shared" : "nautilus-shared"} /><ArchivePreview current={music ? "music-book" : "nautilus"} /><About theme={music ? "book-shared" : "nautilus-shared"} /><Footer /></>;
 }
 
 export function NautilusHome({ archived = false }: { archived?: boolean }) {

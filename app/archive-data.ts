@@ -1,4 +1,6 @@
 export type ArchiveKey =
+  | "endless-rain"
+  | "abunai-mon-amour"
   | "for-lovers"
   | "nautilus"
   | "music-book"
@@ -49,6 +51,8 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "abunai-mon-amour", href: "/postcards/abunai-mon-amour", dateKey: "2026-10-07", date: "OCT 07", month: "October", sender: "TT", title: "危ないMON AMOUR", artist: "中森明菜", card: "amour-card", art: "amour-card-art", number: "036" },
+  { key: "endless-rain", href: "/postcards/endless-rain", dateKey: "2026-10-06", date: "OCT 06", month: "October", sender: "YSY", title: "ENDLESS RAIN", artist: "X JAPAN", card: "endless-card", art: "endless-card-art", number: "035" },
   { key: "for-lovers", href: "/postcards/for-lovers", dateKey: "2026-10-05", date: "OCT 05", month: "October", sender: "DAVID", title: "For Lovers", artist: "Lamp", card: "lovers-card", art: "lovers-card-art", number: "034" },
   { key: "music-book", href: "/postcards/music-book", dateKey: "2026-10-03", date: "OCT 03", month: "October", sender: "TT", title: "Music Book", artist: "山下達郎", card: "music-book-card", art: "music-book-card-art", number: "033" },
   { key: "nautilus", href: "/postcards/nautilus", dateKey: "2026-10-02", date: "OCT 02", month: "October", sender: "YSY", title: "Nautilus", artist: "ヨルシカ / Yorushika", card: "nautilus-card", art: "nautilus-card-art", number: "032" },
