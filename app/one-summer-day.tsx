@@ -22,6 +22,6 @@ export function OneSummerDayHome({ archived = false }: { archived?: boolean }) {
         <div className="summer-sources"><span>Sources & credits</span><a href="https://www.tkma.co.jp/new_release_detail/id=3538" target="_blank" rel="noreferrer">Tokuma Japan · Original soundtrack, release & recording ↗</a><a href="https://www.youtube.com/watch?v=iOYAl37AScY" target="_blank" rel="noreferrer">Joe Hisaishi · Official audio & credits ↗</a><small>Listening notes by FriendsFM. TT’s note is preserved verbatim. Artwork is an original AI-generated still life inspired by that memory, not Studio Ghibli artwork.</small></div>
       </div>
     </section>
-    {archived ? <footer className="summer-footer"><span className="footer-brand">FriendsFM!</span><p>Postcard No. 037 · October 10, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="summer-shared" /><ArchivePreview current="one-summer-day" /><About theme="summer-shared" /><Footer /></>}
+    {archived ? <footer className="summer-footer"><span className="footer-brand">FriendsFM!</span><p>Postcard No. 037 · October 10, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{ day: "Sunday", date: "Oct 11", sender: "TT" }]} theme="summer-shared" /><ArchivePreview current="one-summer-day" /><About theme="summer-shared" /><Footer /></>}
   </main>;
 }

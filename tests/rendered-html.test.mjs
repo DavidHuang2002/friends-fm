@@ -316,3 +316,22 @@ test("releases October postcards at Los Angeles midnight and keeps queue names-o
     for (const slug of ["nautilus", "music-book"]) assert.equal(archive.includes(`href="/postcards/${slug}"`), visible.includes(slug));
   }
 });
+test("releases Japan on October 11 LA time and preserves TT's birthday note", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-11T06:59:00Z") });
+  const before = await (await render()).text();
+  assert.match(before, /youtube.com\/embed\/iOYAl37AScY/);
+  const queue = before.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+  assert.match(queue, /Oct 11/);
+  assert.doesNotMatch(queue, /Japan|Kaczmarek/);
+  assert.doesNotMatch(await (await render("/archive")).text(), /href="\/postcards\/japan"/);
+  const preview = await (await render("/postcards/japan")).text();
+  for (const value of ["我们家三毛十一岁啦", "No. 038", "YqfsBi3jIP4", "japan-share.png", "Sources &amp; recording"]) assert.ok(preview.includes(value), value);
+  t.mock.timers.setTime(new Date("2026-10-11T07:00:00Z").getTime());
+  const after = await (await render()).text();
+  assert.match(after, /youtube.com\/embed\/YqfsBi3jIP4/);
+  assert.doesNotMatch(after.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1], /Oct 11/);
+  assert.match(await (await render("/archive")).text(), /href="\/postcards\/japan"/);
+  const packet = JSON.parse(await readFile(new URL("content/postcards/2026-10-11-japan/submission.json", root)));
+  assert.equal(packet.postcard_number, 38);
+  assert.equal(packet.note, "我们家三毛十一岁啦");
+});

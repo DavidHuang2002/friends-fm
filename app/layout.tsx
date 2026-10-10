@@ -12,6 +12,7 @@ import "./record-shelf.css";
 import "./september-discovery.css";
 import "./for-lovers.css";
 import "./one-summer-day.css";
+import "./japan.css";
 import "./october-six-seven.css";
 import { SongPlaybackController } from "./song-playback-controller";
 

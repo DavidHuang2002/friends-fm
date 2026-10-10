@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-11",
+  "postcard_number": 38,
+  "slug": "japan",
+  "title": "Japan",
+  "artist": "Jan A.P. Kaczmarek",
+  "sender": "TT",
+  "note": "我们家三毛十一岁啦",
+  "input_url": "",
+  "player_url": "https://www.youtube.com/embed/YqfsBi3jIP4",
+  "route": "/postcards/japan",
+  "status": "designed",
+  "submitted_at": "2026-10-10 07:50:31",
+  "sources": [
+    "https://www.sonypictures.com/movies/hachiadogstale",
+    "https://music.amazon.in/tracks/B095Z6M46J",
+    "https://www.youtube.com/watch?v=YqfsBi3jIP4"
+  ]
+}
