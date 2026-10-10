@@ -17,7 +17,7 @@ function Player({ video, title, label }: { video: string; title: string; label: 
 function End({ archived, akina = false }: { archived: boolean; akina?: boolean }) {
   if (archived) return <footer className="signal-footer"><span className="footer-brand">FriendsFM!</span><p>Postcard No. {akina ? "036" : "035"} · October {akina ? "07" : "06"}, 2026</p><a href="/">Go to tonight →</a></footer>;
   const theme = akina ? "amour-shared" : "endless-shared";
-  return <><Schedule entries={akina ? [] : octoberSixSevenQueue.slice(1)} theme={theme} /><ArchivePreview current={akina ? "abunai-mon-amour" : "endless-rain"} /><About theme={theme} /><Footer /></>;
+  return <><Schedule entries={akina ? [{ day: "Saturday", date: "Oct 10", sender: "TT" }] : octoberSixSevenQueue.slice(1)} theme={theme} /><ArchivePreview current={akina ? "abunai-mon-amour" : "endless-rain"} /><About theme={theme} /><Footer /></>;
 }
 
 function TwinStrings() {

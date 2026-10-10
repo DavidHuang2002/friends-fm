@@ -4,6 +4,35 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("schedules TT's One Summer Day for October 10 without changing the personal note", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-10T06:59:59Z") });
+  const before = await (await render()).text();
+  assert.match(before, /youtube.com\/embed\/PxMtHQuE-5Q/);
+  const queue = before.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+  assert.match(queue, /Oct 10/);
+  assert.match(queue, /TT/);
+  assert.doesNotMatch(queue, /あの夏へ|久石|Summer/);
+  assert.doesNotMatch(await (await render("/archive")).text(), /href="\/postcards\/one-summer-day"/);
+  const preview = await (await render("/postcards/one-summer-day")).text();
+  const note = "千寻吃饭团 1:29把所有乐器抽走只剩钢琴 然后千寻开始大哭 印记特别深刻的瞬间";
+  assert.ok(preview.includes(note));
+  assert.match(preview, /youtube.com\/embed\/iOYAl37AScY/);
+  assert.match(preview, /not been independently verified/);
+  assert.match(preview, /tkma.co.jp/);
+  assert.match(preview, /Postcard No. 037/);
+  t.mock.timers.setTime(new Date("2026-10-10T07:00:00Z").getTime());
+  const after = await (await render()).text();
+  assert.match(after, /youtube.com\/embed\/iOYAl37AScY/);
+  assert.match(after, /October 10, 2026/);
+  assert.match(after, /one-summer-day-art.png/);
+  assert.match(await (await render("/archive")).text(), /href="\/postcards\/one-summer-day"/);
+  assert.doesNotMatch(after.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1], /Oct 10/);
+  const packet = JSON.parse(await readFile(new URL("content/postcards/2026-10-10-one-summer-day/submission.json", root)));
+  assert.equal(packet.note, note);
+  assert.equal(packet.date, "2026-10-10");
+  assert.equal(packet.postcard_number, 37);
+});
+
 test("releases October 6–7 at LA midnight with exact submissions and people-only queues", async (t) => {
   t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-06T06:59:59Z") });
   const before = await (await render()).text();

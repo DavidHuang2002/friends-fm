@@ -6,6 +6,7 @@ import { AutumnHome } from "./autumn";
 import { StayWithMeHome, LightSongHome } from "./record-sleeves";
 import { NautilusHome, MusicBookHome } from "./october-records";
 import { ForLoversHome } from "./for-lovers";
+import { OneSummerDayHome } from "./one-summer-day";
 import { EndlessRainHome, MonAmourHome } from "./october-six-seven";
 
 export const dynamic = "force-dynamic";
@@ -62,5 +63,6 @@ function TonightPage() {
   if (date < "2026-10-05") return <MusicBookHome />;
   if (date === "2026-10-05") return <ForLoversHome />;
   if (date === "2026-10-06") return <EndlessRainHome />;
-  return <MonAmourHome />;
+  if (date < "2026-10-10") return <MonAmourHome />;
+  return <OneSummerDayHome />;
 }
