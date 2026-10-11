@@ -25,6 +25,8 @@ If a packet has no sharing image, the existing cover/art treatment remains in us
 Legacy postcards without packets are registered explicitly in the same resolver.
 Keep sharing images in their release packets so future releases inherit this
 behavior automatically. Full historical song pages are not changed by this rule.
+Generated covers display edge-to-edge, without a duplicate title/sender frame;
+the link's accessible label retains the song, artist, sender and date.
 
 ### Player behavior
 

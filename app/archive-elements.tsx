@@ -7,18 +7,18 @@ export function PostcardCard({ postcard, compact = false }: { postcard: Postcard
   return (
     <a
       href={postcard.href}
-      className={`archive-card ${postcard.card}${compact ? " archive-card-compact" : ""}`}
-      aria-label={`Open ${postcard.title} by ${postcard.artist}, sent by ${postcard.sender}`}
+      className={`archive-card ${postcard.card}${compact ? " archive-card-compact" : ""}${cover ? " archive-card-generated" : ""}`}
+      aria-label={`Open ${postcard.title} by ${postcard.artist}, sent by ${postcard.sender}, ${postcard.date}`}
     >
-      <div className="card-top">
+      {!cover && <div className="card-top">
         <span>{postcard.date}</span>
         <span>FROM {postcard.sender}</span>
-      </div>
+      </div>}
       {cover ? <div className="generated-postcard-cover"><img src={cover} alt={`FriendsFM postcard for ${postcard.title}`} loading="lazy" /></div> : <div className={postcard.art} />}
-      <div className="card-copy">
+      {!cover && <div className="card-copy">
         <h3>{postcard.title}</h3>
         <p>{postcard.artist}</p>
-      </div>
+      </div>}
     </a>
   );
 }

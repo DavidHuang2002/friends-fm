@@ -340,6 +340,8 @@ test("archive and September shelf prefer generated postcards with legacy fallbac
   const archive = await (await render("/archive")).text();
   const ginger = archive.match(/<a[^>]*href="\/postcards\/ginger"[\s\S]*?<\/a>/)?.[0];
   assert.match(ginger, /generated-postcard-cover/);
+  assert.match(ginger, /archive-card-generated/);
+  assert.doesNotMatch(ginger, /card-top|card-copy/);
   assert.match(ginger, /<img[^>]*src="[^"]+\.png"/);
   const moving = archive.match(/<a[^>]*href="\/postcards\/moving"[\s\S]*?<\/a>/)?.[0];
   assert.doesNotMatch(moving, /generated-postcard-cover/);
