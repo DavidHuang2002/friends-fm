@@ -335,3 +335,16 @@ test("releases Japan on October 11 LA time and preserves TT's birthday note", as
   assert.equal(packet.postcard_number, 38);
   assert.equal(packet.note, "我们家三毛十一岁啦");
 });
+test("archive and September shelf prefer generated postcards with legacy fallback", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-11T12:00:00Z") });
+  const archive = await (await render("/archive")).text();
+  const ginger = archive.match(/<a[^>]*href="\/postcards\/ginger"[\s\S]*?<\/a>/)?.[0];
+  assert.match(ginger, /generated-postcard-cover/);
+  assert.match(ginger, /<img[^>]*src="[^"]+\.png"/);
+  const moving = archive.match(/<a[^>]*href="\/postcards\/moving"[\s\S]*?<\/a>/)?.[0];
+  assert.doesNotMatch(moving, /generated-postcard-cover/);
+  const cover = ginger.match(/<img[^>]*src="([^"]+)"/)[1];
+  const volume = await (await render("/volumes/september-2026")).text();
+  assert.ok(volume.includes(cover));
+  assert.ok(volume.includes("/moving-album-cover.jpg"));
+});

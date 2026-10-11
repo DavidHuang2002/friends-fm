@@ -1,7 +1,9 @@
 import type { ArchiveKey, PostcardRecord } from "./archive-data";
 import { postcardsBefore } from "./archive-data";
+import { postcardArtwork } from "./postcard-artwork";
 
 export function PostcardCard({ postcard, compact = false }: { postcard: PostcardRecord; compact?: boolean }) {
+  const cover = postcardArtwork(postcard.href);
   return (
     <a
       href={postcard.href}
@@ -12,7 +14,7 @@ export function PostcardCard({ postcard, compact = false }: { postcard: Postcard
         <span>{postcard.date}</span>
         <span>FROM {postcard.sender}</span>
       </div>
-      <div className={postcard.art} />
+      {cover ? <div className="generated-postcard-cover"><img src={cover} alt={`FriendsFM postcard for ${postcard.title}`} loading="lazy" /></div> : <div className={postcard.art} />}
       <div className="card-copy">
         <h3>{postcard.title}</h3>
         <p>{postcard.artist}</p>

@@ -1,4 +1,5 @@
 import { postcards } from "./archive-data";
+import { postcardArtwork } from "./postcard-artwork";
 
 export const septemberLetter = "Friends! Crazy its already a month now. It started just as a random idea one afternoon that I thought might not last more than a week... yet here we are 30 songs later. It was nice building a sound scape with you all and keeping in touch with you all. Let's keep this ritual going and you all made up some of the best music in my life.";
 export const septemberSignoff = "Enjoy our September song track~";
@@ -23,4 +24,4 @@ const artwork: Record<string, string> = {
 export const septemberTracks = postcards
   .filter((song) => song.dateKey >= "2026-08-29" && song.dateKey <= "2026-09-30")
   .sort((a, b) => a.dateKey.localeCompare(b.dateKey))
-  .map((song) => ({ ...song, image: `/${artwork[song.key]}` }));
+  .map((song) => ({ ...song, image: postcardArtwork(song.href) ?? `/${artwork[song.key]}` }));
