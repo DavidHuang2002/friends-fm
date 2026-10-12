@@ -19,8 +19,11 @@ the [live site](https://friendsfm.davidhuang1203.chatgpt.site/).
 ### Archive cover preference
 
 Archive cards and monthly shelves prefer our generated postcard over the album
-cover. `app/postcard-artwork.ts` automatically discovers each release packet's
-`submission.json` route and `share.png`; Vite publishes the image as a static asset.
+cover. `build/postcard-covers.ts` discovers each release packet's
+`submission.json` route and `share.png` at build/dev startup. Identical public
+assets are reused; missing ones are copied into ignored `public/postcard-covers/`.
+The resulting URL map feeds `app/postcard-artwork.ts` without bundling images
+multiple times. Restart the dev server after adding a packet.
 If a packet has no sharing image, the existing cover/art treatment remains in use.
 Legacy postcards without packets are registered explicitly in the same resolver.
 Keep sharing images in their release packets so future releases inherit this
