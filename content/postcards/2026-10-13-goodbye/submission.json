@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-13",
+  "postcard_number": 39,
+  "slug": "goodbye",
+  "title": "グッドバイ / Goodbye",
+  "artist": "toe",
+  "sender": "David",
+  "note": "数摇经典",
+  "input_url": "https://www.youtube.com/watch?v=XBzoHdb1-Qw",
+  "player_url": "https://www.youtube.com/embed/XBzoHdb1-Qw",
+  "route": "/postcards/goodbye",
+  "status": "designed",
+  "recording": "David's submitted 08:43 live video, third-party upload by Keith Tan; not the 07:05 album version",
+  "sources": ["https://toe-music.bandcamp.com/album/for-long-tomorrow", "https://www.youtube.com/watch?v=XBzoHdb1-Qw"]
+}

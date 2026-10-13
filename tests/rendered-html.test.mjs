@@ -350,3 +350,23 @@ test("archive and September shelf prefer generated postcards with legacy fallbac
   assert.ok(volume.includes(cover));
   assert.ok(volume.includes("/moving-album-cover.jpg"));
 });
+test("schedules David's Goodbye live selection for October 13 LA midnight", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-13T06:59:59Z") });
+  const before = await (await render()).text();
+  assert.match(before, /youtube.com\/embed\/YqfsBi3jIP4/);
+  const queue = before.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+  assert.match(queue, /Oct 13/); assert.match(queue, /David/);
+  assert.doesNotMatch(queue, /Goodbye|グッドバイ/);
+  assert.doesNotMatch(await (await render("/archive")).text(), /href="\/postcards\/goodbye"/);
+  const preview = await (await render("/postcards/goodbye")).text();
+  for (const value of ["数摇经典", "No. 039", "Sent by David", "XBzoHdb1-Qw", "08:43", "Third-party upload", "toe-goodbye-share.png", "toe-for-long-tomorrow-cover.jpg"]) assert.ok(preview.includes(value), value);
+  t.mock.timers.setTime(new Date("2026-10-13T07:00:00Z").getTime());
+  const after = await (await render()).text();
+  assert.match(after, /youtube.com\/embed\/XBzoHdb1-Qw/);
+  assert.doesNotMatch(after.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1], /Oct 13/);
+  const archive = await (await render("/archive")).text();
+  assert.match(archive, /href="\/postcards\/goodbye"/);
+  assert.match(archive, /src="\/toe-goodbye-share.png"/);
+  const packet = JSON.parse(await readFile(new URL("content/postcards/2026-10-13-goodbye/submission.json", root)));
+  assert.equal(packet.sender, "David"); assert.equal(packet.note, "数摇经典"); assert.equal(packet.postcard_number, 39);
+});

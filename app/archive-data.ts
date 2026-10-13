@@ -1,4 +1,5 @@
 export type ArchiveKey =
+  | "goodbye"
   | "japan"
   | "one-summer-day"
   | "endless-rain"
@@ -53,6 +54,7 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "goodbye", href: "/postcards/goodbye", dateKey: "2026-10-13", date: "OCT 13", month: "October", sender: "DAVID", title: "グッドバイ / Goodbye", artist: "toe", card: "toe-card", art: "toe-card-art", number: "039" },
   { key: "japan", href: "/postcards/japan", dateKey: "2026-10-11", date: "OCT 11", month: "October", sender: "TT", title: "Japan", artist: "Jan A.P. Kaczmarek", card: "japan-card", art: "japan-card-art", number: "038" },
   { key: "one-summer-day", href: "/postcards/one-summer-day", dateKey: "2026-10-10", date: "OCT 10", month: "October", sender: "TT", title: "あの夏へ", artist: "久石譲 · Joe Hisaishi", card: "summer-card", art: "summer-card-art", number: "037" },
   { key: "abunai-mon-amour", href: "/postcards/abunai-mon-amour", dateKey: "2026-10-07", date: "OCT 07", month: "October", sender: "TT", title: "危ないMON AMOUR", artist: "中森明菜", card: "amour-card", art: "amour-card-art", number: "036" },

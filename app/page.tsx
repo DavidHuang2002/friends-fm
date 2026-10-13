@@ -8,6 +8,7 @@ import { NautilusHome, MusicBookHome } from "./october-records";
 import { ForLoversHome } from "./for-lovers";
 import { OneSummerDayHome } from "./one-summer-day";
 import { JapanHome } from "./japan";
+import { GoodbyeHome } from "./goodbye";
 import { EndlessRainHome, MonAmourHome } from "./october-six-seven";
 
 export const dynamic = "force-dynamic";
@@ -66,5 +67,6 @@ function TonightPage() {
   if (date === "2026-10-06") return <EndlessRainHome />;
   if (date < "2026-10-10") return <MonAmourHome />;
   if (date < "2026-10-11") return <OneSummerDayHome />;
-  return <JapanHome />;
+  if (date < "2026-10-13") return <JapanHome />;
+  return <GoodbyeHome />;
 }
