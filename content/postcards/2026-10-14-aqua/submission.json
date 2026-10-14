@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-14",
+  "postcard_number": 40,
+  "slug": "aqua",
+  "title": "Aqua",
+  "artist": "Ryuichi Sakamoto",
+  "sender": "TT",
+  "note": "用最少的音弹最动人的曲子",
+  "input_url": "https://m.youtube.com/watch?v=IHhJURATDQI&list=RDIHhJURATDQI&start_radio=1&pp=ygUJYXF1YSBvcHVzoAcB&ra=m",
+  "player_url": "https://www.youtube.com/embed/IHhJURATDQI",
+  "route": "/postcards/aqua",
+  "status": "designed",
+  "submitted_at": "2026-10-13 19:05:23",
+  "recording": "Aqua — Opus (2024), official Milan audio, 05:12",
+  "sources": ["https://www.youtube.com/watch?v=IHhJURATDQI", "https://www.sonymusic.com.tw/album/ryuichi-sakamoto-opus/"]
+}

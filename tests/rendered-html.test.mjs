@@ -3,6 +3,22 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
+test("Aqua releases October 14 LA midnight with TT's exact recording and note", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-14T06:59:59Z") });
+  const before = await (await render()).text();
+  assert.ok(before.includes("youtube.com/embed/XBzoHdb1-Qw"));
+  const queue = before.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+  assert.ok(queue.includes("Oct 14") && queue.includes("TT"));
+  assert.ok(!queue.includes("Aqua"));
+  assert.ok(!(await (await render("/archive")).text()).includes('href="/postcards/aqua"'));
+  const preview = await (await render("/postcards/aqua")).text();
+  for (const value of ["用最少的音弹最动人的曲子", "No. 040", "Sent by TT", "IHhJURATDQI", "aqua-share.png", "opus-cover.jpg"]) assert.ok(preview.includes(value), value);
+  t.mock.timers.setTime(new Date("2026-10-14T07:00:00Z").getTime());
+  assert.ok((await (await render()).text()).includes("youtube.com/embed/IHhJURATDQI"));
+  assert.ok((await (await render("/archive")).text()).includes('href="/postcards/aqua"'));
+  const packet = JSON.parse(await readFile(new URL("content/postcards/2026-10-14-aqua/submission.json", root)));
+  assert.equal(packet.postcard_number, 40); assert.equal(packet.sender, "TT"); assert.equal(packet.note, "用最少的音弹最动人的曲子");
+});
 
 test("schedules TT's One Summer Day for October 10 without changing the personal note", async (t) => {
   t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-10T06:59:59Z") });
