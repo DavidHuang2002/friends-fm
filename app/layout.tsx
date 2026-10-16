@@ -15,6 +15,7 @@ import "./one-summer-day.css";
 import "./japan.css";
 import "./aqua.css";
 import "./october-sixteen.css";
+import "./odoriko-redesign.css";
 import "./goodbye.css";
 import "./october-six-seven.css";
 import { SongPlaybackController } from "./song-playback-controller";

@@ -1,0 +1,45 @@
+/* The printed postcard is the cover; surrounding type behaves like sleeve notes. */
+.odoriko-redesign{background:#300b13;color:#fae7ca}
+.odoriko-redesign .odoriko-cover{background:#300b13;padding:24px 3.5vw 18px;min-height:100svh}
+.odoriko-redesign .odoriko-date{margin-top:24px;color:#e4b9a5;font-size:9px}
+.odoriko-redesign .odoriko-stage{grid-template-columns:minmax(240px,.68fr) minmax(0,1.32fr);gap:5vw;padding:28px 0;max-width:1500px;width:100%;margin:auto}
+.odoriko-redesign .odoriko-stage figure{grid-column:2;grid-row:1;transform:none;box-shadow:none;justify-self:end;width:min(100%,78svh)}
+.odoriko-redesign .odoriko-stage header{grid-column:1;grid-row:1;padding:0 0 0 2vw}
+.odoriko-redesign .odoriko-stage .oct16-label{color:#d9aa94;line-height:1.8;font-size:9px;max-width:240px}
+.odoriko-redesign .odoriko-stage h1{white-space:normal;font-size:clamp(38px,4.3vw,72px);line-height:1.2;margin:32px 0 12px;letter-spacing:.05em}
+.odoriko-redesign .odoriko-artist{display:block;font-size:clamp(26px,3vw,46px);font-style:italic;margin:12px 0 0;letter-spacing:0;color:#e8b9aa}
+.odoriko-redesign .odoriko-roman{font-size:9px;letter-spacing:.2em;color:#cb9a88}
+.odoriko-redesign .odoriko-stage blockquote{border:0;border-left:1px solid #95664f;padding:0 0 0 22px;margin:45px 0 35px}
+.odoriko-redesign .odoriko-stage blockquote>span{color:#deb699;font-size:9px}
+.odoriko-redesign .odoriko-stage blockquote p{font-family:serif;font-size:clamp(17px,1.6vw,24px);line-height:1.9;max-width:330px;margin:17px 0 0}
+.odoriko-redesign .odoriko-enter{font-family:var(--font-display),serif;font-style:italic;font-size:25px;align-items:center;max-width:300px}
+.odoriko-listen{display:inline-block;margin-top:20px;font-size:10px;letter-spacing:.06em;border-bottom:1px solid #95664f;padding-bottom:6px}
+.odoriko-redesign a:focus-visible{outline:2px solid #f1c39e;outline-offset:5px}
+.odoriko-redesign .odoriko-bottom{border-color:#684033;color:#d9aa94;font-size:8px;padding-top:16px}
+.odoriko-redesign .odoriko-story{background:#ecd4bf;color:#482018;gap:10vw;padding:110px 8vw;position:relative}
+.odoriko-redesign .odoriko-story h2{font-size:clamp(72px,9vw,145px);letter-spacing:-.055em;margin:45px 0 65px}
+.odoriko-redesign .odoriko-story h2 em{color:#9f463a}
+.odoriko-redesign .odoriko-story header figure{max-width:330px;transform:rotate(-3deg);padding:12px;background:#36141a;color:#eed5bd;box-shadow:12px 18px 0 #d9baa5}
+.odoriko-redesign .odoriko-story figcaption{padding:0 5px 4px;font-size:9px;letter-spacing:.08em}
+.odoriko-redesign .odoriko-lede{margin-top:45px;font-size:clamp(25px,2.5vw,37px);line-height:1.7}
+.odoriko-redesign .odoriko-player{border-color:#a67c62}
+.odoriko-redesign .odoriko-shared{--moving-mint:#ecd4bf;--moving-pink:#ecd4bf;background:#ecd4bf;color:#482018}
+.odoriko-card-art{background-image:url('/odoriko-share-v2.png')}
+@media(max-width:700px){
+ .odoriko-redesign .odoriko-cover{padding:20px 20px 0;min-height:100svh}
+ .odoriko-redesign .odoriko-date{font-size:8px;margin-top:22px;letter-spacing:.04em}
+ .odoriko-redesign .odoriko-stage{display:flex;flex-direction:column;gap:0;padding:22px 0 24px}
+ .odoriko-redesign .odoriko-stage figure{width:calc(100% + 40px);max-width:none;margin:0 -20px;align-self:center}
+ .odoriko-redesign .odoriko-stage header{padding:28px 0 0;width:100%;display:grid;grid-template-columns:1fr auto;column-gap:20px}
+ .odoriko-redesign .odoriko-stage header>.oct16-label,.odoriko-redesign .odoriko-stage h1,.odoriko-redesign .odoriko-roman{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;margin:0}
+ .odoriko-redesign .odoriko-stage blockquote{grid-column:1/-1;margin:0 0 22px;padding-left:17px}
+ .odoriko-redesign .odoriko-stage blockquote p{font-size:18px;max-width:100%;margin-top:10px}
+ .odoriko-redesign .odoriko-enter{font-size:22px;gap:16px}
+ .odoriko-redesign .odoriko-listen{font-size:9px;margin-top:0;align-self:center;max-width:105px;line-height:1.7}
+ .odoriko-redesign .odoriko-bottom{font-size:7px;line-height:1.7;padding:15px 0;gap:20px}
+ .odoriko-redesign .odoriko-bottom span:last-child{text-align:right;max-width:155px}
+ .odoriko-redesign .odoriko-story{padding:65px 25px;gap:55px}
+ .odoriko-redesign .odoriko-story h2{font-size:88px;margin:30px 0 42px}
+ .odoriko-redesign .odoriko-story header figure{max-width:270px;margin-left:8px}
+ .odoriko-redesign .odoriko-lede{font-size:27px;margin-top:0}
+}
