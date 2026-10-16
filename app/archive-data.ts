@@ -1,4 +1,6 @@
 export type ArchiveKey =
+  | "odoriko"
+  | "certainty"
   | "aqua"
   | "goodbye"
   | "japan"
@@ -55,6 +57,8 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "certainty", href: "/postcards/certainty", dateKey: "2026-10-17", date: "OCT 17", month: "October", sender: "TT", title: "Certainty", artist: "Friko", card: "certainty-card", art: "certainty-card-art", number: "042" },
+  { key: "odoriko", href: "/postcards/odoriko", dateKey: "2026-10-16", date: "OCT 16", month: "October", sender: "LUCY", title: "踊り子", artist: "Vaundy", card: "odoriko-card", art: "odoriko-card-art", number: "041" },
   { key: "aqua", href: "/postcards/aqua", dateKey: "2026-10-14", date: "OCT 14", month: "October", sender: "TT", title: "Aqua", artist: "Ryuichi Sakamoto", card: "aqua-card", art: "aqua-card-art", number: "040" },
   { key: "goodbye", href: "/postcards/goodbye", dateKey: "2026-10-13", date: "OCT 13", month: "October", sender: "DAVID", title: "グッドバイ / Goodbye", artist: "toe", card: "toe-card", art: "toe-card-art", number: "039" },
   { key: "japan", href: "/postcards/japan", dateKey: "2026-10-11", date: "OCT 11", month: "October", sender: "TT", title: "Japan", artist: "Jan A.P. Kaczmarek", card: "japan-card", art: "japan-card-art", number: "038" },

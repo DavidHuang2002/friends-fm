@@ -3,6 +3,32 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
+test("October 16–17 queue and archives advance at LA midnight with exact submissions", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-16T06:59:59Z") });
+  for (const [time, marker, queued, available] of [
+    ["2026-10-16T06:59:59Z", "youtube.com/embed/IHhJURATDQI", ["Oct 16", "Oct 17"], []],
+    ["2026-10-16T07:00:00Z", "youtube.com/embed/7HgJIAUtICU", ["Oct 17"], ["odoriko"]],
+    ["2026-10-17T06:59:59Z", "youtube.com/embed/7HgJIAUtICU", ["Oct 17"], ["odoriko"]],
+    ["2026-10-17T07:00:00Z", "bandcamp.com/EmbeddedPlayer/track=569412613", [], ["odoriko", "certainty"]],
+  ]) {
+    t.mock.timers.setTime(new Date(time).getTime());
+    const html = await (await render()).text();
+    assert.ok(html.includes(marker));
+    const queue = html.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+    for (const date of ["Oct 16", "Oct 17"]) assert.equal(queue.includes(date), queued.includes(date));
+    assert.doesNotMatch(queue, /踊り子|Vaundy|Certainty|Friko/);
+    const archive = await (await render("/archive")).text();
+    for (const slug of ["odoriko", "certainty"]) assert.equal(archive.includes('href="/postcards/'+slug+'"'), available.includes(slug));
+  }
+  const lucy = await (await render("/postcards/odoriko")).text();
+  assert.ok(lucy.includes("一首永远会让我想起2025年八月初Nashville的歌。无敌喜欢"));
+  assert.ok(lucy.includes("Sent by Lucy"));
+  const tt = await (await render("/postcards/certainty")).text();
+  assert.ok(tt.includes("Sent by TT")); assert.ok(tt.includes("05:27"));
+  assert.doesNotMatch(tt, /<blockquote|A note from TT/);
+  const packet = JSON.parse(await readFile(new URL("content/postcards/2026-10-17-certainty/submission.json", root)));
+  assert.equal(packet.note, ""); assert.equal(packet.postcard_number, 42);
+});
 test("Aqua releases October 14 LA midnight with TT's exact recording and note", async (t) => {
   t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-14T06:59:59Z") });
   const before = await (await render()).text();
