@@ -3,6 +3,22 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
+test("David's duet switches on October 19 LA midnight with a people-only queue", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-19T06:59:59Z") });
+  const before = await (await render()).text();
+  assert.ok(before.includes("bandcamp.com/EmbeddedPlayer/track=569412613"));
+  const queue = before.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+  assert.match(queue, /David/); assert.match(queue, /Oct 19/);
+  assert.doesNotMatch(queue, /浴室|謝安琪|古天樂/);
+  assert.ok(!(await (await render("/archive")).text()).includes('href="/postcards/a-man-a-woman-and-a-bathroom"'));
+  t.mock.timers.setTime(new Date("2026-10-19T07:00:00Z").getTime());
+  const after = await (await render()).text();
+  for (const value of ["hwzIUmI-mK8", "超好听的对唱", "No. 043", "Sent by David", "bathroom-share.png"]) assert.ok(after.includes(value), value);
+  assert.doesNotMatch(after.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1], /Oct 19/);
+  assert.ok((await (await render("/archive")).text()).includes('href="/postcards/a-man-a-woman-and-a-bathroom"'));
+  const preview = await (await render("/postcards/a-man-a-woman-and-a-bathroom")).text();
+  assert.ok(preview.includes("hwzIUmI-mK8") && preview.includes("超好听的对唱"));
+});
 test("October 16–17 queue and archives advance at LA midnight with exact submissions", async (t) => {
   t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-16T06:59:59Z") });
   for (const [time, marker, queued, available] of [
@@ -201,8 +217,8 @@ test("server-renders the FriendsFM homepage", async () => {
   const html = await response.text();
   assert.match(html, /<title>FriendsFM! — A song postcard every night<\/title>/);
   assert.match(html, /FriendsFM!/);
-  assert.match(html, /href="#story"/);
-  assert.match(html, /youtube\.com\/embed/);
+  assert.match(html, /href="#(?:story|listen)"/);
+  assert.match(html, /youtube\.com\/embed|bandcamp\.com\/EmbeddedPlayer/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Building your site/i);
 });
 

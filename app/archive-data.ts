@@ -1,4 +1,5 @@
 export type ArchiveKey =
+  | "a-man-a-woman-and-a-bathroom"
   | "odoriko"
   | "certainty"
   | "aqua"
@@ -57,6 +58,7 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "a-man-a-woman-and-a-bathroom", href: "/postcards/a-man-a-woman-and-a-bathroom", dateKey: "2026-10-19", date: "OCT 19", month: "October", sender: "DAVID", title: "(一個男人) 一個女人 和浴室", artist: "謝安琪 × 古天樂", card: "bath-card", art: "bath-card-art", number: "043" },
   { key: "certainty", href: "/postcards/certainty", dateKey: "2026-10-17", date: "OCT 17", month: "October", sender: "TT", title: "Certainty", artist: "Friko", card: "certainty-card", art: "certainty-card-art", number: "042" },
   { key: "odoriko", href: "/postcards/odoriko", dateKey: "2026-10-16", date: "OCT 16", month: "October", sender: "LUCY", title: "踊り子", artist: "Vaundy", card: "odoriko-card", art: "odoriko-card-art", number: "041" },
   { key: "aqua", href: "/postcards/aqua", dateKey: "2026-10-14", date: "OCT 14", month: "October", sender: "TT", title: "Aqua", artist: "Ryuichi Sakamoto", card: "aqua-card", art: "aqua-card-art", number: "040" },
