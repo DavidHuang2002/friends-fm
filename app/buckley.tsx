@@ -22,7 +22,7 @@ function BuckleySources({ last }: { last: boolean }) {
 
 function BuckleyEnd({ archived, last }: { archived: boolean; last: boolean }) {
   if (archived) return <footer className="buckley-footer"><span className="footer-brand">FriendsFM!</span><p>No. {last ? "044 · October 21" : "045 · October 22"}, 2026</p><a href="/">Go to tonight →</a></footer>;
-  return <><Schedule entries={last ? [{ day: "Thursday", date: "Oct 22", sender: "David" }] : []} theme={last ? "last-goodbye-shared" : "hallelujah-shared"}/><ArchivePreview current={last ? "last-goodbye" : "hallelujah"}/><About theme={last ? "last-goodbye-shared" : "hallelujah-shared"}/><Footer/></>;
+  return <><Schedule entries={last ? [{ day: "Thursday", date: "Oct 22", sender: "David" }, { day: "Friday", date: "Oct 23", sender: "David" }] : [{ day: "Friday", date: "Oct 23", sender: "David" }]} theme={last ? "last-goodbye-shared" : "hallelujah-shared"}/><ArchivePreview current={last ? "last-goodbye" : "hallelujah"}/><About theme={last ? "last-goodbye-shared" : "hallelujah-shared"}/><Footer/></>;
 }
 
 export function LastGoodbyeHome({ archived = false }: { archived?: boolean }) {

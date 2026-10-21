@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-23",
+  "postcard_number": 46,
+  "slug": "call-your-mom",
+  "title": "Call Your Mom",
+  "artist": "Noah Kahan & Lizzy McAlpine",
+  "sender": "David",
+  "note": "再来一首的我特别喜欢很 vulnerable 很动人的歌",
+  "highlight_lyrics": "Medicate, meditate, swear your soul to Jesus\nThrow a punch, fall in love, give yourself a reason\nDon't wanna drive another mile wonderin' if you're breathin'",
+  "lyrics_credit": "Noah Kahan & Todd Clark",
+  "input_url": "https://www.youtube.com/watch?v=6W8no5Fmogo",
+  "player_url": "https://www.youtube.com/embed/6W8no5Fmogo?playsinline=1&rel=0",
+  "route": "/postcards/call-your-mom",
+  "status": "designed",
+  "sources": ["https://www.youtube.com/watch?v=6W8no5Fmogo", "https://music.apple.com/us/album/call-your-mom-single/1706433317", "https://music.apple.com/mg/song/1706433321"]
+}
