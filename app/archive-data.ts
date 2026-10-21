@@ -1,4 +1,6 @@
 export type ArchiveKey =
+  | "last-goodbye"
+  | "hallelujah"
   | "a-man-a-woman-and-a-bathroom"
   | "odoriko"
   | "certainty"
@@ -58,6 +60,8 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
+  { key: "hallelujah", href: "/postcards/hallelujah", dateKey: "2026-10-22", date: "OCT 22", month: "October", sender: "DAVID", title: "Hallelujah", artist: "Jeff Buckley", card: "hallelujah-card", art: "hallelujah-card-art", number: "045" },
+  { key: "last-goodbye", href: "/postcards/last-goodbye", dateKey: "2026-10-21", date: "OCT 21", month: "October", sender: "TT", title: "Last Goodbye", artist: "Jeff Buckley", card: "last-goodbye-card", art: "last-goodbye-card-art", number: "044" },
   { key: "a-man-a-woman-and-a-bathroom", href: "/postcards/a-man-a-woman-and-a-bathroom", dateKey: "2026-10-19", date: "OCT 19", month: "October", sender: "DAVID", title: "(一個男人) 一個女人 和浴室", artist: "謝安琪 × 古天樂", card: "bath-card", art: "bath-card-art", number: "043" },
   { key: "certainty", href: "/postcards/certainty", dateKey: "2026-10-17", date: "OCT 17", month: "October", sender: "TT", title: "Certainty", artist: "Friko", card: "certainty-card", art: "certainty-card-art", number: "042" },
   { key: "odoriko", href: "/postcards/odoriko", dateKey: "2026-10-16", date: "OCT 16", month: "October", sender: "LUCY", title: "踊り子", artist: "Vaundy", card: "odoriko-card", art: "odoriko-card-art", number: "041" },

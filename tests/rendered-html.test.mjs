@@ -3,6 +3,29 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
+test("two Buckley nights release at LA midnight with exact uploads, senders and note", async (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-21T06:59:59Z") });
+  for (const [time, id, queued, available] of [
+    ["2026-10-21T06:59:59Z", "hwzIUmI-mK8", ["Oct 21", "Oct 22"], []],
+    ["2026-10-21T07:00:00Z", "3MMXjunSx80", ["Oct 22"], ["last-goodbye"]],
+    ["2026-10-22T06:59:59Z", "3MMXjunSx80", ["Oct 22"], ["last-goodbye"]],
+    ["2026-10-22T07:00:00Z", "dV8nFLwQffk", [], ["last-goodbye", "hallelujah"]],
+  ]) {
+    t.mock.timers.setTime(new Date(time).getTime());
+    const html = await (await render()).text();
+    assert.ok(html.includes(`youtube.com/embed/${id}`));
+    const queue = html.match(/<ol class="schedule-list">([\s\S]*?)<\/ol>/)?.[1];
+    for (const date of ["Oct 21", "Oct 22"]) assert.equal(queue.includes(date), queued.includes(date));
+    assert.doesNotMatch(queue, /Last Goodbye|Hallelujah|Jeff Buckley/);
+    const archive = await (await render("/archive")).text();
+    for (const slug of ["last-goodbye", "hallelujah"]) assert.equal(archive.includes(`href="/postcards/${slug}"`), available.includes(slug));
+  }
+  const tt = await (await render("/postcards/last-goodbye")).text();
+  assert.ok(tt.includes("Sent by TT") && tt.includes("No. 044"));
+  assert.doesNotMatch(tt, /<blockquote|A note from TT/);
+  const david = await (await render("/postcards/hallelujah")).text();
+  for (const text of ["我也来首 jeff buckley", "dV8nFLwQffk", "No. 045", "not been verified"]) assert.ok(david.includes(text));
+});
 test("David's duet switches on October 19 LA midnight with a people-only queue", async (t) => {
   t.mock.timers.enable({ apis: ["Date"], now: new Date("2026-10-19T06:59:59Z") });
   const before = await (await render()).text();

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-22",
+  "postcard_number": 45,
+  "slug": "hallelujah",
+  "title": "Hallelujah",
+  "artist": "Jeff Buckley",
+  "sender": "David",
+  "note": "我也来首 jeff buckley",
+  "favorite_moment_intro": "one of my favorite moments in all music:",
+  "favorite_moment": "Maybe there’s a God above\nBut all I’ve ever learned from love\nWas how to shoot at somebody who outdrew you\nIt’s not a cry that you hear at night\nIt’s not someone who has seen the light\nIt’s a cold and a broken Hallelujah",
+  "favorite_moment_credit": "Lyrics by Leonard Cohen · Performed by Jeff Buckley",
+  "input_url": "https://www.youtube.com/watch?v=dV8nFLwQffk",
+  "player_url": "https://www.youtube.com/embed/dV8nFLwQffk?playsinline=1&rel=0",
+  "route": "/postcards/hallelujah",
+  "status": "designed",
+  "sources": ["https://jeffbuckley.com/discography/grace/", "https://music.apple.com/us/album/grace/1046187510", "https://www.youtube.com/watch?v=dV8nFLwQffk"]
+}

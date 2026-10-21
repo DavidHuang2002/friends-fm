@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-21",
+  "postcard_number": 44,
+  "slug": "last-goodbye",
+  "title": "Last Goodbye",
+  "artist": "Jeff Buckley",
+  "sender": "TT",
+  "note": "",
+  "input_url": "https://www.youtube.com/watch?v=3MMXjunSx80",
+  "player_url": "https://www.youtube.com/embed/3MMXjunSx80?playsinline=1&rel=0",
+  "route": "/postcards/last-goodbye",
+  "status": "designed",
+  "sources": ["https://jeffbuckley.com/discography/grace/", "https://music.apple.com/us/album/grace/1046187510", "https://www.youtube.com/watch?v=3MMXjunSx80"]
+}

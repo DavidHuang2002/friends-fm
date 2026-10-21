@@ -22,6 +22,6 @@ export function BathroomHome({ archived = false }: { archived?: boolean }) {
         <div className="bath-sources"><p className="bath-label">Sources & artwork</p><a href="https://music.apple.com/us/album/1441511846" target="_blank" rel="noreferrer">Apple Music · Single, release date & artwork ↗</a><a href="https://www.youtube.com/watch?v=hwzIUmI-mK8" target="_blank" rel="noreferrer">Kay Tse · Official release audio ↗</a><a href="https://www.joox.com/hk/single/FSAwcmUJAcvZWfWRBwXdmg%3D%3D" target="_blank" rel="noreferrer">JOOX · Recording credits ↗</a><small>David’s note is unchanged. Listening notes by FriendsFM. Original AI-generated postcard inspired by the single sleeve’s monochrome photography; the small sleeve is official artwork.</small></div>
       </div>
     </section>
-    {archived ? <footer className="bath-footer"><span className="footer-brand">FriendsFM!</span><p>No. 043 · October 19, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[]} theme="bath-shared"/><ArchivePreview current="a-man-a-woman-and-a-bathroom"/><About theme="bath-shared"/><Footer/></>}
+    {archived ? <footer className="bath-footer"><span className="footer-brand">FriendsFM!</span><p>No. 043 · October 19, 2026</p><a href="/">Go to tonight →</a></footer> : <><Schedule entries={[{day:"Wednesday",date:"Oct 21",sender:"TT"},{day:"Thursday",date:"Oct 22",sender:"David"}]} theme="bath-shared"/><ArchivePreview current="a-man-a-woman-and-a-bathroom"/><About theme="bath-shared"/><Footer/></>}
   </main>;
 }
