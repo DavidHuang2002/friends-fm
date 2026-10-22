@@ -1,4 +1,5 @@
 export type ArchiveKey =
+  | "lifes-for-the-living"
   | "call-your-mom"
   | "last-goodbye"
   | "hallelujah"
@@ -61,7 +62,8 @@ export type PostcardRecord = {
 };
 
 export const postcards: PostcardRecord[] = [
-  { key: "call-your-mom", href: "/postcards/call-your-mom", dateKey: "2026-10-23", date: "OCT 23", month: "October", sender: "DAVID", title: "Call Your Mom", artist: "Noah Kahan & Lizzy McAlpine", card: "call-mom-card", art: "call-mom-card-art", number: "046" },
+  { key: "call-your-mom", href: "/postcards/call-your-mom", dateKey: "2026-10-24", date: "OCT 24", month: "October", sender: "DAVID", title: "Call Your Mom", artist: "Noah Kahan & Lizzy McAlpine", card: "call-mom-card", art: "call-mom-card-art", number: "047" },
+  { key: "lifes-for-the-living", href: "/postcards/lifes-for-the-living", dateKey: "2026-10-23", date: "OCT 23", month: "October", sender: "TT", title: "Life’s for the Living", artist: "Passenger", card: "living-card", art: "living-card-art", number: "046" },
   { key: "hallelujah", href: "/postcards/hallelujah", dateKey: "2026-10-22", date: "OCT 22", month: "October", sender: "DAVID", title: "Hallelujah", artist: "Jeff Buckley", card: "hallelujah-card", art: "hallelujah-card-art", number: "045" },
   { key: "last-goodbye", href: "/postcards/last-goodbye", dateKey: "2026-10-21", date: "OCT 21", month: "October", sender: "TT", title: "Last Goodbye", artist: "Jeff Buckley", card: "last-goodbye-card", art: "last-goodbye-card-art", number: "044" },
   { key: "a-man-a-woman-and-a-bathroom", href: "/postcards/a-man-a-woman-and-a-bathroom", dateKey: "2026-10-19", date: "OCT 19", month: "October", sender: "DAVID", title: "(一個男人) 一個女人 和浴室", artist: "謝安琪 × 古天樂", card: "bath-card", art: "bath-card-art", number: "043" },

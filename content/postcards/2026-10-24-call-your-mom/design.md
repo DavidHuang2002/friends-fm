@@ -1,8 +1,8 @@
-# Call Your Mom — October 23, 2026 / No. 046
+# Call Your Mom — October 24, 2026 / No. 047
 
 David's exact submitted collaboration: Noah Kahan & Lizzy McAlpine, official lyric video 6W8no5Fmogo. Release September 15, 2023, Mercury/Republic. Apple catalog duration 278671 ms, displayed 04:38. Songwriters Noah Kahan and Todd Clark; producers Noah Kahan and Gabe Simon. User-supplied three-line lyric excerpt is reproduced verbatim and credited; no additional lyrics sourced or reproduced.
 
-Queue: Oct 21 TT, Oct 22 David, Oct 23 David. Dates switch at Los Angeles midnight. All preceding affected queues updated; no future-song spoilers. Stable route /postcards/call-your-mom, archive cover from generated share.png.
+Rescheduled at David's request: Oct 23 TT (Life’s for the Living), Oct 24 David (Call Your Mom). Dates switch at Los Angeles midnight. All preceding affected queues updated; no future-song spoilers. Stable route /postcards/call-your-mom, archive cover from generated share.png. Alternate standalone posters remain available in this packet; website artwork unchanged.
 
 Inspected the collaboration sleeve (snowy path, Noah and dog). Derived olive, greige and ivory, but chose a new telephone still life for connection and closeness. The image is AI-generated original artwork, not documentary or official sleeve imagery. Phone layout uses the whole square edge to edge. A dedicated olive lyric section separates David's picked lines from editorial notes, with the middle line highlighted. Small official sleeve is credited in the listening notes.
 

@@ -1,0 +1,11 @@
+# Monotype share poster
+
+Standalone alternative requested by David. Generated with the built-in image generation tool. Saved as `share-monotype.png`. Existing webpage assets remain unchanged.
+
+## Final prompt
+
+Use case: ads-marketing. Create a finished square FriendsFM music postcard as an exceptionally beautiful contemporary abstract monotype print on absorbent cotton paper. Subject: two soft irregular pigment fields touching and bleeding into one another. Dense midnight indigo and bruised plum occupy about three quarters of the composition; a smaller warm pale peach and ivory field nestles slightly off-center lower right, surrounded but not swallowed by the dark pigment. The place where the fields meet is the emotional focal point, tender and quietly urgent, like warmth reaching someone. Entirely nonrepresentational. Rich real printmaking detail: velvety ink, uneven pressure, subtle lifted ink patches, feathered bleed, sparse exposed warm paper fibers, layered translucent pigment. Organic asymmetrical composition with exquisite restraint. No recognizable objects, bodies, faces, landscape, horizon, sun, window, telephone, hearts, glowing portal, or digital gradient. No glossy effects. Looks physically handmade and art-directed, gallery-quality monotype, not generic abstract wallpaper. Dark ink feels heavy and the small peach area feels soft and resilient. Full-bleed square with no surrounding border. Quiet editorial typography in warm ivory, modest size, elegant delicate serif title in the calmer upper-left area. Title must remain clearly readable and leave most space to the print. Small clean typography for credits; generous deliberate spacing. Include exactly these text elements only: upper left "TONIGHT'S SONG"; below it title "Call Your Mom"; below title "Noah Kahan & Lizzy McAlpine"; bottom left "SENT BY DAVID"; bottom right "FriendsFM!". No dates, no extra text, no lyrics, no frames. Balance a museum print's tactile beauty with a collectible independent record sleeve. The image should feel intimate, vulnerable and comforting without illustrating the song literally.
+
+## Visual review
+
+Verified title, both artist names, sender and FriendsFM branding. Indigo and plum pigment meet a warm peach and ivory field; paper texture and restrained typography carry the composition.

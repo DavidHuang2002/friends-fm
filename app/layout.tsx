@@ -19,6 +19,7 @@ import "./odoriko-redesign.css";
 import "./bathroom.css";
 import "./buckley.css";
 import "./call-your-mom.css";
+import "./lifes-for-the-living.css";
 import "./goodbye.css";
 import "./october-six-seven.css";
 import { SongPlaybackController } from "./song-playback-controller";

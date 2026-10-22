@@ -75,6 +75,7 @@ function TonightPage() {
   if (date < "2026-10-21") return <BathroomHome />;
   if (date < "2026-10-22") return <LastGoodbyeHome />;
   if (date < "2026-10-23") return <HallelujahHome />;
+  if (date < "2026-10-24") return <LivingHome />;
   return <CallYourMomHome />;
 }
 import { AquaHome } from "./aqua";
@@ -82,3 +83,4 @@ import { OdorikoHome, CertaintyHome } from "./october-sixteen";
 import { BathroomHome } from "./bathroom";
 import { LastGoodbyeHome, HallelujahHome } from "./buckley";
 import { CallYourMomHome } from "./call-your-mom";
+import { LivingHome } from "./lifes-for-the-living";
